@@ -1,5 +1,20 @@
 # DEV_NOTES — representation, design, story
 
+## Backlog (v1 shipped 2026-07-08; iterate from here)
+
+Verify visually with `pnpm dev` + `node scripts/shoot.mjs` (screenshots; URL env var overrides port).
+
+- Label de-collision — the dense Latin arm overlaps at low zoom; needs a polar relaxation pass (research the tree-of-tree approach, rewrite for polar).
+- Sector weighting — pure leaf-count leaves an angular gap top-left; consider min-angles for small arms or grouping the four single-word arms.
+- Star silhouette — current shape is radial-dendrogram-ish; decide how literal the star polygon should be (arm-length flare by subtree size?).
+- Fonts — Gothic 𐍃𐍄𐌰𐌹𐍂𐌽𐍉 and cuneiform 𒄩𒀸𒋼𒅕𒍝 render in system fallback; consider Noto webfonts (subset) or transliteration-first display.
+- Story camera — framing sometimes off-center; label-aware fit; honor prefers-reduced-motion.
+- Mobile — only a crude stacked layout so far; needs a real pass.
+- Story prose — v1 chapter texts are drafts; tighten voice, add the quiz interactivity (chapter 1 could be an actual clickable quiz).
+- Dataset — decide the pending §7 items in research.md (Esther/sterling in-or-out is IN as disputed for now; rare-words cutoff; Tara node kept as deity name); pull verbatim specialist quotes (the three deep dives discussed).
+- Poster path — static PNG render for r/dataisbeautiful, later.
+- Deploy — GitHub repo + Pages workflow + OG image, when ready.
+
 Everything about *how the data is shown* lives here. `research.md` is data only: etymological facts, epistemic status, sources.
 
 ## Relationship to tree-of-tree
