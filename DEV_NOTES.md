@@ -24,6 +24,7 @@ Radial star layout: **root in the center**, **black background** (night sky), **
 
 ## Representation decisions
 
+- **Attribute, don't assert**: detail panels present claims with their owners ("Beekes derives…", "Wiktionary, following Ringe…"), never bare facts — all sources are human and fallible, and the chart should read as a map of scholarship, not of certainty.
 - **Disputed etymologies** (sterling, Esther): drawn as **dashed edges**, with the competing positions in the detail panel.
 - **The root's own origin** (research.md §4.3): **no drawn parent edge** — drawn edges mean *descent from the root*, nothing else. The hedged "glower" derivation and the Ishtar direction-of-borrowing controversy go into the center node's detail panel and the story chapters. Prose metaphor available: you can't see into a star's core — below the root, reconstruction goes opaque. (An "ember inside the star" visual — \*h₂eh₁s- as a faint glow inside the center — is a possible flourish, only if clearly marked as conjecture.)
 - **Unrelated look-alikes** (Balto-Slavic zvezda; stare/stark/starve; street/strategy; sterile): **prose-only chapter, no nodes, no visual gap** — same treatment as Baum in the tree-of-tree "Not all PIE trees are related" chapter.
