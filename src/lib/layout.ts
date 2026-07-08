@@ -1,7 +1,8 @@
 // Radial layout: root at the exact center, descent flowing outward.
 // Angle comes from a tidy d3 tree run on the full hierarchy (so branch sectors
-// scale with their populations); radius encodes era-like depth so that modern
-// English words form the outer rim — the points of the star.
+// scale with their populations). Radius is ORGANIC: each generation steps
+// outward by a slightly irregular amount, so nothing sits on a shared circle —
+// arms with deeper histories simply reach further.
 
 import { hierarchy, tree, type HierarchyPointNode } from "d3-hierarchy";
 import { TREE, senseColor, type EtymNode } from "../data/etymology";
@@ -30,21 +31,19 @@ export interface Layout {
   extent: { x0: number; y0: number; x1: number; y1: number };
 }
 
-const RIM = 420; // radius of the modern-word rim, in layout units
+const FIRST_STEP = 150; // root → branch head
+const STEP = 96; // each later generation
+// Deterministic per-node wobble so siblings never share a radius.
+function wobble(id: string): number {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+  return 0.82 + ((h >>> 3) % 1000) / 1000 * 0.36; // 0.82 … 1.18
+}
 
-/** Radius ring: root center; reconstructions close-in; attestations by their
- * chain depth; modern words snapped to the rim. */
-function ring(n: HierarchyPointNode<EtymNode>): number {
-  const kind = n.data.kind;
-  if (kind === "root") return 0;
-  if (kind === "reconstructed") return 0.28 * RIM;
-  if (kind === "modern") return RIM;
-  // attested: deeper chains sit further out, capped below the rim
-  let attestedAbove = 0;
-  for (let p = n.parent; p; p = p.parent) {
-    if (p.data.kind === "attested") attestedAbove++;
-  }
-  return Math.min(0.5 + 0.14 * attestedAbove, 0.82) * RIM;
+function radius(n: HierarchyPointNode<EtymNode>): number {
+  if (!n.parent) return 0;
+  const step = n.depth === 1 ? FIRST_STEP : STEP;
+  return radius(n.parent) + step * wobble(n.data.id);
 }
 
 export function buildLayout(): Layout {
@@ -53,7 +52,7 @@ export function buildLayout(): Layout {
 
   const t = tree<EtymNode>()
     .size([2 * Math.PI, 1])
-    .separation((a, b) => ((a.parent === b.parent ? 1 : 1.6) / Math.max(a.depth, 1)));
+    .separation((a, b) => ((a.parent === b.parent ? 1 : 2) / Math.max(a.depth, 1)));
   const pointRoot = t(root);
 
   const byId = new Map<string, LaidNode>();
@@ -61,7 +60,7 @@ export function buildLayout(): Layout {
 
   pointRoot.each((n) => {
     const angle = n.x;
-    const r = ring(n);
+    const r = radius(n);
     const laid: LaidNode = {
       node: n.data,
       angle,
@@ -86,19 +85,21 @@ export function buildLayout(): Layout {
     });
   });
 
-  const pad = 150; // room for rim labels
-  const extent = { x0: -RIM - pad, y0: -RIM - pad, x1: RIM + pad, y1: RIM + pad };
+  // Symmetric extent around the root: the story camera's framing math assumes
+  // the origin sits at the viewBox center.
+  const pad = 170; // room for rim labels
+  let reach = 0;
+  for (const n of nodes) {
+    reach = Math.max(reach, Math.abs(n.x), Math.abs(n.y));
+  }
+  const R = reach + pad;
+  const extent = { x0: -R, y0: -R, x1: R, y1: R };
   return { nodes, links, byId, extent };
 }
 
-/** Link path: a gentle radial curve from parent to child. */
+/** Link path: a straight line from parent to child. */
 export function linkPath(l: LaidLink): string {
-  const { source: s, target: t } = l;
-  if (s.r === 0) return `M0,0L${t.x},${t.y}`;
-  // curve through an intermediate point at the child's angle, parent's radius
-  const mx = Math.sin(t.angle) * s.r;
-  const my = -Math.cos(t.angle) * s.r;
-  return `M${s.x},${s.y}Q${mx},${my} ${t.x},${t.y}`;
+  return `M${l.source.x},${l.source.y}L${l.target.x},${l.target.y}`;
 }
 
 /** SVG path for an n-pointed star centered at 0,0 (rotate/translate outside). */

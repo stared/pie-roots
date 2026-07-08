@@ -4,7 +4,7 @@
 // this file maps scholarship, not certainty.
 
 export type NodeKind = "root" | "reconstructed" | "attested" | "modern";
-export type SenseId = "star" | "shape" | "science" | "fate" | "name" | "other";
+export type SenseId = "star" | "shape" | "science" | "fate" | "name";
 
 export interface EtymNode {
   id: string;
@@ -22,13 +22,14 @@ export interface EtymNode {
   children?: EtymNode[];
 }
 
+// Stellar-temperature palette: every sense color is a color a star can be
+// (blue → white → gold → orange → red); no greens, no violets on this sky.
 export const SENSES: Record<SenseId, { label: string; color: string }> = {
-  star: { label: "the star itself", color: "#f2efe6" },
-  shape: { label: "star-shaped things", color: "#f0c75e" },
-  science: { label: "measuring the sky", color: "#8fc7ff" },
-  fate: { label: "fate & omens", color: "#ff8a5c" },
-  name: { label: "names & gods", color: "#c9a6ff" },
-  other: { label: "stranger paths", color: "#8fd6b5" },
+  star: { label: "the star itself", color: "#f4f1e8" },
+  science: { label: "measuring the sky", color: "#92b4ff" },
+  shape: { label: "star-shaped things", color: "#ffe08a" },
+  name: { label: "names & gods", color: "#ffb45e" },
+  fate: { label: "fate & omens", color: "#ff7a5c" },
 };
 
 export const ROOT_COLOR = "#fff6d8";
@@ -39,7 +40,7 @@ export const TREE: EtymNode = {
   lang: "Proto-Indo-European",
   gloss: "star",
   kind: "root",
-  note: "Wiktionary, following Ringe (2006) and NIL, reads it as *h₂e(h₁)s- ‘to burn, glow’ + the agent suffix *-tḗr — literally ‘the one that glows’. Even that is hedged (“apparently”); below the root, reconstruction goes opaque. The old idea that the word was borrowed from Semitic (Ištar) has been doubted since Buck; Wilson-Wright (2015) argues the loan ran the other way.",
+  note: "Probably ‘the glowing one’: *h₂e(h₁)s- ‘to burn, glow’ + the agent suffix *-tḗr (Wiktionary, following Ringe) — though even that reading is hedged. The old idea that the word was borrowed from Semitic Ištar has long been doubted; Wilson-Wright (2015) argues the loan ran the other way.",
   quote:
     "Apparently from *h₂e(h₁)s- (“to burn, glow”) + *-tḗr (agentive suffix). — Wiktionary",
   refs: [1, 2, 3, 4],
@@ -78,7 +79,7 @@ export const TREE: EtymNode = {
               lang: "English",
               gloss: "the silver penny; the pound",
               kind: "modern",
-              sense: "other",
+              sense: "shape",
               disputed: true,
               note: "Much-discussed, none of it decisive. The OED prefers *steorling ‘little star’, after stars on some Norman pennies — but etymonline notes starred coins were not especially common. Wiktionary carries *stēre ‘strong, stout’ as the alternative; ‘Easterling’ is “considered long exploded”. Watkins does not list it under the star root at all.",
               refs: [8],
@@ -115,7 +116,7 @@ export const TREE: EtymNode = {
                 {
                   id: "starn",
                   form: "starn",
-                  lang: "English (dialectal, Scots)",
+                  lang: "Scots",
                   gloss: "star",
                   kind: "modern",
                   sense: "star",
@@ -272,7 +273,7 @@ export const TREE: EtymNode = {
                   lang: "English",
                   gloss: "fraud without a special name (law)",
                   kind: "modern",
-                  sense: "other",
+                  sense: "shape",
                   note: "Star → star-spotted lizard → crafty person → stellionatus, the Roman jurists’ catch-all for fraud — still on the books in Scots law.",
                   refs: [25],
                 },
@@ -391,7 +392,7 @@ export const TREE: EtymNode = {
           kind: "modern",
           sense: "science",
           important: true,
-          note: "From ἀστεροειδής ‘star-like’; introduced by William Herschel — etymonline hedges “coined probably by” him; Wiktionary adds it was at Charles Burney Jr.’s suggestion.",
+          note: "Greek ἀστεροειδής ‘star-like’, introduced by William Herschel in 1802 for the new not-quite-planets — the word that looks like a modern coinage and is built of the oldest parts.",
           refs: [35],
         },
         {
@@ -563,7 +564,7 @@ export const TREE: EtymNode = {
                   kind: "modern",
                   sense: "science",
                   important: true,
-                  note: "An English formation astro- + -naut, after (not from) French astronautique, coined 1927 by J.-H. Rosny on the model of aéronautique. Percy Greg had named a fictional spaceship “Astronaut” in 1880.",
+                  note: "Literally ‘star-sailor’, astro- + -naut. Percy Greg had already named a fictional spaceship “Astronaut” in 1880 — half a century before anyone could be one.",
                   refs: [52],
                 },
               ],
@@ -661,7 +662,7 @@ export const TREE: EtymNode = {
                       sense: "name",
                       disputed: true,
                       important: true,
-                      note: "Two derivations, not independent: Persian ‘star’ (etymonline: “from Persian sitareh ‘star’ … or perhaps of Semitic origin”), or directly Akkadian Ištar (Wiktionary’s alternative) — and even the Persian route likely alludes to Ishtar. One level deeper it flips: Ištar’s own name has no Semitic etymology, and Wilson-Wright (2015) argues Semitic borrowed it from Indo-European.",
+                      note: "Persian ‘star’ (etymonline) or Akkadian Ištar (Wiktionary’s alternative) — and the two readings blur, since even a Persian star-name would honour the goddess. Deeper down it flips: Ištar’s own name has no Semitic etymology, and Wilson-Wright (2015) argues Semitic borrowed it from Indo-European.",
                       refs: [59, 4],
                     },
                   ],
@@ -754,5 +755,5 @@ export const NODE_BY_ID = nodeById();
 
 export function senseColor(n: EtymNode): string {
   if (n.kind === "root") return ROOT_COLOR;
-  return SENSES[n.sense ?? "other"].color;
+  return SENSES[n.sense ?? "star"].color;
 }

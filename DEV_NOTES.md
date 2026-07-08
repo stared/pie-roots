@@ -1,16 +1,14 @@
 # DEV_NOTES — representation, design, story
 
-## Backlog (v1 shipped 2026-07-08; iterate from here)
+## Backlog (v2 round done 2026-07-08; iterate from here)
 
 Verify visually with `pnpm dev` + `node scripts/shoot.mjs` (screenshots; URL env var overrides port).
 
-- Label de-collision — the dense Latin arm overlaps at low zoom; needs a polar relaxation pass (research the tree-of-tree approach, rewrite for polar).
-- Sector weighting — pure leaf-count leaves an angular gap top-left; consider min-angles for small arms or grouping the four single-word arms.
-- Star silhouette — current shape is radial-dendrogram-ish; decide how literal the star polygon should be (arm-length flare by subtree size?).
-- Fonts — Gothic 𐍃𐍄𐌰𐌹𐍂𐌽𐍉 and cuneiform 𒄩𒀸𒋼𒅕𒍝 render in system fallback; consider Noto webfonts (subset) or transliteration-first display.
-- Story camera — framing sometimes off-center; label-aware fit; honor prefers-reduced-motion.
+- Label de-collision — collisions remain at branch boundaries (Gothic × Latin arm; the astro- cluster; the Iranian chain near center); needs a polar relaxation pass.
+- Sector weighting — pure leaf-count leaves an angular gap bottom-left; consider min-angles for small arms or grouping the four single-word arms.
+- Star silhouette — current shape is organic-radial; decide how literal the star polygon should be (arm-length flare by subtree size?).
+- Fonts — exotic scripts now transliteration-first on the chart (see representation decisions); original scripts could get Noto webfont subsets in the detail panel.
 - Mobile — only a crude stacked layout so far; needs a real pass.
-- Story prose — v1 chapter texts are drafts; tighten voice, add the quiz interactivity (chapter 1 could be an actual clickable quiz).
 - Dataset — decide the pending §7 items in research.md (Esther/sterling in-or-out is IN as disputed for now; rare-words cutoff; Tara node kept as deity name); pull verbatim specialist quotes (the three deep dives discussed).
 - Poster path — static PNG render for r/dataisbeautiful, later.
 - Deploy — GitHub repo + Pages workflow + OG image, when ready.
@@ -31,40 +29,29 @@ Companion piece to [tree-of-tree](https://github.com/stared/tree-of-tree) (local
 Radial star layout: **root in the center**, **black background** (night sky), **nodes as star glyphs**.
 
 - **Eight arms** fall naturally out of the eight branches (research.md §3) — an **eight-pointed star**, which is also the Star of Ishtar's shape: a quiet in-joke given the loan controversy (research.md §4.3). Arm weights are asymmetric (Greek ≫ Armenian); options: (a) embrace uneven flares, (b) angle-budget arms by subtree size, (c) group the four single-word arms into a shared sector.
-- **Radial semantics**: root at center; generations as concentric rings (PIE → proto-languages → attested ancient → modern); **English words at the outer rim** = the points of the star. Time flows outward — like light leaving a star.
+- **Radial semantics (decided 2026-07-08)**: root at center; **no rings** — each generation steps outward by a slightly irregular, deterministic amount (per-node wobble), so nothing sits on a shared circle and arms with deeper histories reach further. Time still flows outward; the silhouette is organic.
+- **Links (decided)**: straight lines, parent to child.
 - **Node glyphs**: star shapes with meaning — e.g. number of points or fill by `kind` (reconstructed = hollow/dashed outline star, attested = filled, modern English = brightest/largest); `important` nodes could twinkle subtly. Root as the biggest star (or a black-hole-like void with a corona — it's a reconstruction, never attested).
-- **Palette on black**: sense colors must survive dark bg — a star-temperature palette is tempting (blue-white / white / yellow / orange / red like stellar classes: another pun, "stellar classification"). Text: off-white; avoid pure #fff on pure #000.
-- **Label placement**: radial layouts fight labels; options: labels along the ray angle (rotated, flipped on the left half) vs. horizontal with leader lines. Either way a label de-collision pass in polar coordinates will be needed.
-- **Open questions for the build round**: how literal the "star polygon" silhouette should be vs. organic radial tree; whether chapters rotate/zoom the star (polar camera framing); poster framing; whether the look-alike roots get tiny satellite mini-stars in a corner.
+- **Palette (decided)**: stellar temperatures only — every sense color is a color a star can be: blue / blue-white / white / gold / orange / ember red. No greens, no violets. Five sense buckets (the former "stranger paths" bucket was folded into its neighbors).
+- **Typography (decided)**: two-font system — serif for prose and word-forms, sans for every supporting voice (glosses, language tags, kickers, step numbers, legend, controls); real weight/size hierarchy; antialiased. On the chart: form = serif semibold, gloss = sans italic, language = sans small caps.
+- **Labels (decided)**: rotated along the ray, flipped past π. English words show the form alone; every non-English word carries its meaning (first gloss clause) and its language on the chart. A de-collision pass in polar coordinates is still needed (backlog).
+- **Open questions**: how literal the "star polygon" silhouette should be vs. organic radial tree; poster framing; whether the look-alike roots get tiny satellite mini-stars in a corner.
 
 ## Representation decisions
 
-- **Attribute, don't assert**: detail panels present claims with their owners ("Beekes derives…", "Wiktionary, following Ringe…"), never bare facts — all sources are human and fallible, and the chart should read as a map of scholarship, not of certainty.
+- **Attribute, don't assert — in the panel, never in the prose**: detail panels present claims with their owners ("Beekes derives…", "Wiktionary, following Ringe…") — all sources are human and fallible, and the chart should read as a map of scholarship, not of certainty. Story prose NEVER carries citation apparatus: it hedges plainly ("though even that reading is uncertain") and leaves the names to the panel.
+- **Exotic scripts are transliteration-first on the chart** (Gothic, cuneiform Hittite / Old Persian, Avestan — the `TRANSLIT_FIRST` set in StarChart): system fonts mangle them; the original script lives in the detail panel. Scripts that render well (Greek, Devanagari, Armenian, Arabic) stay original-first with a transliteration line.
 - **Disputed etymologies** (sterling, Esther): drawn as **dashed edges**, with the competing positions in the detail panel.
 - **The root's own origin** (research.md §4.3): **no drawn parent edge** — drawn edges mean *descent from the root*, nothing else. The hedged "glower" derivation and the Ishtar direction-of-borrowing controversy go into the center node's detail panel and the story chapters. Prose metaphor available: you can't see into a star's core — below the root, reconstruction goes opaque. (An "ember inside the star" visual — \*h₂eh₁s- as a faint glow inside the center — is a possible flourish, only if clearly marked as conjecture.)
 - **Unrelated look-alikes** (Balto-Slavic zvezda; stare/stark/starve; street/strategy; sterile): **prose-only chapter, no nodes, no visual gap** — same treatment as Baum in the tree-of-tree "Not all PIE trees are related" chapter.
 - **`important` nodes** (labeled when zoomed out, draft): star, stellar, constellation, Stella, asterisk, asteroid, disaster, astronomy, astrology, astronaut, Tara, Esther, Stern, staírnō, seren, ḫašterz, astł.- **Sense buckets → color** (by meaning, never by language), per the draft categories in research.md §3.
 - Rhetorical beat to keep for the look-alikes chapter: *asteroid* looks like it should be a false friend and is genuine; *stare* feels star-related and is not.
 
-## Story arc (draft — rethought 2026-07-08, second pass)
+## Story arc (v2 — rebuilt 2026-07-08, third pass; shipped in `src/content/steps/`)
 
-**Organizing principle: non-obviousness.** A word that visibly contains "star" (stardom, starfish, superstar, starlight…) teaches the reader nothing — no reveal, no story. The test for every chapter beat: *would you be surprised that this word does — or does not — have a star in it?* Two kinds of surprise carry the whole piece:
+**Two principles.**
 
-- **Hidden stars**: words people use daily with no idea a star is inside (disaster, étoile, Esther…).
-- **Fake stars**: words that loudly flash "star" and are unrelated (starve, strategy, Zoroaster…).
+1. **Non-obviousness** (survives from the second pass): the test for every beat is *would you be surprised that this word does — or does not — have a star in it?* Transparent star-compounds (stardom, starfish…) get no narrative time.
+2. **Walk through words, never talk about the walk** (new, after the v1 prose failed): each step is ONE paragraph that moves word → word → word. Titles name the content — actual words, or a concrete question ("Does Ishtar come from star?") — never the author's method or framing device ("a quiz, not a lecture" was the anti-pattern). No thesis-speak, no meta-commentary, no citations in the prose (hedges stay, plainly worded). The hook lives in the hero as a "Did you know…?" question over English words only.
 
-Transparent star-compounds stay in the chart as small leaves but get NO narrative time. Chapters still light cross-arm constellations (the mechanic from the first pass survives; the content criterion changes).
-
-1. **A quiz, not a lecture** (hook) — six words: *disaster, starve, étoile, strategy, Esther, stark*. Which contain a star? Every letter-based guess is wrong — the spelling misleads in both directions. That inversion is the thesis of the whole chart: kinship is descent, not resemblance.
-2. **The glower** — the center: \*h₂stḗr, probably 'the one that glows' (\*h₂eh₁s- 'burn' + \*-tḗr, hedged); below the root, reconstruction goes opaque.
-3. **Same word, unrecognizable** — cognates that sound nothing like star yet are the same word run through regular sound change: Hittite ḫašterz, Welsh seren, Armenian astł, Ossetian стъалы, Tocharian ścirye, Sanskrit tā́rā (the s- lost in a Vedic contraction). The arms of the star are disguises.
-4. **stella in disguise** — the Latin diminutive ('little star') hiding inside étoile and estrella, and re-entering English where nobody sees it: Estelle, the heraldic estoile, the ballet étoile.
-5. **The hidden stars of Greek** — disaster = dis-astro, 'ill-starred'; the astrolabe, 'star-taker'; asterisk, 'little star', whose Latin twin asteriscus now names a bone of the inner ear.
-6. **The strangest paths** — where the star ended up with no sky in sight: the pupil of the eye (Sanskrit tā́rā and Latin stēlla both); the starred gecko stelliō that became a knave and then stellionate, fraud, in Scots law; the stellarator, a machine for making a star.
-7. **Names with stars inside** — Esther: one name, two origins (Persian 'star' or Ishtar), and they are not independent; Tara: the deity name hides a star, the common given name (Irish Temair) does not — a double trap.
-8. **The Ishtar question** — the oldest attestation, cuneiform ḫašterz, and what its ḫ- proves: the family inherited the word, it is not Ishtar's; the live twist is the opposite direction — Semitic may have borrowed it from Indo-European (Wilson-Wright 2015). Unresolved.
-9. **Hidden constellation, wrong root** — desire and consider carry Latin's OTHER star word, sīdus 'constellation', inside them: star-meaning hidden in plain English, but a different family entirely. And Balto-Slavic shows the mirror case: same sky, different word (zvezda, root ĝhu̯oigʷ- 'shine').
-10. **Fake stars** — starve, stark, stern, stare, sterile, street, stratum, strategy, sitar, Zoroaster, poetaster: five different roots and suffixes, none of them star. The reverse trap closes the loop: asteroid looks coined-and-fake and is the genuine article.
-11. **Notes** — sources, method, credits.
-
-(Each chapter maps to a set of focus-node ids for the scrollytelling.)
+The shipped ten chapters: **The star in the centre** (root) → **From steorra to star** (Germanic; star as the least-changed word) → **seren, astł, tā́rā** (cognate disguises + the Tara double take) → **Latin's little star** (stēlla → étoile/estrella → Estelle/estoile) → **Is there a star in disaster?** (Greek: disaster, asterisk, astrolabe) → **The star in your eye** (pupil, stellionate, stellarator) → **Does Ishtar come from star?** (ḫašterz's ḫ-, Wilson-Wright reversal, Esther as coda) → **desire, consider — no relation** (sīdus; Balto-Slavic gwiazda) → **starve, stark, strategy** (look-alikes; asteroid as the reverse trap) → **Notes**.

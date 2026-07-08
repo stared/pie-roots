@@ -11,6 +11,10 @@ interface Props {
   selectedId: string | null;
 }
 
+// Scripts the system font stack renders poorly (Gothic, cuneiform, Avestan):
+// the chart shows the transliteration; the original lives in the detail panel.
+const TRANSLIT_FIRST = new Set(["got-stairno", "hit-hasterz", "op-star", "ae-star"]);
+
 function glyph(n: LaidNode): { d: string; hollow: boolean } {
   const kind = n.node.kind;
   if (kind === "root") return { d: starPath(8, 16, 7), hollow: false };
@@ -99,11 +103,7 @@ export default function StarChart({ focusIds, interactive, onSelect, selectedId 
     interactive || n.node.important || n.node.kind === "root" || isActiveFocused(n);
   const isActiveFocused = (n: LaidNode) => (activeIds ? activeIds.has(n.node.id) : false);
 
-  // In story mode the transform is our own zoomIdentity-based one (translate
-  // then scale semantics differ): compose as scale(k) then translate.
-  const g = interactive
-    ? `translate(${transform.x},${transform.y}) scale(${transform.k})`
-    : `scale(${transform.k}) translate(${transform.x},${transform.y})`;
+  const g = `translate(${transform.x},${transform.y}) scale(${transform.k})`;
 
   return (
     <svg
@@ -157,21 +157,53 @@ export default function StarChart({ focusIds, interactive, onSelect, selectedId 
                 strokeDasharray={hollow ? "2.5 2" : undefined}
               />
               {n.node.kind === "root" && <circle r={26} fill="none" stroke="#fff6d8" strokeOpacity={0.25} />}
-              {labelVisible(n) && n.node.kind !== "root" && (
-                <text
-                  className={`label ${n.node.kind === "modern" ? "label-modern" : ""}`}
-                  transform={`rotate(${flip ? rotate + 90 : rotate - 90})`}
-                  x={flip ? -14 : 14}
-                  dy="0.32em"
-                  textAnchor={flip ? "end" : "start"}
-                  fill={n.color}
-                >
-                  {n.node.form}
-                </text>
-              )}
+              {labelVisible(n) && n.node.kind !== "root" && (() => {
+                // English words speak for themselves; everything else carries
+                // its meaning and its language on the chart.
+                const english = n.node.lang === "English";
+                const gloss = n.node.gloss.split(/[;(]/)[0].trim();
+                const translitFirst = TRANSLIT_FIRST.has(n.node.id);
+                const lx = flip ? -14 : 14;
+                return (
+                  <text
+                    className={`label ${n.node.kind === "modern" ? "label-modern" : ""}`}
+                    transform={`rotate(${flip ? rotate + 90 : rotate - 90})`}
+                    x={lx}
+                    dy="0.32em"
+                    textAnchor={flip ? "end" : "start"}
+                  >
+                    <tspan className="label-form" fill={n.color}>
+                      {translitFirst ? n.node.translit : n.node.form}
+                    </tspan>
+                    {!english && !translitFirst && n.node.translit && (
+                      <tspan className="label-translit" x={lx} dy="1.3em">
+                        {n.node.translit}
+                      </tspan>
+                    )}
+                    {!english && (
+                      <tspan className="label-gloss" x={lx} dy="1.3em">
+                        {gloss}
+                      </tspan>
+                    )}
+                    {!english && (
+                      <tspan className="label-lang" x={lx} dy="1.4em">
+                        {n.node.lang}
+                      </tspan>
+                    )}
+                  </text>
+                );
+              })()}
               {n.node.kind === "root" && (
-                <text className="label label-root" y={38} textAnchor="middle" fill="#fff6d8">
-                  {n.node.form}
+                <text className="label label-root" y={38} textAnchor="middle">
+                  <tspan className="label-form" fill="#fff6d8">
+                    {n.node.form}
+                  </tspan>
+                  <tspan className="label-gloss" x={0} dy="1.4em">
+                    star
+                  </tspan>
+                  <tspan className="label-lang" x={0} dy="1.4em">
+                    Proto-Indo-European
+                  </tspan>
                 </text>
               )}
             </g>

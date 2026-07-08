@@ -37,14 +37,16 @@ export default function App() {
     <div className="app">
       <header className="hero">
         <div className="hero-text">
+          <p className="hero-kicker">an explorable etymology</p>
           <h1>
             The star of <em>star</em>
           </h1>
           <p className="hero-sub">
-            How one Proto-Indo-European word became <b>disaster</b>, <b>étoile</b>, <b>asterisk</b>, and
-            (maybe) <b>Esther</b>. An explorable etymology of <span className="root-word">*h₂stḗr</span>.
+            Did you know that <b>disaster</b>, <b>asterisk</b>, <b>Estelle</b> and (maybe){" "}
+            <b>Esther</b> all grew from the same root as the word <b>star</b>? One
+            Proto-Indo-European word, <span className="root-word">*h₂stḗr</span>.
           </p>
-          <p className="hero-scroll">scroll ↓</p>
+          <p className="hero-scroll">Scroll to follow the rays ↓</p>
         </div>
       </header>
 
@@ -58,6 +60,9 @@ export default function App() {
               }}
               className={`step ${i === activeStep ? "step-active" : ""}`}
             >
+              <p className="step-num">
+                {i + 1} · {STEPS.length}
+              </p>
               <h2>{s.title}</h2>
               <div dangerouslySetInnerHTML={{ __html: s.html }} />
               {i === STEPS.length - 1 && (
