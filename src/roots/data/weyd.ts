@@ -28,10 +28,12 @@ export const EYE_NODES: EyeNode[] = [
   { id: "envy", form: "envy", kind: "modern", a: -34, r: 450, parent: "invidia" },
   { id: "evidens", form: "ēvidēns", note: "plain to see · Latin", kind: "ancestor", a: -14, r: 345, parent: "video" },
   { id: "evidence", form: "evidence", kind: "modern", a: -24, r: 516, parent: "evidens" },
-  { id: "prudens", form: "prūdēns", note: "foreseeing, from prōvidēns · Latin", kind: "ancestor", a: -5, r: 345, parent: "video" },
-  { id: "prudent", form: "prudent", kind: "modern", a: -13, r: 560, parent: "prudens" },
+  { id: "providere", form: "prōvidēre", note: "to foresee · Latin", kind: "ancestor", a: -5, r: 330, parent: "video" },
+  { id: "provide", form: "provide", kind: "modern", a: -1, r: 485, parent: "providere" },
+  { id: "prudens", form: "prūdēns", note: "foreseeing · Latin", kind: "ancestor", a: -9, r: 430, parent: "providere" },
+  { id: "prudent", form: "prudent", kind: "modern", a: -15, r: 560, parent: "prudens" },
   { id: "visio", form: "vīsiō", note: "sight · Latin", kind: "ancestor", a: 4, r: 330, parent: "video" },
-  { id: "vision", form: "vision", kind: "modern", a: -1, r: 570, parent: "visio" },
+  { id: "vision", form: "vision", kind: "modern", a: 2, r: 575, parent: "visio" },
   { id: "veoir", form: "veoir", note: "to see · Old French", kind: "ancestor", a: 20, r: 280, parent: "video" },
   { id: "view", form: "view", kind: "modern", a: 13, r: 470, parent: "veoir" },
   { id: "avis", form: "avis", note: "opinion: (ce m’est) a vis · Old French", kind: "ancestor", a: 28, r: 330, parent: "veoir" },
@@ -43,9 +45,11 @@ export const EYE_NODES: EyeNode[] = [
   { id: "history", form: "history", kind: "modern", a: -58, r: 400, parent: "historia" },
   { id: "estoire", form: "estoire", note: "Old French", kind: "ancestor", a: -46, r: 330, parent: "historia", flip: true },
   { id: "story", form: "story", kind: "modern", a: -46, r: 360, parent: "estoire" },
-  { id: "eidos", form: "εἶδος", note: "the seen form · Greek", kind: "ancestor", a: -76, r: 240 },
-  { id: "idea", form: "idea", kind: "modern", a: -84, r: 340, parent: "eidos" },
-  { id: "idol", form: "idol", kind: "modern", a: -72, r: 390, parent: "eidos" },
+  // idea and idol: two different formations on the same seen-stem, side by side
+  { id: "idea_gr", form: "ἰδέα", note: "form, pattern · Greek", kind: "ancestor", a: -85, r: 235 },
+  { id: "idea", form: "idea", kind: "modern", a: -89, r: 330, parent: "idea_gr" },
+  { id: "eidolon", form: "εἴδωλον", note: "image, phantom · Greek", kind: "ancestor", a: -73, r: 285 },
+  { id: "idol", form: "idol", kind: "modern", a: -77, r: 350, parent: "eidolon" },
 
   // Germanic arm (left, inherited): the knowing side
   { id: "witana", form: "*witaną", note: "to know · Proto-Germanic", kind: "proto", a: 198, r: 160 },
@@ -59,8 +63,8 @@ export const EYE_NODES: EyeNode[] = [
   { id: "guide", form: "guide", kind: "modern", a: 210, r: 520, parent: "guider" },
   { id: "wisaz", form: "*wīsaz", note: "knowing · Proto-Germanic", kind: "proto", a: 158, r: 180 },
   { id: "wise", form: "wise", kind: "modern", a: 150, r: 440, parent: "wisaz" },
-  { id: "wizard", form: "wizard", kind: "modern", a: 163, r: 500, parent: "wisaz" },
-  { id: "wisa", form: "wīsa", note: "manner · Frankish", kind: "proto", a: 138, r: 280, parent: "wisaz" },
+  { id: "wizard", form: "wizard", kind: "modern", a: 163, r: 500, parent: "wise" },
+  { id: "wisa", form: "*wīsa", note: "manner · Frankish", kind: "proto", a: 138, r: 280, parent: "wisaz" },
   { id: "guise", form: "guise", kind: "modern", a: 136, r: 420, parent: "wisa", dashed: true },
 
   // single-fruit branches

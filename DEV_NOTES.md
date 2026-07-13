@@ -30,7 +30,8 @@ Four candidate roots (data from `root_trees.md`, exploration tier) — \*weyd-, 
 - *Contrast hierarchy is strict*: words, links, and dots must clearly dominate; guides whisper. No "grayscale hell" where content and decoration blur together.
 - *One word per node.* No `cycle · encyclopedia` combo labels. Prune repetitive same-stem derivatives (view but not interview; ban but not banns).
 - *Linking forms are NODES, not footnotes.* `videō → invidia → envy` is drawn as a chain; a note like "← invidia…" under an English word is wrong. Notes carry only the gloss · language of the node's own form; English leaves stand bare.
-- *No `?` in word forms* — a dashed link alone marks a disputed step.
+- *No `?` in word forms or notes* — a dashed link alone marks a disputed step.
+- *Same surface, different source must be legible.* When two English words share a visible element but descend from different forms (teleology's *tele-* = τέλος vs telephone's *tele-* = τῆλε; idea = ἰδέα vs idol = εἴδωλον), each gets its own source node, the pair sits adjacent, and the dek names the split — otherwise the chart reads as inconsistent.
 - *Links are d3 `linkRadial`/canopy curves* — no hand-rolled midpoint pulls (they make weird S-turns). *No line crossings*; verify every change with screenshots (`pnpm roots:shoot`).
 
 Stack: React + TypeScript, d3-shape for link curves, typed data modules with hand-tuned positions in `src/roots/data/`, second Vite entry (`roots.html`, hash-switched views `#see #speak #sit #turn`), type-checked by `tsc -b`. Run: `pnpm roots`.

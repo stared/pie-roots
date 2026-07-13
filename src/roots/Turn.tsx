@@ -1,4 +1,4 @@
-import { TURN_NODES, RING, type TurnNode } from "./data/kwel";
+import { TURN_NODES, RING, ringR, type TurnNode } from "./data/kwel";
 import { polar, radialPath } from "./types";
 
 const CX = 830, CY = 790;
@@ -8,7 +8,7 @@ interface Laid extends TurnNode { x: number; y: number }
 
 const laid: Record<string, Laid> = {};
 for (const n of TURN_NODES) {
-  const [x, y] = polar(CX, CY, n.a, RING[n.d]);
+  const [x, y] = polar(CX, CY, n.a, ringR(n.d));
   laid[n.id] = { ...n, x, y };
 }
 
@@ -24,8 +24,8 @@ export default function Turn() {
       {/* spokes */}
       <g transform={`translate(${CX} ${CY})`}>
         {nodes.map(n => {
-          const [pa, pr] = n.parent ? [laid[n.parent].a, RING[laid[n.parent].d]] : [n.a, R0];
-          return <path key={n.id} d={radialPath(pa, pr, n.a, RING[n.d])} fill="none"
+          const [pa, pr] = n.parent ? [laid[n.parent].a, ringR(laid[n.parent].d)] : [n.a, R0];
+          return <path key={n.id} d={radialPath(pa, pr, n.a, ringR(n.d))} fill="none"
             className="t-link" strokeDasharray={n.dashed ? "5 4" : undefined} />;
         })}
       </g>

@@ -1,7 +1,9 @@
 // *kʷel- 'to turn'. Data from root_trees.md (exploration tier).
 // The layout is a wheel made of words alone: the root at the hub, PIE
 // formations on an inner ring, ancestors on a middle ring, English words on
-// the outer ring. a = screen degrees; d = ring index.
+// the outer ring. a = screen degrees; d = ring index (fractional allowed).
+// The two tele-'s are different Greek words (τέλος vs τῆλε) — they sit
+// adjacent so the split reads as deliberate, and the dek names it.
 
 export interface TurnNode {
   id: string;
@@ -10,13 +12,19 @@ export interface TurnNode {
   note?: string;
   kind: "proto" | "ancestor" | "modern";
   a: number;
-  d: 1 | 2 | 3;
+  d: number;
   parent?: string;
   dashed?: boolean;
 }
 
 /** radius per ring */
 export const RING = [0, 250, 470, 680];
+
+/** radius for a (possibly fractional) ring index */
+export const ringR = (d: number): number => {
+  const i = Math.min(Math.floor(d), RING.length - 2);
+  return RING[i] + (RING[i + 1] - RING[i]) * (d - i);
+};
 
 export const TURN_NODES: TurnNode[] = [
   // the reduplicated 'turner-turner': the word says 'turn' twice
@@ -33,7 +41,8 @@ export const TURN_NODES: TurnNode[] = [
   { id: "kwolo", form: "*kʷól(h₁)-o-", note: "the plain o-grade: one turn · PIE", kind: "proto", a: 96, d: 1 },
   { id: "polos", form: "πόλος", note: "pivot, axis · Greek", kind: "ancestor", a: 66, d: 2, parent: "kwolo" },
   { id: "pole", form: "pole", kind: "modern", a: 58, d: 3, parent: "polos" },
-  { id: "pulley", form: "pulley", kind: "modern", a: 74, d: 3, parent: "polos" },
+  { id: "polidion", form: "πολίδιον", note: "little pivot · Greek", kind: "ancestor", a: 74, d: 2.5, parent: "polos", dashed: true },
+  { id: "pulley", form: "pulley", kind: "modern", a: 74, d: 3, parent: "polidion" },
   { id: "kolo", form: "koło", note: "wheel, circle · Polish", kind: "ancestor", a: 96, d: 2, parent: "kwolo" },
   { id: "kolej", form: "kolej", note: "wheel-track → railway · Polish", kind: "ancestor", a: 114, d: 2, parent: "kwolo" },
 
@@ -46,11 +55,12 @@ export const TURN_NODES: TurnNode[] = [
   { id: "boukolos", form: "βουκόλος", note: "cattle-mover · Greek", kind: "ancestor", a: 190, d: 1 },
   { id: "bucolic", form: "bucolic", kind: "modern", a: 190, d: 2, parent: "boukolos" },
 
-  // disputed
-  { id: "kwolso", form: "*kʷol-so-", note: "the neck: what the head turns on? · PIE", kind: "proto", a: 217, d: 1, dashed: true },
-  { id: "collar", form: "collar", kind: "modern", a: 217, d: 2, parent: "kwolso", dashed: true },
-  { id: "telos", form: "τέλος", note: "the turn of the course → completion? · Greek", kind: "ancestor", a: 27, d: 1, dashed: true },
-  { id: "teleology", form: "teleology", kind: "modern", a: 27, d: 2, parent: "telos", dashed: true },
-  { id: "tele", form: "τῆλε", note: "far — a locative of the turning root? · Greek", kind: "ancestor", a: -43, d: 1, dashed: true },
-  { id: "telephone", form: "telephone", kind: "modern", a: -47, d: 2, parent: "tele", dashed: true },
+  // disputed — the two tele-'s side by side: two different Greek words
+  { id: "tele", form: "τῆλε", note: "far · Greek", kind: "ancestor", a: 8, d: 1, dashed: true },
+  { id: "telephone", form: "telephone", kind: "modern", a: 8, d: 2, parent: "tele" },
+  { id: "telos", form: "τέλος", note: "the turn of the course: completion · Greek", kind: "ancestor", a: 27, d: 1, dashed: true },
+  { id: "teleology", form: "teleology", kind: "modern", a: 27, d: 2, parent: "telos" },
+  { id: "kwolso", form: "*kʷol-so-", note: "the neck — what the head turns on · PIE", kind: "proto", a: 217, d: 1, dashed: true },
+  { id: "collum", form: "collum", note: "neck · Latin", kind: "ancestor", a: 217, d: 2, parent: "kwolso" },
+  { id: "collar", form: "collar", kind: "modern", a: 217, d: 3, parent: "collum" },
 ];
