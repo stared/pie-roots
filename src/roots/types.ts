@@ -5,6 +5,25 @@ import { linkRadial } from "d3-shape";
 
 export const rad = (deg: number): number => (deg * Math.PI) / 180;
 
+/** A chart word: gloss and language live in separate fields (data),
+ *  and are composed into the "gloss · language" note line only here
+ *  (presentation). English words carry neither. */
+export interface WordNode {
+  id: string;
+  form: string;
+  gloss?: string;
+  lang?: string;
+  kind: "proto" | "ancestor" | "modern";
+  parent?: string;
+  /** the step from the parent is uncertain in the sources */
+  dashed?: boolean;
+}
+
+export const noteLine = (n: { gloss?: string; lang?: string }): string | undefined => {
+  const line = [n.gloss, n.lang].filter(Boolean).join(" · ");
+  return line || undefined;
+};
+
 export const polar = (cx: number, cy: number, deg: number, r: number): [number, number] => [
   cx + Math.cos(rad(deg)) * r,
   cy + Math.sin(rad(deg)) * r,

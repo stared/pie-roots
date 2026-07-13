@@ -1,75 +1,73 @@
 // *weyd- 'to see → to know'. Data from root_trees.md (exploration tier).
 // One word per node; every non-obvious English word gets its linking form as
 // a real intermediate NODE (videō → invidia → envy), never as a footnote.
-// Notes are only the gloss · language of the node's own form. Angles/radii
-// are hand-tuned; modern words are clamped to the almond silhouette.
+// gloss and lang are separate fields — the "gloss · language" line is
+// composed at render time. Angles/radii are hand-tuned; modern words are
+// clamped to the almond silhouette.
 
-export type EyeKind = "ancestor" | "proto" | "modern";
+import type { WordNode } from "../types";
 
-export interface EyeNode {
-  id: string;
-  form: string;
-  /** gloss · language of this form — non-English forms only */
-  note?: string;
-  kind: EyeKind;
+export interface EyeNode extends WordNode {
   a: number;
   r: number;
-  parent?: string;
-  /** loan or disputed link */
-  dashed?: boolean;
   /** force the label to the other side of the node */
   flip?: boolean;
 }
 
 export const EYE_NODES: EyeNode[] = [
   // Latin arm (right): the seeing side
-  { id: "video", form: "videō", note: "to see · Latin", kind: "ancestor", a: 4, r: 180 },
-  { id: "invidia", form: "invidia", note: "a look cast upon · Latin", kind: "ancestor", a: -24, r: 330, parent: "video" },
-  { id: "envy", form: "envy", kind: "modern", a: -34, r: 450, parent: "invidia" },
-  { id: "evidens", form: "ēvidēns", note: "plain to see · Latin", kind: "ancestor", a: -14, r: 345, parent: "video" },
+  { id: "video", form: "videō", gloss: "to see", lang: "Latin", kind: "ancestor", a: 4, r: 180 },
+  { id: "invidere", form: "invidēre", gloss: "to look askance at", lang: "Latin", kind: "ancestor", a: -26, r: 250, parent: "video" },
+  { id: "invidia", form: "invidia", gloss: "envy, ill will", lang: "Latin", kind: "ancestor", a: -26, r: 335, parent: "invidere" },
+  { id: "envy", form: "envy", kind: "modern", a: -37, r: 450, parent: "invidia" },
+  { id: "evidens", form: "ēvidēns", gloss: "plain to see", lang: "Latin", kind: "ancestor", a: -14, r: 345, parent: "video" },
   { id: "evidence", form: "evidence", kind: "modern", a: -24, r: 516, parent: "evidens" },
-  { id: "providere", form: "prōvidēre", note: "to foresee · Latin", kind: "ancestor", a: -5, r: 330, parent: "video" },
+  { id: "providere", form: "prōvidēre", gloss: "to foresee", lang: "Latin", kind: "ancestor", a: -5, r: 330, parent: "video" },
   { id: "provide", form: "provide", kind: "modern", a: -1, r: 485, parent: "providere" },
-  { id: "prudens", form: "prūdēns", note: "foreseeing · Latin", kind: "ancestor", a: -9, r: 430, parent: "providere" },
+  { id: "prudens", form: "prūdēns", gloss: "foreseeing", lang: "Latin", kind: "ancestor", a: -9, r: 430, parent: "providere" },
   { id: "prudent", form: "prudent", kind: "modern", a: -15, r: 560, parent: "prudens" },
-  { id: "visio", form: "vīsiō", note: "sight · Latin", kind: "ancestor", a: 4, r: 330, parent: "video" },
+  { id: "visio", form: "vīsiō", gloss: "sight", lang: "Latin", kind: "ancestor", a: 4, r: 330, parent: "video" },
   { id: "vision", form: "vision", kind: "modern", a: 2, r: 575, parent: "visio" },
-  { id: "veoir", form: "veoir", note: "to see · Old French", kind: "ancestor", a: 20, r: 280, parent: "video" },
-  { id: "view", form: "view", kind: "modern", a: 13, r: 470, parent: "veoir" },
-  { id: "avis", form: "avis", note: "opinion: (ce m’est) a vis · Old French", kind: "ancestor", a: 28, r: 330, parent: "veoir" },
+  { id: "veoir", form: "veoir", gloss: "to see", lang: "Old French", kind: "ancestor", a: 20, r: 280, parent: "video" },
+  { id: "veue", form: "veue", gloss: "sight", lang: "Old French", kind: "ancestor", a: 18, r: 410, parent: "veoir" },
+  { id: "view", form: "view", kind: "modern", a: 13, r: 470, parent: "veue" },
+  { id: "visus", form: "vīsus", gloss: "a seeing", lang: "Latin", kind: "ancestor", a: 36, r: 240, parent: "video" },
+  { id: "avis", form: "avis", gloss: "opinion: (ce m’est) a vis", lang: "Old French", kind: "ancestor", a: 29, r: 350, parent: "visus" },
   { id: "advice", form: "advice", kind: "modern", a: 28, r: 490, parent: "avis" },
 
   // Greek arm (upper right)
-  { id: "histor", form: "ἵστωρ", note: "one who has seen · Greek", kind: "ancestor", a: -55, r: 150 },
-  { id: "historia", form: "historia", note: "inquiry · Greek → Latin", kind: "ancestor", a: -55, r: 255, parent: "histor" },
+  { id: "histor", form: "ἵστωρ", gloss: "one who has seen", lang: "Greek", kind: "ancestor", a: -55, r: 150 },
+  { id: "historia", form: "historia", gloss: "inquiry", lang: "Latin", kind: "ancestor", a: -55, r: 255, parent: "histor" },
   { id: "history", form: "history", kind: "modern", a: -58, r: 400, parent: "historia" },
-  { id: "estoire", form: "estoire", note: "Old French", kind: "ancestor", a: -46, r: 330, parent: "historia", flip: true },
+  { id: "estoire", form: "estoire", lang: "Old French", kind: "ancestor", a: -46, r: 330, parent: "historia", flip: true },
   { id: "story", form: "story", kind: "modern", a: -46, r: 360, parent: "estoire" },
   // idea and idol: two different formations on the same seen-stem, side by side
-  { id: "idea_gr", form: "ἰδέα", note: "form, pattern · Greek", kind: "ancestor", a: -85, r: 235 },
+  { id: "idea_gr", form: "ἰδέα", gloss: "form, pattern", lang: "Greek", kind: "ancestor", a: -85, r: 235 },
   { id: "idea", form: "idea", kind: "modern", a: -89, r: 330, parent: "idea_gr" },
-  { id: "eidolon", form: "εἴδωλον", note: "image, phantom · Greek", kind: "ancestor", a: -73, r: 285 },
+  { id: "eidolon", form: "εἴδωλον", gloss: "image, phantom", lang: "Greek", kind: "ancestor", a: -73, r: 285 },
   { id: "idol", form: "idol", kind: "modern", a: -77, r: 350, parent: "eidolon" },
 
-  // Germanic arm (left, inherited): the knowing side
-  { id: "witana", form: "*witaną", note: "to know · Proto-Germanic", kind: "proto", a: 198, r: 160 },
-  { id: "witan", form: "witan", note: "to know · Old English", kind: "ancestor", a: 186, r: 265, parent: "witana" },
+  // Germanic arm (left, inherited): the knowing side — and its near-twin,
+  // *wītaną 'to blame' (long ī), the same-surface sibling of *witaną 'to know'
+  { id: "witana", form: "*witaną", gloss: "to know", lang: "Proto-Germanic", kind: "proto", a: 198, r: 160 },
+  { id: "witan", form: "witan", gloss: "to know", lang: "Old English", kind: "ancestor", a: 186, r: 265, parent: "witana" },
   { id: "wit", form: "wit", kind: "modern", a: 201, r: 390, parent: "witan" },
   { id: "witness", form: "witness", kind: "modern", a: 184, r: 490, parent: "witan" },
-  { id: "aetwitan", form: "ǣtwītan", note: "to taunt · Old English", kind: "ancestor", a: 172, r: 380, parent: "witan" },
-  { id: "twit", form: "twit", kind: "modern", a: 172, r: 560, parent: "aetwitan" },
-  { id: "fwitan", form: "*wītan", note: "to show the way · Frankish", kind: "proto", a: 205, r: 280, parent: "witana" },
-  { id: "guider", form: "guider", note: "Old French", kind: "ancestor", a: 208, r: 400, parent: "fwitan", dashed: true },
+  { id: "witanao", form: "*wītaną", gloss: "to blame, punish", lang: "Proto-Germanic", kind: "proto", a: 218, r: 255 },
+  { id: "aetwitan", form: "ǣtwītan", gloss: "to taunt", lang: "Old English", kind: "ancestor", a: 225, r: 300, parent: "witanao" },
+  { id: "twit", form: "twit", kind: "modern", a: 228, r: 460, parent: "aetwitan" },
+  { id: "fwitan", form: "*wītan", gloss: "to show the way", lang: "Frankish", kind: "proto", a: 205, r: 280, parent: "witanao" },
+  { id: "guider", form: "guider", lang: "Old French", kind: "ancestor", a: 208, r: 400, parent: "fwitan" },
   { id: "guide", form: "guide", kind: "modern", a: 210, r: 520, parent: "guider" },
-  { id: "wisaz", form: "*wīsaz", note: "knowing · Proto-Germanic", kind: "proto", a: 158, r: 180 },
+  { id: "wisaz", form: "*wīsaz", gloss: "knowing", lang: "Proto-Germanic", kind: "proto", a: 158, r: 180 },
   { id: "wise", form: "wise", kind: "modern", a: 150, r: 440, parent: "wisaz" },
   { id: "wizard", form: "wizard", kind: "modern", a: 163, r: 500, parent: "wise" },
-  { id: "wisa", form: "*wīsa", note: "manner · Frankish", kind: "proto", a: 138, r: 280, parent: "wisaz" },
-  { id: "guise", form: "guise", kind: "modern", a: 136, r: 420, parent: "wisa", dashed: true },
+  { id: "wisa", form: "*wīsa", gloss: "manner", lang: "Frankish", kind: "proto", a: 138, r: 280 },
+  { id: "guise", form: "guise", kind: "modern", a: 136, r: 420, parent: "wisa" },
 
   // single-fruit branches
-  { id: "druwits", form: "*dru-wits", note: "oak-knower · Proto-Celtic", kind: "proto", a: 64, r: 180 },
+  { id: "druwits", form: "*dru-wits", gloss: "oak-knower", lang: "Proto-Celtic", kind: "proto", a: 64, r: 180 },
   { id: "druid", form: "druid", kind: "modern", a: 66, r: 340, parent: "druwits" },
-  { id: "vedas", form: "véda", note: "knowledge · Sanskrit", kind: "ancestor", a: 110, r: 196 },
+  { id: "vedas", form: "véda", gloss: "knowledge", lang: "Sanskrit", kind: "ancestor", a: 110, r: 196 },
   { id: "veda", form: "Veda", kind: "modern", a: 108, r: 330, parent: "vedas" },
 ];

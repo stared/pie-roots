@@ -1,5 +1,5 @@
 import { TURN_NODES, RING, ringR, type TurnNode } from "./data/kwel";
-import { polar, radialPath } from "./types";
+import { noteLine, polar, radialPath } from "./types";
 
 const CX = 830, CY = 790;
 const R0 = 92; // links leave the hub from here
@@ -43,7 +43,7 @@ export default function Turn() {
               : <circle cx={n.x} cy={n.y} r={4} fill="none" className="t-ring"
                   strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />}
             <text x={tx} y={n.y - 9} textAnchor={anchor} className={modern ? "t-word" : "t-anc"}>{n.form}</text>
-            {n.note && <text x={tx} y={n.y + 18} textAnchor={anchor} className="t-note">{n.note}</text>}
+            {noteLine(n) && <text x={tx} y={n.y + 18} textAnchor={anchor} className="t-note">{noteLine(n)}</text>}
           </g>
         );
       })}

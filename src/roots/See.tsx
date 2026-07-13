@@ -1,5 +1,5 @@
 import { EYE_NODES, type EyeNode } from "./data/weyd";
-import { polar, rad, radialPath } from "./types";
+import { noteLine, polar, rad, radialPath } from "./types";
 
 const CX = 850, CY = 620;
 const A = 780, B = 400; // almond half-axes: the silhouette the words trace
@@ -58,8 +58,8 @@ export default function See() {
                   strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />}
             <text x={tx} y={n.y + dy} textAnchor={anchor}
               className={modern ? "t-word" : "t-anc"}>{n.form}</text>
-            {n.note && (
-              <text x={tx} y={n.y + dy + (above ? -16 : 17)} textAnchor={anchor} className="t-note">{n.note}</text>
+            {noteLine(n) && (
+              <text x={tx} y={n.y + dy + (above ? -16 : 17)} textAnchor={anchor} className="t-note">{noteLine(n)}</text>
             )}
           </g>
         );

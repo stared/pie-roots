@@ -1,4 +1,5 @@
 import { SED_NODES, ROOT_X, ROOT_Y, STRATA, LEAF_Y, ERAS, type SedNode } from "./data/sed";
+import { noteLine } from "./types";
 
 interface Laid extends SedNode { y: number }
 
@@ -30,7 +31,7 @@ export default function Sit() {
           <circle cx={n.x} cy={n.y} r={4} fill="none" className="t-ring"
             strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />
           <text x={n.x} y={n.y - 12} textAnchor="middle" className="t-anc">{n.form}</text>
-          {n.note && <text x={n.x} y={n.y + 22} textAnchor="middle" className="t-note">{n.note}</text>}
+          {noteLine(n) && <text x={n.x} y={n.y + 22} textAnchor="middle" className="t-note">{noteLine(n)}</text>}
         </g>
       ))}
 

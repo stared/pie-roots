@@ -31,6 +31,9 @@ Four candidate roots (data from `root_trees.md`, exploration tier) — \*weyd-, 
 - *One word per node.* No `cycle · encyclopedia` combo labels. Prune repetitive same-stem derivatives (view but not interview; ban but not banns).
 - *Linking forms are NODES, not footnotes.* `videō → invidia → envy` is drawn as a chain; a note like "← invidia…" under an English word is wrong. Notes carry only the gloss · language of the node's own form; English leaves stand bare.
 - *No `?` in word forms or notes* — a dashed link alone marks a disputed step.
+- *Dashed means the STEP is uncertain in the sources* — not mere borrowing. Loans drawn flatly by Wiktionary (guide, guise, historia, Veda) are solid; dashes mark hedged derivations (fās, bandito, niche, the two tele-'s, *kʷol-so-, *πολίδιον→pulley). The Hades line is dashed for a different reason: it is not a descent edge at all.
+- *Transmission steps are drawn only when the surface changed en route.* Modern learned words connect straight to their classical formation (teleology < τέλος, ephedrine < ἐφέδρα, symphony < φωνή); Latin/French carrier steps appear only where the word visibly transformed (blame's blasphēmāre→blasmer, anthem's antefn, chair's chaiere).
+- *Data is structured*: every node carries `gloss` and `lang` as separate fields; the "gloss · language" note line is composed at render time (`noteLine` in types.ts), never baked into data strings.
 - *Same surface, different source must be legible.* When two English words share a visible element but descend from different forms (teleology's *tele-* = τέλος vs telephone's *tele-* = τῆλε; idea = ἰδέα vs idol = εἴδωλον), each gets its own source node, the pair sits adjacent, and the dek names the split — otherwise the chart reads as inconsistent.
 - *Links are d3 `linkRadial`/canopy curves* — no hand-rolled midpoint pulls (they make weird S-turns). *No line crossings*; verify every change with screenshots (`pnpm roots:shoot`).
 

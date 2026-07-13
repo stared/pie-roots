@@ -1,5 +1,5 @@
 import { RIPPLE_NODES, GEN, STUBS, type RippleNode } from "./data/bheh2";
-import { polar, arcPath, radialPath } from "./types";
+import { noteLine, polar, arcPath, radialPath } from "./types";
 
 const OX = 335, OY = 820;
 const R0 = 90; // links leave the root from here
@@ -41,9 +41,9 @@ export default function Speak() {
         const [x, y] = polar(OX, OY, s.a, radius(s.g));
         const [x0, y0] = polar(OX, OY, s.a, R0);
         return (
-          <g key={s.text}>
+          <g key={`${s.form}-${s.lang}`}>
             <line x1={x0} y1={y0} x2={x} y2={y} className="t-link" strokeDasharray="3 6" />
-            <text x={x - 8} y={y + 4} textAnchor="end" className="t-note">{s.text}</text>
+            <text x={x - 8} y={y + 4} textAnchor="end" className="t-note">{`${s.form} ‘${s.gloss}’ · ${s.lang}`}</text>
           </g>
         );
       })}
@@ -58,7 +58,7 @@ export default function Speak() {
               : <circle cx={n.x} cy={n.y} r={4} fill="none" className="t-ring"
                   strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />}
             <text x={n.x + 11} y={n.y - 8} className={modern ? "t-word" : "t-anc"}>{n.form}</text>
-            {n.note && <text x={n.x + 11} y={n.y + 17} className="t-note">{n.note}</text>}
+            {noteLine(n) && <text x={n.x + 11} y={n.y + 17} className="t-note">{noteLine(n)}</text>}
           </g>
         );
       })}
