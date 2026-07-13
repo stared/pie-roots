@@ -15,6 +15,28 @@ Verify visually with `pnpm dev` + `node scripts/shoot.mjs` (screenshots; URL env
 
 Everything about *how the data is shown* lives here. `research.md` is data only: etymological facts, epistemic status, sources.
 
+## Root explorations (`src/roots/`, settled 2026-07-13)
+
+Four candidate roots (data from `root_trees.md`, exploration tier) — \*weyd-, \*bʰeh₂-, \*sed-, \*kʷel- — each with a **shaped layout carried by word placement plus one subtle structural guide**:
+
+- `See.tsx` — \*weyd-: root at the pupil's place, English words clamped to the almond silhouette (drawn as one faint outline); Ἀΐδης → Hades sits just outside the lower rim with **no link into the eye** (the Unseen); guide/guise re-enter on dashed loan links.
+- `Speak.tsx` — \*bʰeh₂-: a fan rippling rightward, faint arcs marking the generations; dead branches as dashed stubs; the 'shine' homophone lives in the dek only.
+- `Sit.tsx` — \*sed-: **time strata** — every node sits at its era's depth (PIE / proto-languages / antiquity / middle ages / English), faint hairlines between eras with small-caps era labels in each band's lower-left; English words rest as bare leaves in the bottom stratum.
+- `Turn.tsx` — \*kʷel-: faint concentric rims; PIE formations inner, ancestors middle, English words on the outer rim.
+
+**Chart rules (Piotr, 2026-07-12/13, hard-won over several rounds):**
+
+- *Scenery is fluff, layout is fair game.* No painted props (eyeball fill, speaker glyph, arches). **One subtle guide structure is welcome** — faint rims, ripple arcs, strata hairlines, an almond outline (`.t-guide`), never filled.
+- *Contrast hierarchy is strict*: words, links, and dots must clearly dominate; guides whisper. No "grayscale hell" where content and decoration blur together.
+- *One word per node.* No `cycle · encyclopedia` combo labels. Prune repetitive same-stem derivatives (view but not interview; ban but not banns).
+- *Linking forms are NODES, not footnotes.* `videō → invidia → envy` is drawn as a chain; a note like "← invidia…" under an English word is wrong. Notes carry only the gloss · language of the node's own form; English leaves stand bare.
+- *No `?` in word forms* — a dashed link alone marks a disputed step.
+- *Links are d3 `linkRadial`/canopy curves* — no hand-rolled midpoint pulls (they make weird S-turns). *No line crossings*; verify every change with screenshots (`pnpm roots:shoot`).
+
+Stack: React + TypeScript, d3-shape for link curves, typed data modules with hand-tuned positions in `src/roots/data/`, second Vite entry (`roots.html`, hash-switched views `#see #speak #sit #turn`), type-checked by `tsc -b`. Run: `pnpm roots`.
+
+**Subtraction principle (Piotr, 2026-07-12): perfectionism is when nothing can be subtracted.** No decorative texture, no captions narrating the diagram, no per-word drift explainers on English words — the note line is reserved for non-English forms (gloss · language, per the chart-label rule). Modern English words stand bare.
+
 ## Relationship to tree-of-tree
 
 Companion piece to [tree-of-tree](https://github.com/stared/tree-of-tree) (local checkout: `../tree-of-tree-claude`, live at https://p.migdal.pl/tree-of-tree/). The tree of 'tree' was tree-shaped; the star of 'star' is star-shaped. Fresh codebase (decided — no code fork), but mirror its proven contracts:
@@ -54,4 +76,6 @@ Radial star layout: **root in the center**, **black background** (night sky), **
 1. **Non-obviousness** (survives from the second pass): the test for every beat is *would you be surprised that this word does — or does not — have a star in it?* Transparent star-compounds (stardom, starfish…) get no narrative time.
 2. **Walk through words, never talk about the walk** (new, after the v1 prose failed): each step is ONE paragraph that moves word → word → word. Titles name the content — actual words, or a concrete question ("Does Ishtar come from star?") — never the author's method or framing device ("a quiz, not a lecture" was the anti-pattern). No thesis-speak, no meta-commentary, no citations in the prose (hedges stay, plainly worded). The hook lives in the hero as a "Did you know…?" question over English words only.
 
-The shipped ten chapters: **The star in the centre** (root) → **From steorra to star** (Germanic; star as the least-changed word) → **seren, astł, tā́rā** (cognate disguises + the Tara double take) → **Latin's little star** (stēlla → étoile/estrella → Estelle/estoile) → **Is there a star in disaster?** (Greek: disaster, asterisk, astrolabe) → **The star in your eye** (pupil, stellionate, stellarator) → **Does Ishtar come from star?** (ḫašterz's ḫ-, Wilson-Wright reversal, Esther as coda) → **desire, consider — no relation** (sīdus; Balto-Slavic gwiazda) → **starve, stark, strategy** (look-alikes; asteroid as the reverse trap) → **Notes**.
+The shipped ten chapters: **The star in the centre** (root) → **From steorra to star** (Germanic; star as the least-changed word) → **seren, astł, tā́rā** (cognate disguises + the Tara double take) → **Latin's little star** (stēlla → étoile/estrella → Estelle/estoile) → **Is there a star in disaster?** (Greek: disaster, asterisk, astrolabe) → **The star in your eye** (pupil, stellionate, stellarator) → **Does Ishtar come from star?** (ḫašterz's ḫ-, Wilson-Wright reversal, Esther as coda) → **Latin's other star** (sīdus hiding in consider/desire — framed as a find, never as "X is unrelated" trivia; Balto-Slavic gwiazda) → **starve, stark, strategy** (look-alikes; asteroid as the reverse trap) → **Notes**.
+
+Hero hook: ONE short line, connections only — no negatives, no fake stars (those pay off in the closing chapter), nothing whose letters give it away (Estelle, aster, asterisk), no clause chains. The honest inventory of surprising English words is thin (disaster; disputed Esther), so the hook stays minimal rather than padded or explained.

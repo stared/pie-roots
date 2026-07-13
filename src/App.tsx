@@ -42,9 +42,8 @@ export default function App() {
             The star of <em>star</em>
           </h1>
           <p className="hero-sub">
-            Did you know that <b>disaster</b>, <b>asterisk</b>, <b>Estelle</b> and (maybe){" "}
-            <b>Esther</b> all grew from the same root as the word <b>star</b>? One
-            Proto-Indo-European word, <span className="root-word">*h₂stḗr</span>.
+            One word, six thousand years: how <span className="root-word">*h₂stḗr</span> became{" "}
+            <b>star</b>, <b>disaster</b>, and (maybe) <b>Esther</b>.
           </p>
           <p className="hero-scroll">Scroll to follow the rays ↓</p>
         </div>

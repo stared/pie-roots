@@ -1,0 +1,52 @@
+:root {
+  --serif: "Iowan Old Style", "Palatino Linotype", Charter, Georgia, serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --paper: #f7f2e8;
+  --ink: #2a231a;
+  --mid: #6d5f4b;
+  --faint: #8a7a60;
+}
+
+* { margin: 0; box-sizing: border-box; }
+
+body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
+
+.roots { min-height: 100vh; padding-bottom: 40px; background: var(--paper); color: var(--ink); }
+
+.roots nav {
+  display: flex; justify-content: center; gap: 1.8em;
+  padding: 20px;
+  font-family: var(--sans); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.roots nav a { text-decoration: none; color: var(--mid); opacity: 0.6; }
+.roots nav a.active { opacity: 1; color: var(--ink); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+
+.roots header { max-width: 860px; margin: 0 auto; padding: 18px 24px 6px; text-align: center; }
+.roots h1 { font-size: clamp(32px, 4.6vw, 52px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.05; }
+.roots h1 i { font-style: italic; }
+.roots header p { margin: 0.7em auto 0; max-width: 660px; font-size: 17px; line-height: 1.55; color: var(--mid); }
+.roots header p b { font-weight: 600; color: var(--ink); }
+.roots header p i { color: var(--ink); }
+
+.roots figure { max-width: 1360px; margin: 0 auto; padding: 10px 16px 0; }
+.roots svg { display: block; width: 100%; height: auto; }
+
+.roots footer {
+  text-align: center; font-family: var(--sans); font-size: 12px;
+  padding: 18px 20px 0; color: var(--mid); opacity: 0.8;
+}
+
+/* tree — the content (words, links, dots) must clearly dominate the guides */
+.t-guide { stroke: #ece4d1; stroke-width: 1; fill: none; }
+.t-link { stroke: #8a775a; stroke-width: 1.3; }
+.t-dot { fill: var(--ink); }
+.t-ring { stroke: #55462f; stroke-width: 1.5; }
+.t-root { font: italic 600 27px var(--serif); fill: var(--ink); }
+.t-root-gloss { font: 12.5px var(--sans); letter-spacing: 0.06em; fill: var(--mid); }
+.t-word { font: 600 19px var(--serif); fill: var(--ink);
+  paint-order: stroke; stroke: var(--paper); stroke-width: 5px; stroke-linejoin: round; }
+.t-anc { font: italic 600 15px var(--serif); fill: #362c1d;
+  paint-order: stroke; stroke: var(--paper); stroke-width: 5px; stroke-linejoin: round; }
+.t-note { font: italic 11px var(--sans); fill: #6b5a42;
+  paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
+.t-era { font: 11px var(--sans); letter-spacing: 0.14em; fill: #b3a184; }
