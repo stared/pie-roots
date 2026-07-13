@@ -68,6 +68,9 @@ export const EYE_NODES: EyeNode[] = [
   // single-fruit branches
   { id: "druwits", form: "*dru-wits", gloss: "oak-knower", lang: "Proto-Celtic", kind: "proto", a: 64, r: 180 },
   { id: "druid", form: "druid", kind: "modern", a: 66, r: 340, parent: "druwits" },
-  { id: "vedas", form: "véda", gloss: "knowledge", lang: "Sanskrit", kind: "ancestor", a: 110, r: 196 },
-  { id: "veda", form: "Veda", kind: "modern", a: 108, r: 330, parent: "vedas" },
+  { id: "vedas", form: "véda", gloss: "knowledge", lang: "Sanskrit", kind: "ancestor", a: 98, r: 196 },
+  { id: "veda", form: "Veda", kind: "modern", a: 96, r: 330, parent: "vedas" },
+  // the Unseen: ἀ- 'un-' + ϝιδ- 'seen', with the digamma dropped as in ἰδέα
+  { id: "aides", form: "Ἀΐδης", gloss: "the Unseen", lang: "Greek", kind: "ancestor", a: 119, r: 262, dashed: true },
+  { id: "hades", form: "Hades", kind: "modern", a: 119, r: 352, parent: "aides" },
 ];

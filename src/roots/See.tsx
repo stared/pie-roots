@@ -24,14 +24,6 @@ export default function See() {
       {/* the almond, faintly */}
       <path d={almond} className="t-guide" fill="none" />
 
-      {/* Hades, just outside the lower rim — no link into the eye: the Unseen */}
-      <circle cx={1210} cy={945} r={4} fill="none" className="t-ring" />
-      <text x={1210} y={933} textAnchor="middle" className="t-anc">Ἀΐδης</text>
-      <text x={1210} y={984} textAnchor="middle" className="t-note">the Unseen: *n̥- ‘un-’ + wid- ‘seen’ · Greek</text>
-      <line x1={1218} y1={948} x2={1438} y2={968} className="t-link" strokeDasharray="5 4" />
-      <circle cx={1444} cy={968} r={4.4} className="t-dot" />
-      <text x={1458} y={974} className="t-word">Hades</text>
-
       {/* links */}
       <g transform={`translate(${CX} ${CY})`}>
         {nodes.map(n => {
