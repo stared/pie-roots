@@ -1,5 +1,5 @@
-import { RIPPLE_NODES, GEN, STUBS, type RippleNode } from "./data/bheh2";
-import { noteLine, polar, arcPath, radialPath } from "./types";
+import { RIPPLE_NODES, GEN, type RippleNode } from "./data/bheh2";
+import { polar, arcPath, radialPath } from "./types";
 
 const OX = 335, OY = 820;
 const R0 = 90; // links leave the root from here
@@ -36,29 +36,33 @@ export default function Speak() {
         })}
       </g>
 
-      {/* branches that die before English */}
-      {STUBS.map(s => {
-        const [x, y] = polar(OX, OY, s.a, radius(s.g));
-        const [x0, y0] = polar(OX, OY, s.a, R0);
-        return (
-          <g key={`${s.form}-${s.lang}`}>
-            <line x1={x0} y1={y0} x2={x} y2={y} className="t-link" strokeDasharray="3 6" />
-            <text x={x - 8} y={y + 4} textAnchor="end" className="t-note">{`${s.form} ‘${s.gloss}’ · ${s.lang}`}</text>
-          </g>
-        );
-      })}
-
-      {/* nodes */}
+      {/* nodes: a tight label block beside each node — form, gloss, language */}
       {nodes.map(n => {
         const modern = n.kind === "modern";
+        const left = n.labelLeft;
+        const tx = left ? n.x - 11 : n.x + 11;
+        const anchor = left ? "end" : "start";
         return (
           <g key={n.id}>
             {modern
               ? <circle cx={n.x} cy={n.y} r={4.4} className="t-dot" />
               : <circle cx={n.x} cy={n.y} r={4} fill="none" className="t-ring"
                   strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />}
-            <text x={n.x + 11} y={n.y - 8} className={modern ? "t-word" : "t-anc"}>{n.form}</text>
-            {noteLine(n) && <text x={n.x + 11} y={n.y + 17} className="t-note">{noteLine(n)}</text>}
+            {modern
+              ? <text x={tx} y={n.y + 5} textAnchor={anchor} className="t-word">{n.form}</text>
+              : left ? (
+                <>
+                  <text x={tx} y={n.y - 8} textAnchor={anchor} className="t-anc">{n.form}</text>
+                  {n.gloss && <text x={tx} y={n.y + 14} textAnchor={anchor} className="t-note">{n.gloss}</text>}
+                  {n.lang && <text x={tx} y={n.y + 28} textAnchor={anchor} className="t-note">{n.lang}</text>}
+                </>
+              ) : (
+                <>
+                  <text x={tx} y={n.y - 6} textAnchor={anchor} className="t-anc">{n.form}</text>
+                  {n.gloss && <text x={tx} y={n.y + 13} textAnchor={anchor} className="t-note">{n.gloss}</text>}
+                  {n.lang && <text x={tx} y={n.y + 27} textAnchor={anchor} className="t-note">{n.lang}</text>}
+                </>
+              )}
           </g>
         );
       })}

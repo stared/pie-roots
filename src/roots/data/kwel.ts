@@ -26,7 +26,7 @@ export const ringR = (d: number): number => {
 export const TURN_NODES: TurnNode[] = [
   // the reduplicated 'turner-turner': the word says 'turn' twice
   { id: "kwekwlom", form: "*kʷe-kʷl-óm", gloss: "the reduplicated turner-turner", lang: "PIE", kind: "proto", a: -90, d: 1 },
-  { id: "hwehwla", form: "*hwehwlą", lang: "Proto-Germanic", kind: "proto", a: -117, d: 2, parent: "kwekwlom" },
+  { id: "hwehwla", form: "*hwehwlą", gloss: "wheel", lang: "Proto-Germanic", kind: "proto", a: -117, d: 2, parent: "kwekwlom" },
   { id: "wheel", form: "wheel", kind: "modern", a: -117, d: 3, parent: "hwehwla" },
   { id: "kyklos", form: "κύκλος", gloss: "wheel, circle", lang: "Greek", kind: "ancestor", a: -88, d: 2, parent: "kwekwlom" },
   { id: "cycle", form: "cycle", kind: "modern", a: -97, d: 3, parent: "kyklos" },

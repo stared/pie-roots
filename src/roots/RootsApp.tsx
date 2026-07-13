@@ -22,19 +22,19 @@ const VIEWS: View[] = [
   {
     hash: "speak",
     title: <><i>*bʰeh₂-</i> ‘to speak’</>,
-    dek: <>One verb of speaking: Greek made it sound (<b>phone</b>, <b>prophet</b>), Latin made it destiny (<b>fate</b>, <b>fairy</b>), Germanic made it command (<b>ban</b>, <b>banish</b>). Its homophone <i>*bʰeh₂-</i> ‘to shine’ — phase, photo-, phantom, beacon — is a different root.</>,
+    dek: <>One verb of speaking: Greek made it sound (<b>phone</b>, <b>prophet</b>), Latin made it destiny (<b>fate</b>, <b>fairy</b>), Germanic made it command (<b>ban</b>, <b>banish</b>). PIE <i>bʰ-</i> became Latin <i>f-</i> and Greek <i>φ-</i>, so <i>*bʰeh₂-</i> is <i>fārī</i> and <i>φημί</i>. Its homophone <i>*bʰeh₂-</i> ‘to shine’ — phase, photo-, phantom, beacon — is a different root.</>,
     chart: <Speak />,
   },
   {
     hash: "sit",
     title: <><i>*sed-</i> ‘to sit’</>,
-    dek: <>Nine separate routes into English: <b>sit</b> and <b>soot</b> straight from Old English, <b>siege</b> and <b>size</b> through French, <b>chair</b> from Greek by way of Latin, <b>banshee</b> from a fairy mound. English <b>nest</b> and Latin <i>nīdus</i> compress the same compound, <i>*ni-sd-ós</i> ‘the sit-down’.</>,
+    dek: <>Nine separate routes into English: <b>sit</b> and <b>soot</b> straight from Old English, <b>siege</b> and <b>size</b> through French, <b>chair</b> from Greek by way of Latin, <b>banshee</b> from a fairy mound. English <b>nest</b> and Latin <i>nīdus</i> compress the same compound, <i>*ni-sd-ós</i> ‘the sit-down’; Greek wore the <i>s-</i> down to a breath, so <i>*sed-</i> is ἕδρα ‘seat’.</>,
     chart: <Sit />,
   },
   {
     hash: "turn",
     title: <><i>*kʷel-</i> ‘to turn’</>,
-    dek: <>The root named the wheel by turning twice: reduplicated <i>*kʷe-kʷl-óm</i> became <b>wheel</b>, <b>cycle</b>, and <b>chakra</b>; the single turn <i>*kʷólo-</i> gave Polish <b>koło</b> and, through Greek, <b>pole</b>. The two <i>tele-</i>s are different Greek words, each only a disputed member: <b>teleology</b> ends on <i>τέλος</i> ‘completion’, <b>telephone</b> reaches through <i>τῆλε</i> ‘far’.</>,
+    dek: <>The root named the wheel by turning twice: reduplicated <i>*kʷe-kʷl-óm</i> became <b>wheel</b>, <b>cycle</b>, and <b>chakra</b>; the single turn <i>*kʷólo-</i> gave Polish <b>koło</b> and, through Greek, <b>pole</b>. Greek split <i>kʷ</i> by the following vowel — π before o (<i>πόλος</i>), τ before e (<i>τέλος</i>) — while Germanic made it <i>hw-</i> (<b>wheel</b>). The two <i>tele-</i>s are different Greek words, each only a disputed member: <b>teleology</b> ends on <i>τέλος</i> ‘completion’, <b>telephone</b> reaches through <i>τῆλε</i> ‘far’.</>,
     chart: <Turn />,
   },
 ];

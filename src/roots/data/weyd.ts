@@ -12,11 +12,13 @@ export interface EyeNode extends WordNode {
   r: number;
   /** force the label to the other side of the node */
   flip?: boolean;
+  /** label sits left of the node, clear of the rightward fan */
+  labelLeft?: boolean;
 }
 
 export const EYE_NODES: EyeNode[] = [
   // Latin arm (right): the seeing side
-  { id: "video", form: "videō", gloss: "to see", lang: "Latin", kind: "ancestor", a: 4, r: 180 },
+  { id: "video", form: "videō", gloss: "to see", lang: "Latin", kind: "ancestor", a: 4, r: 180, labelLeft: true },
   { id: "invidere", form: "invidēre", gloss: "to look askance at", lang: "Latin", kind: "ancestor", a: -26, r: 250, parent: "video" },
   { id: "invidia", form: "invidia", gloss: "envy, ill will", lang: "Latin", kind: "ancestor", a: -26, r: 335, parent: "invidere" },
   { id: "envy", form: "envy", kind: "modern", a: -37, r: 450, parent: "invidia" },
@@ -39,7 +41,7 @@ export const EYE_NODES: EyeNode[] = [
   { id: "histor", form: "ἵστωρ", gloss: "one who has seen", lang: "Greek", kind: "ancestor", a: -55, r: 150 },
   { id: "historia", form: "historia", gloss: "inquiry", lang: "Latin", kind: "ancestor", a: -55, r: 255, parent: "histor" },
   { id: "history", form: "history", kind: "modern", a: -58, r: 400, parent: "historia" },
-  { id: "estoire", form: "estoire", lang: "Old French", kind: "ancestor", a: -46, r: 330, parent: "historia", flip: true },
+  { id: "estoire", form: "estoire", gloss: "story, history", lang: "Old French", kind: "ancestor", a: -46, r: 330, parent: "historia", flip: true },
   { id: "story", form: "story", kind: "modern", a: -46, r: 360, parent: "estoire" },
   // idea and idol: two different formations on the same seen-stem, side by side
   { id: "idea_gr", form: "ἰδέα", gloss: "form, pattern", lang: "Greek", kind: "ancestor", a: -85, r: 235 },
@@ -57,7 +59,7 @@ export const EYE_NODES: EyeNode[] = [
   { id: "aetwitan", form: "ǣtwītan", gloss: "to taunt", lang: "Old English", kind: "ancestor", a: 225, r: 300, parent: "witanao" },
   { id: "twit", form: "twit", kind: "modern", a: 228, r: 460, parent: "aetwitan" },
   { id: "fwitan", form: "*wītan", gloss: "to show the way", lang: "Frankish", kind: "proto", a: 205, r: 280, parent: "witanao" },
-  { id: "guider", form: "guider", lang: "Old French", kind: "ancestor", a: 208, r: 400, parent: "fwitan" },
+  { id: "guider", form: "guider", gloss: "to guide", lang: "Old French", kind: "ancestor", a: 208, r: 400, parent: "fwitan" },
   { id: "guide", form: "guide", kind: "modern", a: 210, r: 520, parent: "guider" },
   { id: "wisaz", form: "*wīsaz", gloss: "knowing", lang: "Proto-Germanic", kind: "proto", a: 158, r: 180 },
   { id: "wise", form: "wise", kind: "modern", a: 150, r: 440, parent: "wisaz" },
