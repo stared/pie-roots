@@ -48,7 +48,8 @@ export const EYE_NODES: EyeNode[] = [
   // idea and idol: two different formations on the same seen-stem, side by side
   { id: "idea_gr", form: "ἰδέα", gloss: "form, pattern", lang: "Greek", kind: "ancestor", a: -116.0, r: 183 },
   { id: "idea", form: "idea", kind: "modern", a: -116, r: 435, parent: "idea_gr" },
-  { id: "eidolon", form: "εἴδωλον", gloss: "image, phantom", lang: "Greek", kind: "ancestor", a: -99.0, r: 218 },
+  { id: "eidos", form: "εἶδος", gloss: "the seen form", lang: "Greek", kind: "ancestor", a: -99, r: 120 },
+  { id: "eidolon", form: "εἴδωλον", gloss: "image, phantom", lang: "Greek", kind: "ancestor", a: -99, r: 260, parent: "eidos" },
   { id: "idol", form: "idol", kind: "modern", a: -99, r: 435, parent: "eidolon" },
 
   // Germanic arm (left, inherited): the knowing side — and its near-twin,
@@ -57,7 +58,7 @@ export const EYE_NODES: EyeNode[] = [
   { id: "witan", form: "witan", gloss: "to know", lang: "Old English", kind: "ancestor", a: 163.5, r: 265, parent: "witana" },
   { id: "wit", form: "wit", kind: "modern", a: 172, r: 435, parent: "witan" },
   { id: "witness", form: "witness", kind: "modern", a: 155, r: 435, parent: "witan" },
-  { id: "witanao", form: "*wītaną", gloss: "to blame, punish", lang: "Proto-Germanic", kind: "proto", a: -152.3, r: 184 },
+  { id: "witanao", form: "*wītaną", gloss: "to see off; blame, punish", lang: "Proto-Germanic", kind: "proto", a: -152.3, r: 184 },
   { id: "aetwitan", form: "ǣtwītan", gloss: "to taunt", lang: "Old English", kind: "ancestor", a: -161.2, r: 308, parent: "witanao" },
   { id: "twit", form: "twit", kind: "modern", a: 195, r: 435, parent: "aetwitan" },
   { id: "fwitan", form: "*wītan", gloss: "to show the way", lang: "Frankish", kind: "proto", a: -146.7, r: 265, parent: "witanao", labelRight: true },
