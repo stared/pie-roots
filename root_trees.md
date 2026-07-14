@@ -26,10 +26,11 @@ Descent-tree outlines for candidate roots: root → proto-language branches → 
 │   ├── affārī → affābilis → affable
 │   ├── effārī → ineffābilis → ineffable
 │   ├── praefārī → praefātiō → preface
-│   ├── fās 'divine utterance, right' → nefās → nefārius → nefarious
-│   └── ? fatērī 'to acknowledge' [*bʰh₂-tó-s; morphology debated]
-│       ├── cōnfitērī → confess, confession
-│       └── profitērī → profess, professor, profession
+│   └── (see also root-formations fās, fatērī below — parallel to fārī, not from it)
+├── ? fās 'divine utterance, right' (root-formation; Beekes: "no convincing etymology") → nefās → nefārius → nefarious
+├── fatērī 'to acknowledge' [*bʰh₂-tó-s; a root-formation parallel to fārī]
+│   ├── cōnfitērī → confess, confession
+│   └── profitērī → profess, professor, profession
 ├── φημί (Ancient Greek) 'I say'
 │   ├── προφήτης 'spokesman' → prophet, prophecy, prophesy
 │   ├── εὔφημος 'auspicious of speech' → euphemism
@@ -149,11 +150,11 @@ Source: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/bʰeh�
 *kʷel(h₁)- 'to turn; move around; dwell'
 ├── *kʷe-kʷl-óm 'wheel' (the root REDUPLICATED: 'turner-turner')
 │   ├── PGmc *hwehwlą → OE hwēol → wheel, wheelwright
-│   ├── Gk κύκλος → cycle, bicycle, cyclone, Cyclops, encyclopedia ('circle of learning')
+│   ├── Gk κύκλος → cycle (via LL cyclus), ? cyclone (sources split: κύκλος vs κυκλῶν 'whirling'), Cyclops, encyclopedia ('circle of learning')
 │   └── Skt cakrá → chakra; → Hindi cakkar → chukker (polo period)
 ├── *kʷól(h₁)-o- 'the turner' (plain o-grade — ONE turn where the wheel-word has two)
 │   └── Proto-Slavic *kolo (s-stem) → Polish koło 'wheel, circle', Russian колесо;
-│       Polish kolej 'wheel-track → turn → railway', okolica 'the lands around'
+│       PSl *kolěja 'wheel track' (*kolo + -ěja) → Polish kolej 'railway' [parallel inheritance, NOT from Polish koło]; okolica 'the lands around'
 │       [formation twin of Gk πόλος below — the one-turn set (koło, pole) vs the two-turn set (wheel, cycle, chakra)]
 ├── Latin colere 'till, dwell, worship' ('circle the land → tend it → worship')
 │   ├── cultus → cult, culture, cultivate, agriculture
