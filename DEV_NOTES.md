@@ -19,7 +19,7 @@ Everything about *how the data is shown* lives here. `research.md` is data only:
 
 Four candidate roots (data from `root_trees.md`, exploration tier) — \*weyd-, \*bʰeh₂-, \*sed-, \*kʷel- — each with a **shaped layout carried by word placement plus one subtle structural guide**:
 
-- `See.tsx` — \*weyd-: **elliptical polar coordinates** (KX/KY stretch a circular polar layout into the eye, links drawn in the unscaled space and stretched with the group transform + non-scaling stroke). The rim is simply r = const — no per-angle clamping, so every chain grows radially outward and linkRadial never degenerates into S-wiggles (that warping came from clamp-squashed radii: wide angular steps over tiny radial ones). Ἀΐδης → Hades is an ordinary dashed-from-root chain inside the eye.
+- `See.tsx` — \*weyd-: **elliptical polar coordinates** (KX/KY map (a, r) into the wide eye; the rim is the r = const ellipse, no per-angle clamping) with **straight-segment links**. All English words sit on one rim band (r = 435) so the ellipse fills evenly; unbranched chains are straight lines with their intermediate nodes ON the line. Ἀΐδης → Hades is an ordinary dashed-from-root chain inside the eye.
 - `Speak.tsx` — \*bʰeh₂-: a fan rippling rightward, faint arcs marking the generations; dead branches as dashed stubs; the 'shine' homophone lives in the dek only.
 - `Sit.tsx` — \*sed-: **time strata** — every node sits at its era's depth (PIE / proto-languages / antiquity / middle ages / English), faint hairlines between eras with small-caps era labels in each band's lower-left; English words rest as bare leaves in the bottom stratum.
 - `Turn.tsx` — \*kʷel-: faint concentric rims; PIE formations inner, ancestors middle, English words on the outer rim.

@@ -1,5 +1,5 @@
 import { EYE_NODES, type EyeNode } from "./data/weyd";
-import { noteLine, rad, radialPath } from "./types";
+import { noteLine, rad } from "./types";
 
 const CX = 850, CY = 620;
 // elliptical polar coordinates: the eye is wider than tall, so a unit of
@@ -29,15 +29,13 @@ export default function See() {
       {/* the rim, faintly */}
       <ellipse cx={CX} cy={CY} rx={KX * R_EDGE} ry={KY * R_EDGE} className="t-guide" fill="none" />
 
-      {/* links: drawn in circular polar space, stretched into the ellipse */}
-      <g transform={`translate(${CX} ${CY}) scale(${KX} ${KY})`}>
-        {nodes.map(n => {
-          const [pa, pr] = n.parent ? [laid[n.parent].a, laid[n.parent].r] : [n.a, R0];
-          return <path key={n.id} d={radialPath(pa, pr, n.a, n.r)} fill="none"
-            vectorEffect="non-scaling-stroke"
-            className="t-link" strokeDasharray={n.dashed ? "5 4" : undefined} />;
-        })}
-      </g>
+      {/* links: straight segments — curvature carries no meaning, so chains
+          without splits are single lines with their nodes ON the line */}
+      {nodes.map(n => {
+        const [px, py] = n.parent ? [laid[n.parent].x, laid[n.parent].y] : polarE(n.a, R0);
+        return <line key={`l-${n.id}`} x1={px} y1={py} x2={n.x} y2={n.y}
+          className="t-link" strokeDasharray={n.dashed ? "5 4" : undefined} />;
+      })}
 
       {/* nodes */}
       {nodes.map(n => {

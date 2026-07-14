@@ -50,3 +50,22 @@ const radialGen: any = linkRadial()
  */
 export const radialPath = (a0: number, r0: number, a1: number, r1: number): string =>
   radialGen({ source: [rad(a0 + 90), r0], target: [rad(a1 + 90), r1] }) ?? "";
+
+/**
+ * Spiral link: angle and radius interpolate together, so the tangent always
+ * follows the direction of travel — same-ray links are straight, lateral
+ * links are one soft arc, never an S (unlike linkRadial, which forces radial
+ * tangents at both ends and absorbs lateral offset mid-curve as a wobble).
+ * Origin-relative; screen degrees.
+ */
+export const spiralPath = (a0: number, r0: number, a1: number, r1: number): string => {
+  const N = 24;
+  const pts: string[] = [];
+  for (let i = 0; i <= N; i++) {
+    const t = i / N;
+    const a = rad(a0 + (a1 - a0) * t);
+    const r = r0 + (r1 - r0) * t;
+    pts.push(`${(Math.cos(a) * r).toFixed(1)},${(Math.sin(a) * r).toFixed(1)}`);
+  }
+  return `M ${pts[0]} L ${pts.slice(1).join(" ")}`;
+};
