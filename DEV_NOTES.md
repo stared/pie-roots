@@ -38,6 +38,7 @@ Four candidate roots (data from `root_trees.md`, exploration tier) — \*weyd-, 
 - *Each dek carries a sound-law key* answering "why doesn't it sound like the root": Greek w-loss (see), bʰ→f/φ (speak), s→h (sit), the kʷ→π/τ/hw split (turn).
 - *No second-class nodes*: branches that die before English are ordinary nodes (ring + form/gloss/lang), not floating stub text — near-invisible dotted connectors read as broken.
 - *Speak labels are a tight three-line block beside the node* (form / gloss / language) — straddling the node left a dead gap, and one-line "gloss · language" tails caused most collisions; fan-head nodes whose corridors exit rightward (fārī, φημί, *bannjan; videō in see) take `labelLeft`.
+- *A label must be closer to its own node than to any other* — a gloss that drifts toward a neighboring node (dru-wits' note hovering by véda) reads as belonging to it. Fan-head ancestors sit at the angular centroid of their subtree, close to the root, so density stays even.
 - *Same surface, different source must be legible.* When two English words share a visible element but descend from different forms (teleology's *tele-* = τέλος vs telephone's *tele-* = τῆλε; idea = ἰδέα vs idol = εἴδωλον), each gets its own source node, the pair sits adjacent, and the dek names the split — otherwise the chart reads as inconsistent.
 - *Links are d3 `linkRadial`/canopy curves* — no hand-rolled midpoint pulls (they make weird S-turns). *No line crossings*; verify every change with screenshots (`pnpm roots:shoot`).
 
