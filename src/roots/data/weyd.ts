@@ -16,6 +16,8 @@ export interface EyeNode extends WordNode {
   labelLeft?: boolean;
   /** label sits right of the node, clear of a leftward fan */
   labelRight?: boolean;
+  /** small horizontal label nudge, so word gaps don't align with a ray */
+  dx?: number;
 }
 
 export const EYE_NODES: EyeNode[] = [
@@ -30,7 +32,7 @@ export const EYE_NODES: EyeNode[] = [
   { id: "provide", form: "provide", kind: "modern", a: -6, r: 435, parent: "providere" },
   { id: "prudens", form: "prūdēns", gloss: "foreseeing", lang: "Latin", kind: "ancestor", a: -15.2, r: 331, parent: "providere" },
   { id: "prudent", form: "prudent", kind: "modern", a: -16, r: 435, parent: "prudens" },
-  { id: "visio", form: "vīsiō", gloss: "sight", lang: "Latin", kind: "ancestor", a: 2.9, r: 273, parent: "video" },
+  { id: "visio", form: "vīsiō", gloss: "sight", lang: "Latin", kind: "ancestor", a: 2.9, r: 273, parent: "video", flip: true },
   { id: "vision", form: "vision", kind: "modern", a: 6, r: 435, parent: "visio" },
   { id: "veoir", form: "veoir", gloss: "to see", lang: "Old French", kind: "ancestor", a: 7.8, r: 206, parent: "video" },
   { id: "veue", form: "veue", gloss: "sight", lang: "Old French", kind: "ancestor", a: 15.3, r: 336, parent: "veoir" },
@@ -46,7 +48,7 @@ export const EYE_NODES: EyeNode[] = [
   { id: "estoire", form: "estoire", gloss: "story, history", lang: "Old French", kind: "ancestor", a: -69.2, r: 349, parent: "historia" },
   { id: "story", form: "story", kind: "modern", a: -66, r: 435, parent: "estoire" },
   // idea and idol: two different formations on the same seen-stem, side by side
-  { id: "idea_gr", form: "ἰδέα", gloss: "form, pattern", lang: "Greek", kind: "ancestor", a: -116.0, r: 183 },
+  { id: "idea_gr", form: "ἰδέα", gloss: "form, pattern", lang: "Greek", kind: "ancestor", a: -116.0, r: 183, dx: -10 },
   { id: "idea", form: "idea", kind: "modern", a: -116, r: 435, parent: "idea_gr" },
   { id: "eidos", form: "εἶδος", gloss: "the seen form", lang: "Greek", kind: "ancestor", a: -99, r: 120 },
   { id: "eidolon", form: "εἴδωλον", gloss: "image, phantom", lang: "Greek", kind: "ancestor", a: -99, r: 260, parent: "eidos" },
@@ -68,7 +70,7 @@ export const EYE_NODES: EyeNode[] = [
   { id: "wys", form: "wys", gloss: "wise", lang: "Middle English", kind: "ancestor", a: 129.5, r: 290, parent: "wisaz", labelRight: true },
   { id: "wise", form: "wise", kind: "modern", a: 122, r: 435, parent: "wys" },
   { id: "wizard", form: "wizard", kind: "modern", a: 137, r: 435, parent: "wys" },
-  { id: "wisa", form: "*wīsa", gloss: "manner", lang: "Frankish", kind: "proto", a: 103, r: 245, labelRight: true },
+  { id: "wisa", form: "*wīsa", gloss: "manner", lang: "Frankish", kind: "proto", a: 103, r: 290, labelRight: true },
   { id: "guise", form: "guise", kind: "modern", a: 103, r: 435, parent: "wisa" },
 
   // single-fruit branches
@@ -77,6 +79,6 @@ export const EYE_NODES: EyeNode[] = [
   { id: "vedas", form: "véda", gloss: "knowledge", lang: "Sanskrit", kind: "ancestor", a: 68, r: 280, labelLeft: true },
   { id: "veda", form: "Veda", kind: "modern", a: 68, r: 435, parent: "vedas" },
   // the Unseen: ἀ- 'un-' + ϝιδ- 'seen', with the digamma dropped as in ἰδέα
-  { id: "aides", form: "Ἀΐδης", gloss: "the Unseen", lang: "Greek", kind: "ancestor", a: 88, r: 160, dashed: true, labelLeft: true },
+  { id: "aides", form: "Ἀΐδης", gloss: "the Unseen", lang: "Greek", kind: "ancestor", a: 88, r: 350, dashed: true, labelLeft: true },
   { id: "hades", form: "Hades", kind: "modern", a: 88, r: 435, parent: "aides" },
 ];

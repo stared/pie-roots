@@ -47,6 +47,7 @@ export default function See() {
         if (n.x < CX - 580) { anchor = "start"; tx = n.x + 4; }
         if (n.labelLeft) { anchor = "end"; tx = n.x - 10; }
         if (n.labelRight) { anchor = "start"; tx = n.x + 10; }
+        if (n.dx) tx += n.dx;
         const dy = above ? -13 : 26;
         return (
           <g key={n.id}>
