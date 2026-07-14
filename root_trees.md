@@ -11,9 +11,8 @@ Descent-tree outlines for candidate roots: root → proto-language branches → 
 ```
 *bʰeh₂- (PIE) 'to speak, say'
 ├── fōr, fārī (Latin) 'to speak' [via Proto-Italic *fāōr]
-│   ├── fātum (Latin) 'thing spoken; destiny'
-│   │   ├── fate, fatal, fatality
-│   │   ├── fāta (Late Latin) 'the Fates' → fae (Old French) → fay, faerie → fairy
+│   ├── fātum (Latin) 'thing spoken; destiny' → fatal, fatality
+│   │   ├── fāta (plural) 'the Fates' → fate; → fae (Old French) → fay, faerie → fairy
 │   │   └── fado (Portuguese) 'fate; song genre' → fado
 │   ├── fāma (Latin) 'talk, report, renown'
 │   │   └── fame, famous, defame, infamous, infamy
@@ -50,13 +49,14 @@ Descent-tree outlines for candidate roots: root → proto-language branches → 
 │           └── antefn (Old English) → anthem (early-loan doublet)
 ├── *bʰh₂-néw-ti → *bannaną (Proto-Germanic) 'to proclaim, summon'
 │   ├── bannan (Old English) → ban, banns (of marriage)
-│   ├── *bannjan (Frankish) → Old French
-│   │   ├── ban 'feudal proclamation/jurisdiction' → banal ('of compulsory feudal service' → 'common to all')
-│   │   ├── bandon 'jurisdiction' → a bandon 'at (someone's) disposal' → abandon
-│   │   └── banir → banish
-│   └── bannum (Medieval Latin ← Germanic) 'proclamation'
-│       ├── bando, bandire (Italian) → ? bandit (form conflated with Gothic bandwjan 'signal')
-│       └── contrabbando 'against the proclamation' → contraband
+│   ├── *bannjan (Frankish, causative verb)
+│   │   ├── banir (Old French) → banish
+│   │   └── bannīre (Late Latin) → bandīre/bandire (Italian; -d- after Gothic bandwjan 'signal') → bandito → ? bandit
+│   └── *ban (Frankish noun) 'command under penalty'
+│       ├── ban (Old French) 'feudal proclamation/jurisdiction' → banal ('of compulsory feudal service' → 'common to all')
+│       │   └── bandon 'jurisdiction' → a bandon 'at (someone's) disposal' → abandon
+│       └── bannum (Medieval Latin) 'proclamation'
+│           └── bando → contrabando (older Italian) 'against the proclamation' → contraband
 ├── *bʰeh₂-ni-s
 │   ├── *bōniz (Proto-Germanic) 'prayer, petition' → bón (Old Norse) → boon
 │   ├── ban (Old Armenian) 'word, thing' — no English yield
@@ -157,7 +157,7 @@ Source: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/bʰeh�
 │       [formation twin of Gk πόλος below — the one-turn set (koło, pole) vs the two-turn set (wheel, cycle, chakra)]
 ├── Latin colere 'till, dwell, worship' ('circle the land → tend it → worship')
 │   ├── cultus → cult, culture, cultivate, agriculture
-│   ├── colōnus → colony, colonial
+│   ├── colōnus → colōnia → colony, colonial
 │   └── ? ancilla (*ambhi-kʷolos 'one who bustles around') → ancillary
 ├── Gk πόλος 'pivot, axis' ('what it turns on')
 │   ├── Latin polus → pole (celestial, magnetic)
