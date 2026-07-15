@@ -5,7 +5,7 @@ import puppeteer from "puppeteer-core";
 
 const BASE = process.env.BASE ?? "http://localhost:4331";
 const OUT = process.env.OUT ?? "/tmp/roots";
-const views = process.argv.slice(2).length ? process.argv.slice(2) : ["see", "speak", "sit", "turn"];
+const views = process.argv.slice(2).length ? process.argv.slice(2) : ["see", "know", "speak", "sit", "turn"];
 
 const browser = await puppeteer.launch({
   executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",

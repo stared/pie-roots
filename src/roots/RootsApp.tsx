@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import See from "./See";
+import Know from "./Know";
 import Speak from "./Speak";
 import Sit from "./Sit";
 import Turn from "./Turn";
@@ -18,6 +19,12 @@ const VIEWS: View[] = [
     title: <><i>*weyd-</i> ‘to see’</>,
     dek: <>Its perfect <i>*wóyde</i> ‘has seen’ meant <b>knows</b>, so the root split: seeing through Latin (<b>vision</b>, <b>view</b>, <b>evidence</b>), knowing through Germanic (<b>wit</b>, <b>wise</b>) and Greek (<b>history</b>, <b>idea</b>). Greek dropped its <i>w-</i>, so <i>ϝιδ-</i> ‘seen’ hides in <b>idea</b> — and, read as ἀ-ϝιδ- ‘the Unseen’, in <b>Hades</b>.</>,
     chart: <See />,
+  },
+  {
+    hash: "know",
+    title: <><i>*weyd-</i> ‘to know’</>,
+    dek: <>The same root, secret side: to see means to know, and where knowing turned occult the root followed — <b>wizard</b>, <b>clairvoyant</b> ‘clear-seeing’, <b>Hades</b> ‘the Unseen’, the <b>Veda</b>. English’s own words for the hidden — <i>witch</i>, <i>weird</i>, <i>seer</i>, <i>occult</i> itself — all come from other roots; Polish kept what English lost: <b>widzieć</b> ‘to see’ and <b>wiedzieć</b> ‘to know’ sit one letter apart, and <b>wiedźma</b> ‘witch’ and <b>wieszcz</b> ‘bard-prophet’ are still ones-who-know.</>,
+    chart: <Know />,
   },
   {
     hash: "speak",

@@ -305,8 +305,10 @@ Source: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/bʰeh�
 │   │   ├── *witją 'understanding' → wit (n.), witty
 │   │   └── OE witnes 'knowledge, testimony' → witness
 │   ├── PGmc *wītaną 'blame, observe' → OE wītan → wite; ætwītan 'reproach' → twit
-│   └── PGmc *wīsaz 'knowing' → OE wīs → wise, wisdom, wizard (wise+-ard),
-│       wiseacre (via Middle Dutch wijsseggher 'soothsayer'); *wīsǭ 'manner' → wise (n.)
+│   └── PGmc *wīsaz 'knowing' → OE wīs → wise, wisdom, wizard (wise+-ard);
+│       wiseacre ← Middle Dutch wijssegger 'soothsayer' ← OHG wīzago 'prophet, soothsayer'
+│       ← PWG *wītagō [Wiktionary stops at PWG, no PIE stated; etymonline alone ties it
+│       via OHG wizzan 'to know' — single-witness step]; *wīsǭ 'manner' → wise (n.)
 ├── Germanic → Romance LOANBACK loop
 │   ├── Frankish *wītan 'show the way' → Old Occitan guidar → OF guider → guide (→ ? guy, the rope)
 │   └── Frankish *wīsu 'manner' → OF guise → guise, disguise
@@ -342,6 +344,33 @@ Source: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/bʰeh�
 **Topology.** ~58 English words; **~110–120 nodes fully drawn** (the largest tree in this round). Six productive arms + three context arms. Latin is the broadest (one verb, videō, fans into >30 English words); the deepest chain is Greek→Latin→French (*weyd- → ἵστωρ → historia → estoire → story: 8–9 levels); Germanic is shallow but contains the **loanback loop** — Germanic material sneaking back into English dressed as Romance (guide, guise). **Six independent routes into English.** The see→know shift divides the tree at the PIE stem level (*wóyde 'knows' everywhere: wit, Veda, οἶδα, ведать) — every arm replays the same metamorphosis independently.
 
 **Hook**: where \*h₂stḗr is a slim tree with one bright crown, \*weyd- is a six-armed banyan — the same 'seen→known' change replays in every arm, and English plunders all six. Bonus star crossover: **asteroid's -oid IS \*weyd-** (εἶδος 'form') — the star chart's favorite word is half see-root.
+
+### The knowing side (secret-knowledge subset, audited 2026-07-15)
+
+Chains verified per-edge against Wiktionary (etymonline as second witness), verbatim quotes on file.
+
+```
+*weyd- / perfect *wóyde 'to have seen, to know'
+├── Balto-Slavic → Polish (promoted from context; the see/know split survives one letter apart)
+│   ├── PSl *vìděti 'to see' (< PBS *weiˀdēˀtei) → OPl (14th c., form-identical, folded)
+│   │   → widzieć → widmo 'spectre; spectrum' (widzieć + -mo, Polish-internal formation)
+│   └── *wóyde → PBS *waid- → PSl *vě̀děti 'to know; to foresee' → wiedzieć
+│       ├── *věďa (*věděti + *-ja) 'knowledge' → wiedza (attested 1612)
+│       ├── *vědьma 'witch' → wiedźma
+│       └── *věščь adj. 'oracular; proficient' (*věděti + *-ťь) → wieszcz 'inspired poet; prophet'
+│       (also *sъvědъkъ 'co-knower' → świadek 'witness' — verified, not drawn)
+├── Latin videō, the far-seeing subset
+│   ├── OF veoir → Fr voir → voyant 'seeing' → clairvoyant (psychic sense 1837; clair- is *kelh₁-)
+│   │   └── vu 'seen' → déjà vu (Boirac 1876; English 1903)
+│   ├── vīsus → vīsiō → vision → visionary (vision + -ary per both witnesses, 1650s 'able to see visions')
+│   └── prōvidēre → prōvidentia → providence; capital-P 'God as caretaker' c. 1600
+├── Greek: εἴδωλον → eidolon borrowed DIRECTLY from Greek (1801 'a shade, a specter'; no Latin stage),
+│   beside the inherited εἴδωλον → īdōlum → idole → idol chain
+└── Indic: Skt vidyā 'knowledge; a spell, incantation' (root vid); āyurveda 'science of life' → Ayurveda
+    [only the -veda half is *weyd-; āyus is *h₂eyu-/*aiw-]
+```
+
+**Exclusion bench** (each verified to another root; the English occult vocabulary is not \*weyd-): witch ← \*wikkōną, PIE \*weyk- 'consecrate' per Wiktionary, "uncertain origin" per etymonline/Liberman; weird ← OE wyrd 'fate' ← \*wert- 'to turn'; see/seer ← \*sekʷ-; Odin ← \*weh₂t- 'to be excited'; occult ← Latin occulere, \*ḱel- 'to cover'.
 
 ---
 
