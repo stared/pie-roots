@@ -66,7 +66,7 @@ export default function Know() {
 
       {/* the root as the source of light */}
       <text x={CX} y={CY + 2} textAnchor="middle" className="t-root">*weyd-</text>
-      <text x={CX} y={CY + 30} textAnchor="middle" className="t-root-gloss">to see means to know</text>
+      <text x={CX} y={CY + 30} textAnchor="middle" className="t-root-gloss">to see, to know · Proto-Indo-European</text>
     </svg>
   );
 }
