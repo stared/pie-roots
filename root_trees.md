@@ -354,7 +354,7 @@ Chains verified per-edge against Wiktionary (etymonline as second witness), verb
 ├── Balto-Slavic → Polish (promoted from context; the see/know split survives one letter apart)
 │   ├── PSl *vìděti 'to see' (< PBS *weiˀdēˀtei) → OPl (14th c., form-identical, folded)
 │   │   → widzieć → widmo 'spectre; spectrum' (widzieć + -mo, Polish-internal formation)
-│   └── *wóyde → PBS *waid- → PSl *vě̀děti 'to know; to foresee' → wiedzieć
+│   └── *wóyde → PBS *waid- → PSl *vě̀děti 'to know; to foresee' → wiedzieć [verb itself not drawn]
 │       ├── *věďa (*věděti + *-ja) 'knowledge' → wiedza (attested 1612)
 │       ├── *vědьma 'witch' → wiedźma
 │       └── *věščь adj. 'oracular; proficient' (*věděti + *-ťь) → wieszcz 'inspired poet; prophet'
@@ -362,7 +362,7 @@ Chains verified per-edge against Wiktionary (etymonline as second witness), verb
 ├── Latin videō, the far-seeing subset
 │   ├── OF veoir → Fr voir → voyant 'seeing' → clairvoyant (psychic sense 1837; clair- is *kelh₁-)
 │   │   └── vu 'seen' → déjà vu (Boirac 1876; English 1903)
-│   ├── vīsus → vīsiō → vision → visionary (vision + -ary per both witnesses, 1650s 'able to see visions')
+│   ├── vīsus → vīsiō → vision; visionary (vision + -ary per both witnesses, 1650s 'able to see visions') [not drawn]
 │   └── prōvidēre → prōvidentia → providence; capital-P 'God as caretaker' c. 1600
 ├── Greek: εἴδωλον → eidolon borrowed DIRECTLY from Greek (1801 'a shade, a specter'; no Latin stage),
 │   beside the inherited εἴδωλον → īdōlum → idole → idol chain
