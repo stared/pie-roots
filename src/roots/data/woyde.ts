@@ -23,17 +23,17 @@ export interface KnowNode extends WordNode {
 
 export const KNOW_NODES: KnowNode[] = [
   // Slavic arm (right): the seeing verb and the knowing verb, one letter apart
-  { id: "videti", form: "*vìděti", gloss: "to see", lang: "Proto-Slavic", kind: "proto", a: -52, r: 165 },
-  { id: "widziec", form: "widzieć", gloss: "to see", lang: "Polish", kind: "modern", a: -52, r: 300, parent: "videti" },
-  { id: "widmo", form: "widmo", gloss: "spectre; spectrum", lang: "Polish", kind: "modern", a: -52, r: 450, parent: "widziec" },
-  { id: "woyde", form: "*wóyde", gloss: "to have seen, to know", lang: "PIE", kind: "proto", a: 8, r: 118, flip: true },
-  { id: "vedeti", form: "*vě̀děti", gloss: "to know; to foresee", lang: "Proto-Slavic", kind: "proto", a: 8, r: 230, parent: "woyde" },
-  { id: "vedja", form: "*věďa", gloss: "knowledge", lang: "Proto-Slavic", kind: "proto", a: -7.9, r: 330.9, parent: "vedeti" },
-  { id: "wiedza", form: "wiedza", gloss: "knowledge", lang: "Polish", kind: "modern", a: -16, r: 445, parent: "vedja" },
-  { id: "vesc", form: "*věščь", gloss: "oracular, skilled", lang: "Proto-Slavic", kind: "proto", a: 8, r: 335, parent: "vedeti", flip: true },
-  { id: "wieszcz", form: "wieszcz", gloss: "inspired poet; prophet", lang: "Polish", kind: "modern", a: 8, r: 448, parent: "vesc" },
-  { id: "vedma", form: "*vědьma", gloss: "witch", lang: "Proto-Slavic", kind: "proto", a: 20.6, r: 334.8, parent: "vedeti" },
-  { id: "wiedzma", form: "wiedźma", gloss: "witch", lang: "Polish", kind: "modern", a: 27, r: 448, parent: "vedma" },
+  { id: "videti", form: "*vìděti", gloss: "to see", lang: "Proto-Slavic", kind: "proto", a: -49, r: 165 },
+  { id: "widziec", form: "widzieć", gloss: "to see", lang: "Polish", kind: "modern", a: -49, r: 300, parent: "videti" },
+  { id: "widmo", form: "widmo", gloss: "spectre; spectrum", lang: "Polish", kind: "modern", a: -49, r: 450, parent: "widziec" },
+  { id: "woyde", form: "*wóyde", gloss: "to have seen, to know", lang: "PIE", kind: "proto", a: -3, r: 118 },
+  { id: "vedeti", form: "*vě̀děti", gloss: "to know; to foresee", lang: "Proto-Slavic", kind: "proto", a: -3, r: 255, parent: "woyde", labelLeft: true, flip: true },
+  { id: "vedja", form: "*věďa", gloss: "knowledge", lang: "Proto-Slavic", kind: "proto", a: -17.7, r: 343.5, parent: "vedeti" },
+  { id: "wiedza", form: "wiedza", gloss: "knowledge", lang: "Polish", kind: "modern", a: -26, r: 445, parent: "vedja" },
+  { id: "vesc", form: "*věščь", gloss: "oracular, skilled", lang: "Proto-Slavic", kind: "proto", a: -3, r: 345, parent: "vedeti", dx: 35 },
+  { id: "wieszcz", form: "wieszcz", gloss: "inspired poet; prophet", lang: "Polish", kind: "modern", a: -3, r: 448, parent: "vesc", flip: true },
+  { id: "vedma", form: "*vědьma", gloss: "witch", lang: "Proto-Slavic", kind: "proto", a: 11.7, r: 345, parent: "vedeti" },
+  { id: "wiedzma", form: "wiedźma", gloss: "witch", lang: "Polish", kind: "modern", a: 20, r: 448, parent: "vedma" },
 
   // Germanic arm (lower right): the wise ones
   { id: "wisaz", form: "*wīsaz", gloss: "knowing", lang: "Proto-Germanic", kind: "proto", a: 52, r: 190, labelRight: true, flip: true },
