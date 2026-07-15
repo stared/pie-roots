@@ -18,7 +18,8 @@ page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
 page.on("pageerror", (e) => errors.push(String(e)));
 
 for (const v of views) {
-  await page.goto(`${BASE}/roots.html#${v}`, { waitUntil: "networkidle0" });
+  // a view may carry a query, e.g. "?share#know"
+  await page.goto(`${BASE}/roots.html${v.startsWith("?") ? v : `#${v}`}`, { waitUntil: "networkidle0" });
   await page.reload({ waitUntil: "networkidle0" }); // hash-only navigations don't refetch
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: `${OUT}-${v}.png`, fullPage: true });

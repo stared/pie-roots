@@ -36,6 +36,16 @@ body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
   padding: 18px 20px 0; color: var(--mid); opacity: 0.8;
 }
 
+/* ?share — poster page: title, chart, legend + credits */
+.roots.share { padding-bottom: 28px; }
+.roots.share header { padding-top: 34px; }
+.roots footer.credit {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 0.5em 1.7em; opacity: 1; font-size: 12.5px; padding-top: 8px;
+}
+.roots footer.credit svg { display: inline-block; width: auto; height: auto; vertical-align: -2px; margin-right: 3px; }
+.roots footer.credit b { color: var(--ink); font-weight: 600; }
+
 /* tree — the content (words, links, dots) must clearly dominate the guides */
 .t-guide { stroke: #ece4d1; stroke-width: 1; fill: none; }
 .t-link { stroke: #8a775a; stroke-width: 1.3; }
