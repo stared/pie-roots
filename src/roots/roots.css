@@ -24,6 +24,12 @@ body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
 .roots header { max-width: 860px; margin: 0 auto; padding: 18px 24px 6px; text-align: center; }
 .roots h1 { font-size: clamp(32px, 4.6vw, 52px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.05; }
 .roots h1 i { font-style: italic; }
+.roots h1 .means {
+  font-family: var(--sans); font-size: 0.34em; font-weight: 400;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--faint);
+  vertical-align: middle; margin: 0 0.5em;
+}
+.roots h1 .gloss { font-weight: 400; }
 .roots header p { margin: 0.7em auto 0; max-width: 660px; font-size: 17px; line-height: 1.55; color: var(--mid); }
 .roots header p b { font-weight: 600; color: var(--ink); }
 .roots header p i { color: var(--ink); }
