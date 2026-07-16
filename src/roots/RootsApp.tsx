@@ -62,6 +62,7 @@ export default function RootsApp() {
       {!share && (
         <nav>
           <a href="../">✳ PIE roots</a>
+          <a href="https://github.com/stared/pie-roots">GitHub</a>
         </nav>
       )}
       <header>
@@ -83,7 +84,7 @@ export default function RootsApp() {
           <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" /></svg> attested ancestor</span>
           <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" strokeDasharray="2 2" /></svg> reconstructed</span>
           <span><svg width="20" height="13"><line x1="1" y1="7" x2="19" y2="7" className="t-link" strokeDasharray="5 4" /></svg> disputed step</span>
-          <span className="by">chains follow Wiktionary, with Etymonline as a second witness · <a href="https://github.com/stared/pie-roots">notes &amp; sources</a> · <a href="?share">poster version</a></span>
+          <span className="by">sources: Wiktionary, Etymonline · <a href="https://github.com/stared/pie-roots/blob/main/root_trees.md">full descent trees</a> · <a href="?share">poster version</a></span>
         </footer>
       )}
     </div>
