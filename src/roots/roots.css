@@ -62,3 +62,19 @@ body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
 .t-note { font: italic 11px var(--sans); fill: #6b5a42;
   paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
 .t-era { font: 11px var(--sans); letter-spacing: 0.14em; fill: #b3a184; }
+
+/* dark — night ground for the occult chart: the root is the light source,
+   words are what the light reaches. Brightness follows attestation:
+   modern words brightest, attested ancestors dimmer, reconstructions dimmest. */
+.roots.dark {
+  --paper: #171210;
+  --ink: #f2e8d3;
+  --mid: #a3927a;
+  --faint: #8d7c64;
+}
+body:has(.roots.dark) { background: #171210; }
+.roots.dark .t-link { stroke: #c0a678; }
+.roots.dark .t-ring { stroke: #c7b28a; }
+.roots.dark .t-anc { fill: #d9c9a6; }
+.roots.dark .t-proto { fill: #c2b08c; }
+.roots.dark .t-note { fill: #96856a; }

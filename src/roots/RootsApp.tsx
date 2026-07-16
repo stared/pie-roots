@@ -14,6 +14,8 @@ interface View {
   title: ReactNode;
   dek: ReactNode;
   chart: ReactNode;
+  /** night ground — light-on-dark palette (the occult chart) */
+  dark?: boolean;
 }
 
 const VIEWS: View[] = [
@@ -30,6 +32,7 @@ const VIEWS: View[] = [
     title: <><i>*weyd-</i> <span className="means">means</span> magic</>,
     dek: <>To see meant to know — and where knowing turned occult, the root followed: <b>wizard</b>, <b>clairvoyant</b> ‘clear-seeing’, <b>Hades</b> ‘the Unseen’, the <b>Veda</b>. English’s own words for the hidden — <i>witch</i>, <i>weird</i>, <i>seer</i>, <i>occult</i> itself — all come from other roots; Polish kept what English lost: <b>widzieć</b> ‘to see’ sits one letter from <i>wiedzieć</i> ‘to know’, and <b>wiedźma</b> ‘witch’ and <b>wieszcz</b> ‘poet-prophet’ are still ones-who-know.</>,
     chart: <Know />,
+    dark: true,
   },
   {
     slug: "bheh2",
@@ -64,8 +67,9 @@ export default function RootsApp() {
   // a compact legend, and credits. e.g. /weyd-magic/?share
   const share = new URLSearchParams(location.search).has("share");
 
+  const cls = ["roots", share && "share", view.dark && "dark"].filter(Boolean).join(" ");
   return (
-    <div className={share ? "roots share" : "roots"}>
+    <div className={cls}>
       {!share && (
         <nav>
           <a href="../">✳ PIE roots</a>
@@ -83,7 +87,7 @@ export default function RootsApp() {
           <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" /></svg> attested ancestor</span>
           <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" strokeDasharray="2 2" /></svg> reconstructed</span>
           <span><svg width="20" height="13"><line x1="1" y1="7" x2="19" y2="7" className="t-link" strokeDasharray="5 4" /></svg> disputed step</span>
-          <span className="by">by Piotr Migdał · 2026 · p.migdal.pl/pie-roots · sources: Wiktionary, Etymonline</span>
+          <span className="by">by <a href="https://p.migdal.pl">Piotr Migdał</a> · 2026 · p.migdal.pl/pie-roots · sources: Wiktionary, Etymonline</span>
         </footer>
       ) : (
         <footer className="credit">

@@ -56,7 +56,7 @@ export default function Know() {
               : <circle cx={n.x} cy={n.y} r={4} fill="none" className="t-ring"
                   strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />}
             <text x={tx} y={n.y + dy} textAnchor={anchor}
-              className={modern ? "t-word" : "t-anc"}>{n.form}</text>
+              className={modern ? "t-word" : n.kind === "proto" ? "t-anc t-proto" : "t-anc"}>{n.form}</text>
             {noteLine(n) && (
               <text x={tx} y={n.y + dy + (above ? -16 : 17)} textAnchor={anchor} className="t-note">{noteLine(n)}</text>
             )}
