@@ -62,7 +62,7 @@ export const KNOW_NODES: KnowNode[] = [
   { id: "ayurveda", form: "Ayurveda", kind: "modern", a: 143.1, r: 445, parent: "ayurvedaskt" },
 
   // Latin arm (left): the far-seers
-  { id: "video", form: "videō", gloss: "to see", lang: "Latin", kind: "ancestor", a: -172, r: 120 },
+  { id: "video", form: "vidēre", gloss: "to see", lang: "Latin", kind: "ancestor", a: -172, r: 120 },
   { id: "providere", form: "prōvidēre", gloss: "to foresee", lang: "Latin", kind: "ancestor", a: 171.2, r: 222.0, parent: "video" },
   { id: "providentia", form: "prōvidentia", gloss: "foresight", lang: "Latin", kind: "ancestor", a: 165.1, r: 334.2, parent: "providere" },
   { id: "providence", form: "Providence", kind: "modern", a: 162.1, r: 445, parent: "providentia" },

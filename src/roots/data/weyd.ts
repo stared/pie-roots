@@ -22,7 +22,7 @@ export interface EyeNode extends WordNode {
 
 export const EYE_NODES: EyeNode[] = [
   // Latin arm (right): the seeing side
-  { id: "video", form: "videō", gloss: "to see", lang: "Latin", kind: "ancestor", a: -9, r: 115, labelLeft: true },
+  { id: "video", form: "vidēre", gloss: "to see", lang: "Latin", kind: "ancestor", a: -9, r: 115, labelLeft: true },
   { id: "invidere", form: "invidēre", gloss: "to look askance at", lang: "Latin", kind: "ancestor", a: -33.9, r: 199, parent: "video" },
   { id: "invidia", form: "invidia", gloss: "envy, ill will", lang: "Latin", kind: "ancestor", a: -44.8, r: 325, parent: "invidere" },
   { id: "envie", form: "envie", gloss: "envy", lang: "Old French", kind: "ancestor", a: -47.2, r: 380, parent: "invidia" },
