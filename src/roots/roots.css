@@ -46,6 +46,7 @@ body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
 }
 .roots footer.credit svg { display: inline-block; width: auto; height: auto; vertical-align: -2px; margin-right: 3px; }
 .roots footer.credit b { color: var(--ink); font-weight: 600; }
+.roots footer.credit a { color: inherit; }
 
 /* tree — the content (words, links, dots) must clearly dominate the guides */
 .t-guide { stroke: #ece4d1; stroke-width: 1; fill: none; }

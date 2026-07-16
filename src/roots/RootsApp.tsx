@@ -61,9 +61,7 @@ export default function RootsApp() {
     <div className={share ? "roots share" : "roots"}>
       {!share && (
         <nav>
-          {VIEWS.map(v => (
-            <a key={v.slug} href={`../${v.slug}/`} className={v === view ? "active" : ""}>{v.slug}</a>
-          ))}
+          <a href="../">✳ PIE roots</a>
         </nav>
       )}
       <header>
@@ -80,7 +78,13 @@ export default function RootsApp() {
           <span className="by">by Piotr Migdał · 2026 · p.migdal.pl/pie-roots · sources: Wiktionary, Etymonline</span>
         </footer>
       ) : (
-        <footer>exploration tier · chains follow Wiktionary · grades and sources in root_trees.md</footer>
+        <footer className="credit">
+          <span><svg width="12" height="13"><circle cx="6" cy="7" r="4.4" className="t-dot" /></svg> modern word</span>
+          <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" /></svg> attested ancestor</span>
+          <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" strokeDasharray="2 2" /></svg> reconstructed</span>
+          <span><svg width="20" height="13"><line x1="1" y1="7" x2="19" y2="7" className="t-link" strokeDasharray="5 4" /></svg> disputed step</span>
+          <span className="by">chains follow Wiktionary, with Etymonline as a second witness · <a href="https://github.com/stared/pie-roots">notes &amp; sources</a></span>
+        </footer>
       )}
     </div>
   );
