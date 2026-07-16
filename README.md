@@ -9,26 +9,28 @@ words fan out into the modern vocabulary. Companion to
 
 ## What's here
 
-- **The star of *star*** — a scrollytelling explorable of **\*h₂stḗr** 'star'
-  (*star, stellar, asterisk, disaster, étoile…*) — the
-  [landing page](https://p.migdal.pl/pie-roots/).
-- **Root charts** — hand-laid charts, one PIE root each, at
-  [roots.html](https://p.migdal.pl/pie-roots/roots.html):
-  - [#see](https://p.migdal.pl/pie-roots/roots.html#see) — **\*weyd-** laid out
-    as an eye: *vision, view, evidence, wit, wise, history, idea, Hades*
-  - [#know](https://p.migdal.pl/pie-roots/roots.html#know) — the same root's
-    secret side, rays from the root: *wizard, wiseacre, clairvoyant, déjà vu,
-    eidolon* — and Polish *wiedźma, wieszcz, widmo*
-  - [#speak](https://p.migdal.pl/pie-roots/roots.html#speak) — **\*bʰeh₂-** as a
-    rippling fan: *fate, fairy, prophet, anthem, ban, bandit, contraband*
-  - [#sit](https://p.migdal.pl/pie-roots/roots.html#sit) — **\*sed-** in dated
-    time strata: *settle, siege, size, chair, banshee, Upanishad*
-  - [#turn](https://p.migdal.pl/pie-roots/roots.html#turn) — **\*kʷel-** as a
-    wheel of words: *wheel, cycle, chakra, culture, colony, pole, collar*
+One root per page:
 
-  Append `?share` before the hash — e.g.
-  [roots.html?share#know](https://p.migdal.pl/pie-roots/roots.html?share#know) —
-  for a poster page (title, chart, legend, credits) ready for sharing.
+- [/h2ster/](https://p.migdal.pl/pie-roots/h2ster/) — **the star of *star***,
+  a scrollytelling explorable of **\*h₂stḗr** 'star'
+  (*star, stellar, asterisk, disaster, étoile…*)
+- [/weyd/](https://p.migdal.pl/pie-roots/weyd/) — **\*weyd-** means to see, to
+  know — laid out as an eye: *vision, view, evidence, wit, wise, history,
+  idea, Hades*
+- [/weyd-magic/](https://p.migdal.pl/pie-roots/weyd-magic/) — **\*weyd-**
+  means magic — the root's occult descendants as rays of light: *wizard,
+  wiseacre, clairvoyant, déjà vu, eidolon* — and Polish *wiedźma, wieszcz,
+  widmo*
+- [/bheh2/](https://p.migdal.pl/pie-roots/bheh2/) — **\*bʰeh₂-** 'to speak' as
+  a rippling fan: *fate, fairy, prophet, anthem, ban, bandit, contraband*
+- [/sed/](https://p.migdal.pl/pie-roots/sed/) — **\*sed-** 'to sit' in dated
+  time strata: *settle, siege, size, chair, banshee, Upanishad*
+- [/kwel/](https://p.migdal.pl/pie-roots/kwel/) — **\*kʷel-** 'to turn' as a
+  wheel of words: *wheel, cycle, chakra, culture, colony, pole, collar*
+
+Append `?share` — e.g.
+[/weyd-magic/?share](https://p.migdal.pl/pie-roots/weyd-magic/?share) — for a
+poster page (title, chart, legend, credits) ready for sharing.
 
 ## Sourcing
 
@@ -44,8 +46,8 @@ Matasović, Kloekhorst, …).
 
 ```bash
 pnpm install
-pnpm dev      # the star of 'star'  → http://localhost:5173
-pnpm roots    # the root charts     → http://localhost:4330/roots.html
+pnpm dev      # the site            → http://localhost:5173
+pnpm roots    # the root charts     → http://localhost:4330/weyd/
 pnpm build    # type-check + production bundle into dist/
 pnpm preview  # serve the production build
 ```
@@ -56,8 +58,9 @@ Vite + React + TypeScript; d3 only where it earns its keep (hierarchy, zoom,
 shape) — the SVG itself is rendered declaratively by React.
 
 ```
-index.html      the star of 'star' — scrollytelling explorable of *h₂stḗr
-roots.html      the root charts (see · know · speak · sit · turn)
+index.html      the landing page — index of the collection
+h2ster/         the star of 'star' — scrollytelling explorable of *h₂stḗr
+weyd/ weyd-magic/ bheh2/ sed/ kwel/   the root charts, one page per root
 src/            star app: components, content (Markdown steps), data
 src/roots/      root charts: one component + hand-tuned data file per root
 research.md     *h₂stḗr research dossier

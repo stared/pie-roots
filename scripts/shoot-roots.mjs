@@ -1,11 +1,11 @@
-// Screenshot the four root visualizations. Needs a running server:
+// Screenshot the root visualizations. Needs a running server:
 //   pnpm build && pnpm preview --port 4331   (or pnpm roots for the dev server)
-// Usage: BASE=http://localhost:4331 node scripts/shoot-roots.mjs [see speak sit turn]
+// Usage: BASE=http://localhost:4331 node scripts/shoot-roots.mjs [weyd weyd-magic/?share ...]
 import puppeteer from "puppeteer-core";
 
 const BASE = process.env.BASE ?? "http://localhost:4331";
 const OUT = process.env.OUT ?? "/tmp/roots";
-const views = process.argv.slice(2).length ? process.argv.slice(2) : ["see", "know", "speak", "sit", "turn"];
+const views = process.argv.slice(2).length ? process.argv.slice(2) : ["weyd", "weyd-magic", "bheh2", "sed", "kwel"];
 
 const browser = await puppeteer.launch({
   executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -18,12 +18,13 @@ page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
 page.on("pageerror", (e) => errors.push(String(e)));
 
 for (const v of views) {
-  // a view may carry a query, e.g. "?share#know"
-  await page.goto(`${BASE}/roots.html${v.startsWith("?") ? v : `#${v}`}`, { waitUntil: "networkidle0" });
-  await page.reload({ waitUntil: "networkidle0" }); // hash-only navigations don't refetch
+  // a view is a path, optionally with a query: "weyd", "weyd-magic/?share"
+  const path = v.includes("/") ? v : `${v}/`;
+  await page.goto(`${BASE}/${path}`, { waitUntil: "networkidle0" });
   await page.evaluate(() => document.fonts.ready);
-  await page.screenshot({ path: `${OUT}-${v}.png`, fullPage: true });
-  console.log(`${v}: shot -> ${OUT}-${v}.png`);
+  const name = v.replace(/[/?#]/g, "");
+  await page.screenshot({ path: `${OUT}-${name}.png`, fullPage: true });
+  console.log(`${v}: shot -> ${OUT}-${name}.png`);
 }
 console.log("console errors:", errors.length ? errors : "none");
 await browser.close();
