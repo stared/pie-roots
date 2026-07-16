@@ -68,16 +68,16 @@ body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
    modern words brightest, attested ancestors dimmer, reconstructions dimmest. */
 .roots.dark {
   --paper: #0b0d13;
-  --ink: #f1f1ea;
-  --mid: #9aa0a8;
-  --faint: #7d828b;
+  --ink: #ffffff;
+  --mid: #b2b8c1;
+  --faint: #8b919b;
 }
 body:has(.roots.dark) { background: #0b0d13; }
-.roots.dark .t-link { stroke: #9aa1ad; }
-.roots.dark .t-dot { fill: #f4f7fc; }
-.roots.dark .t-ring { stroke: #c8cdd6; }
-.roots.dark .t-root { fill: #fbfcf8; }
-.roots.dark .t-root-gloss { fill: #cdd2da; }
-.roots.dark .t-anc { fill: #ccd0ca; }
-.roots.dark .t-proto { fill: #a7aba5; }
-.roots.dark .t-note { fill: #83888f; }
+.roots.dark .t-link { stroke: #c9cfda; }
+.roots.dark .t-dot { fill: #ffffff; }
+.roots.dark .t-ring { stroke: #dfe3ea; }
+.roots.dark .t-root { fill: #ffffff; }
+.roots.dark .t-root-gloss { fill: #e3e7ee; }
+.roots.dark .t-anc { fill: #eceee8; }
+.roots.dark .t-proto { fill: #c8ccc5; }
+.roots.dark .t-note { fill: #9ba1ab; }

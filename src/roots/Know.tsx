@@ -39,12 +39,15 @@ export default function Know() {
         </radialGradient>
         <radialGradient id="k-ray" gradientUnits="userSpaceOnUse" cx={CX} cy={CY} r={560}
           gradientTransform={`translate(${CX} ${CY}) scale(${KX} ${KY}) translate(${-CX} ${-CY})`}>
-          <stop offset="0%" stopColor="#eff3fa" />
-          <stop offset="40%" stopColor="#a7aebc" />
-          <stop offset="100%" stopColor="#585d69" />
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="40%" stopColor="#c9cfda" />
+          <stop offset="100%" stopColor="#767c88" />
         </radialGradient>
         <filter id="k-bloom" x="-250%" y="-250%" width="600%" height="600%">
           <feGaussianBlur stdDeviation="4" />
+        </filter>
+        <filter id="k-raybloom" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="2.6" />
         </filter>
         <filter id="k-textbloom" x="-60%" y="-120%" width="220%" height="340%">
           <feGaussianBlur stdDeviation="7" />
@@ -52,14 +55,19 @@ export default function Know() {
       </defs>
       <ellipse cx={CX} cy={CY} rx={R_FADE * KX} ry={R_FADE * KY} fill="url(#k-glow)" />
 
-      {/* links: straight rays of light, graded outward by the shared gradient */}
-      {nodes.map(n => {
-        const p = n.parent ? laid[n.parent] : undefined;
-        const [px, py] = p ? [p.x, p.y] : polarE(n.a, R0);
-        return <line key={`l-${n.id}`} x1={px} y1={py} x2={n.x} y2={n.y}
-          className="t-link" style={{ stroke: "url(#k-ray)" }}
-          strokeDasharray={n.dashed ? "5 4" : undefined} />;
-      })}
+      {/* links: straight rays of light, graded outward by the shared gradient —
+          drawn twice, a blurred glow under the crisp line */}
+      {[{ pfx: "lg", glow: true }, { pfx: "l", glow: false }].map(({ pfx, glow }) => (
+        <g key={pfx} filter={glow ? "url(#k-raybloom)" : undefined} opacity={glow ? 0.6 : 1}>
+          {nodes.map(n => {
+            const p = n.parent ? laid[n.parent] : undefined;
+            const [px, py] = p ? [p.x, p.y] : polarE(n.a, R0);
+            return <line key={`${pfx}-${n.id}`} x1={px} y1={py} x2={n.x} y2={n.y}
+              className="t-link" style={{ stroke: "url(#k-ray)", strokeWidth: glow ? 2.4 : undefined }}
+              strokeDasharray={n.dashed ? "5 4" : undefined} />;
+          })}
+        </g>
+      ))}
 
       {/* nodes */}
       {nodes.map(n => {
