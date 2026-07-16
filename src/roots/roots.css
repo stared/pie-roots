@@ -67,14 +67,17 @@ body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
    words are what the light reaches. Brightness follows attestation:
    modern words brightest, attested ancestors dimmer, reconstructions dimmest. */
 .roots.dark {
-  --paper: #171210;
-  --ink: #f2e8d3;
-  --mid: #a3927a;
-  --faint: #8d7c64;
+  --paper: #0b0d13;
+  --ink: #f1f1ea;
+  --mid: #9aa0a8;
+  --faint: #7d828b;
 }
-body:has(.roots.dark) { background: #171210; }
-.roots.dark .t-link { stroke: #c0a678; }
-.roots.dark .t-ring { stroke: #c7b28a; }
-.roots.dark .t-anc { fill: #d9c9a6; }
-.roots.dark .t-proto { fill: #c2b08c; }
-.roots.dark .t-note { fill: #96856a; }
+body:has(.roots.dark) { background: #0b0d13; }
+.roots.dark .t-link { stroke: #9aa1ad; }
+.roots.dark .t-dot { fill: #f4f7fc; }
+.roots.dark .t-ring { stroke: #c8cdd6; }
+.roots.dark .t-root { fill: #fbfcf8; }
+.roots.dark .t-root-gloss { fill: #cdd2da; }
+.roots.dark .t-anc { fill: #ccd0ca; }
+.roots.dark .t-proto { fill: #a7aba5; }
+.roots.dark .t-note { fill: #83888f; }
