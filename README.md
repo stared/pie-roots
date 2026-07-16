@@ -36,8 +36,10 @@ poster page (title, chart, legend, credits) ready for sharing.
 
 The chart chains follow **Wiktionary**, with **Etymonline** as a second
 witness; every edge is verified against the sources before it is drawn, and
-uncertain or single-witness steps are dashed. The descent trees with notes
-live in [`root_trees.md`](root_trees.md) (exploration tier). The
+uncertain or weakly-sourced steps are dashed. Each charted root has its
+descent tree with notes in [`notes/`](notes) — e.g.
+[`notes/weyd.md`](notes/weyd.md) — with the wider survey in
+[`root_trees.md`](root_trees.md). The
 \*h₂stḗr dossier in [`research.md`](research.md) is graded against the
 specialist dictionaries (Watkins, Kroonen, Beekes, de Vaan, Derksen,
 Matasović, Kloekhorst, …).
