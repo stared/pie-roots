@@ -29,7 +29,7 @@ const VIEWS: View[] = [
   {
     slug: "weyd-magic",
     trees: "notes/weyd.md#the-knowing-side-secret-knowledge-subset-audited-2026-07-15",
-    title: <><i>*weyd-</i> <span className="means">means</span> to see, to know — the occult side</>,
+    title: <><i>*weyd-</i> <span className="means">means</span> to see, to know</>,
     dek: <>To see meant to know — and where knowing turned occult, the root followed: <b>wizard</b>, <b>clairvoyant</b> ‘clear-seeing’, <b>Hades</b> ‘the Unseen’, the <b>Veda</b>. English’s own words for the hidden — <i>witch</i>, <i>weird</i>, <i>seer</i>, <i>occult</i> itself — all come from other roots; Polish kept what English lost: <b>widzieć</b> ‘to see’ sits one letter from <i>wiedzieć</i> ‘to know’, and <b>wiedźma</b> ‘witch’ and <b>wieszcz</b> ‘poet-prophet’ are still ones-who-know.</>,
     chart: <Know />,
     dark: true,
