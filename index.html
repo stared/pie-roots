@@ -20,7 +20,6 @@
         --ink: #2a231a;
         --mid: #6d5f4b;
         --faint: #8a7a60;
-        --hairline: #e3dac7;
       }
       * { margin: 0; box-sizing: border-box; }
       body {
@@ -40,9 +39,8 @@
       main { width: 100%; max-width: 640px; margin-top: 7vh; }
       a.root {
         display: block; text-decoration: none; color: inherit;
-        padding: 20px 6px; border-top: 1px solid var(--hairline);
+        padding: 20px 6px;
       }
-      a.root:last-of-type { border-bottom: 1px solid var(--hairline); }
       a.root h2 { font-size: 23px; font-weight: 600; }
       a.root h2 i { font-style: italic; }
       a.root h2 .plain { font-weight: 400; color: var(--mid); }
@@ -62,11 +60,14 @@
       <p>
         How single Proto-Indo-European words fan out into the modern
         vocabulary — one root per page, every chain verified against the
-        sources. A companion to
-        <a href="https://p.migdal.pl/tree-of-tree/" style="color: inherit">the tree of <i>tree</i></a>.
+        sources.
       </p>
     </header>
     <main>
+      <a class="root" href="https://p.migdal.pl/tree-of-tree/">
+        <h2><i>*deru-</i> <span class="plain">— the tree of ‘tree’</span></h2>
+        <p>tree, true, truce, trust, druid, endure, tar — a scrollytelling explorable</p>
+      </a>
       <a class="root" href="./h2ster/">
         <h2><i>*h₂stḗr</i> <span class="plain">— the star of ‘star’</span></h2>
         <p>star, stellar, asterisk, disaster, étoile — a scrollytelling explorable</p>
@@ -76,7 +77,7 @@
         <p>vision, view, evidence, wit, wise, history, idea — and Hades, the Unseen</p>
       </a>
       <a class="root" href="./weyd-magic/">
-        <h2><i>*weyd-</i> <span class="plain">means magic</span></h2>
+        <h2><i>*weyd-</i> <span class="plain">means to see, to know — the occult side</span></h2>
         <p>wizard, clairvoyant, déjà vu, eidolon — and Polish wiedźma, wieszcz, widmo</p>
       </a>
       <a class="root" href="./bheh2/">
@@ -93,7 +94,7 @@
       </a>
     </main>
     <footer>
-      by Piotr Migdał · sources: Wiktionary, Etymonline &amp; the specialist dictionaries<br />
+      by <a href="https://p.migdal.pl">Piotr Migdał</a> · sources: Wiktionary, Etymonline &amp; the specialist dictionaries<br />
       <a href="https://github.com/stared/pie-roots">github.com/stared/pie-roots</a>
     </footer>
   </body>

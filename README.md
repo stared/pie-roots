@@ -1,9 +1,9 @@
 # PIE roots ✳️
 
 Explorable etymologies of Proto-Indo-European roots — how single prehistoric
-words fan out into the modern vocabulary. Companion to
+words fan out into the modern vocabulary. It continues
 [tree-of-tree](https://github.com/stared/tree-of-tree)
-([live](https://p.migdal.pl/tree-of-tree/)).
+([live](https://p.migdal.pl/tree-of-tree/)), the tree of *tree*.
 
 **Live: [p.migdal.pl/pie-roots](https://p.migdal.pl/pie-roots/)**
 
