@@ -8,7 +8,7 @@
 *bʰeh₂- (PIE) 'to speak, say'
 ├── fōr, fārī (Latin) 'to speak' [via Proto-Italic *fāōr]
 │   ├── fātum (Latin) 'thing spoken; destiny' → fatal, fatality
-│   │   ├── fāta (plural) 'the Fates' → fate; → fae (Old French) → fay, faerie → fairy
+│   │   ├── fāta (plural) 'the Fates' → fate; → ? fae (Old French) → fay, faerie → fairy
 │   │   └── fado (Portuguese) 'fate; song genre' → fado
 │   ├── fāma (Latin) 'talk, report, renown'
 │   │   └── fame, famous, defame, infamous, infamy
@@ -55,7 +55,7 @@
 │       └── bannum (Medieval Latin) 'proclamation'
 │           └── bando → contrabando (older Italian) 'against the proclamation' → contraband
 ├── *bʰeh₂-ni-s
-│   ├── *bōniz (Proto-Germanic) 'prayer, petition' → bón (Old Norse) → boon
+│   ├── ? *bōniz (Proto-Germanic) 'prayer, petition' → bón (Old Norse) → boon
 │   ├── ban (Old Armenian) 'word, thing' — no English yield
 │   └── basnь (Proto-Slavic) 'fable, spell' — no English yield
 ├── bhánati (Sanskrit) 'speaks' — no English yield
@@ -64,9 +64,30 @@
 
 **False twin appendix** — homophonous \*bʰeh₂- 'to shine' (same Wiktionary page): photo-, phosphorus, phase, phenomenon, epiphany, diaphanous, emphasis, fantasy, fancy, phantom, hierophant, sycophant, cellophane, beacon, beckon, ? banner. Every 'shine' word is a potential trap: *phase* vs *aphasia*, *emphasis* vs *apophasis*, *phenomenon* vs *phoneme* — identical-looking Greek stems from two different roots.
 
-## Sources
+## Transition sources
 
-- root: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/bʰeh₂- · https://www.etymonline.com/word/*bha-
-- Latin: https://en.wiktionary.org/wiki/for#Latin (fārī) · https://en.wiktionary.org/wiki/fateor#Latin · https://en.wiktionary.org/wiki/fas#Latin
-- Greek: https://en.wiktionary.org/wiki/φημί#Ancient_Greek · https://en.wiktionary.org/wiki/φωνή#Ancient_Greek · https://en.wiktionary.org/wiki/βλάσφημος#Ancient_Greek
-- Germanic: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/bannaną · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/bōniz
+- PIE root and the distinct homophonous “shine” root:
+  https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/bʰeh₂- · https://www.etymonline.com/word/*bha-
+- Latin `fārī → fātum/fāta → fate`; the route `fāta → Old French fae → fairy`
+  is one published analysis, while Etymonline also reports an alternative from
+  Latin *Fatuus/Faunus*. Also `fāma → fame`, `fābula → fable`,
+  `īnfāns → infant/infantry`, and `praefātiō → preface`:
+  https://en.wiktionary.org/wiki/for#Latin · https://www.etymonline.com/word/fate · https://www.etymonline.com/word/fairy · https://www.etymonline.com/word/fame · https://www.etymonline.com/word/fable · https://www.etymonline.com/word/infant · https://www.etymonline.com/word/infantry · https://www.etymonline.com/word/preface
+- Parallel Latin formation `fatērī → cōnfitērī → confess`:
+  https://en.wiktionary.org/wiki/fateor#Latin · https://www.etymonline.com/word/confess
+- Disputed attachment of Latin `fās`; `nefās → nefarious` after that point:
+  https://en.wiktionary.org/wiki/fas#Latin · https://www.etymonline.com/word/nefarious
+- Greek `φημί` formations to prophet, euphemism and aphasia:
+  https://en.wiktionary.org/wiki/φημί#Ancient_Greek · https://www.etymonline.com/word/prophet · https://www.etymonline.com/word/euphemism · https://www.etymonline.com/word/aphasia
+- `βλάσφημος → βλασφημέω → Latin/French → blame`:
+  https://en.wiktionary.org/wiki/βλάσφημος#Ancient_Greek · https://www.etymonline.com/word/blame
+- `φωνή → symphony` and Greek/Latin/Old English `antiphon → anthem`:
+  https://en.wiktionary.org/wiki/φωνή#Ancient_Greek · https://www.etymonline.com/word/symphony · https://www.etymonline.com/word/anthem
+- Germanic `*bannaną → ban`, Frankish routes to banish/banal/abandon, and the
+  proclamation compounds contraband/bandit: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/bannaną · https://www.etymonline.com/word/ban · https://www.etymonline.com/word/banish · https://www.etymonline.com/word/banal · https://www.etymonline.com/word/abandon · https://www.etymonline.com/word/contraband · https://www.etymonline.com/word/bandit
+- `*bōniz → Old Norse bón → boon` is secure after Proto-Germanic; attaching
+  `*bōniz` directly to PIE *bʰeh₂-ni-s is one of two analyses listed by the source:
+  https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/bōniz · https://www.etymonline.com/word/boon
+- Context-only Armenian, Slavic and Sanskrit forms are supplied by the PIE
+  reconstruction page; Sanskrit `bhāṣā` remains dashed because its exact
+  formation/root attachment needs stronger specialist support.

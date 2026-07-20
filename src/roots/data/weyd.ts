@@ -69,7 +69,7 @@ export const EYE_NODES: EyeNode[] = [
   { id: "aetwitan", form: "ætwītan", gloss: "to taunt", lang: "Old English", kind: "ancestor", a: -161.2, r: 308, parent: "witanao" },
   { id: "twit", form: "twit", kind: "modern", a: 195, r: 435, parent: "aetwitan" },
   { id: "fwitan", form: "*wītan", gloss: "to show the way", lang: "Frankish", kind: "proto", a: -146.7, r: 265, parent: "witanao", labelRight: true },
-  { id: "guider", form: "guider", gloss: "to guide", lang: "Old French", kind: "ancestor", a: -143.8, r: 349, parent: "fwitan", dashed: true },
+  { id: "guider", form: "guider", gloss: "to guide", lang: "Old French", kind: "ancestor", a: -143.8, r: 349, parent: "fwitan" },
   { id: "guide", form: "guide", kind: "modern", a: 218, r: 435, parent: "guider" },
   { id: "wisaz", form: "*wīsaz", gloss: "knowing", lang: "Proto-Germanic", kind: "proto", a: 129.5, r: 155, labelRight: true },
   { id: "wis", form: "wīs", gloss: "wise", lang: "Old English", kind: "ancestor", a: 129.5, r: 225, parent: "wisaz", labelRight: true },
@@ -88,6 +88,6 @@ export const EYE_NODES: EyeNode[] = [
   { id: "vedas", form: "véda", gloss: "knowledge", lang: "Sanskrit", kind: "ancestor", a: 68, r: 280, labelLeft: true },
   { id: "veda", form: "Veda", kind: "modern", a: 68, r: 435, parent: "vedas" },
   // the Unseen: ἀ- 'un-' + ϝιδ- 'seen', with the digamma dropped as in ἰδέα
-  { id: "aides", form: "Ἀΐδης", gloss: "the Unseen", lang: "Greek", kind: "ancestor", a: 88, r: 350, dashed: true, labelLeft: true },
+  { id: "aides", form: "ᾍδης", gloss: "the Unseen", lang: "Greek", kind: "ancestor", a: 88, r: 350, dashed: true, labelLeft: true },
   { id: "hades", form: "Hades", kind: "modern", a: 88, r: 435, parent: "aides" },
 ];

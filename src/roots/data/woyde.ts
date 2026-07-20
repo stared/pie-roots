@@ -87,6 +87,6 @@ export const KNOW_NODES: KnowNode[] = [
   { id: "idol", form: "idol", kind: "modern", a: -103.2, r: 447, parent: "idole" },
   { id: "eidolon", form: "eidolon", kind: "modern", a: -84.3, r: 430, parent: "eidolongr" },
   // the Unseen: ἀ- 'un-' + ϝιδ- 'seen', with the digamma dropped as in ἰδέα
-  { id: "aides", form: "Ἀΐδης", gloss: "the Unseen", lang: "Greek", kind: "ancestor", a: -65.3, r: 310, dashed: true },
+  { id: "aides", form: "ᾍδης", gloss: "the Unseen", lang: "Greek", kind: "ancestor", a: -65.3, r: 310, dashed: true },
   { id: "hades", form: "Hades", kind: "modern", a: -65.3, r: 445, parent: "aides" },
 ];

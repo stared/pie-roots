@@ -39,7 +39,7 @@
 │   │   εἰδύλλιον 'little picture' → idyll
 │   ├── εἴδωλον 'seen shape, phantom' → idol, idolatry, eidolon
 │   ├── ἰδέα 'form, notion' → idea, ideal, ideology
-│   ├── ? Ἀΐδης → Hades 'the Unseen One' (Beekes endorses; others hedge)
+│   ├── ? ᾍδης → Hades 'the Unseen One'
 │   └── οἶδα 'I know' ← *wóyde (context — no English)
 ├── Celtic: *dru-wits 'oak-knower / strong seer' → druid   [the 'knower' half is *weyd-]
 ├── Indo-Iranian: *wóyd-o-s → Sanskrit véda 'knowledge' → Veda, Vedic, Ayurveda
@@ -74,11 +74,26 @@ Chains verified per-edge against Wiktionary (etymonline as second witness), verb
 
 **Exclusion bench** (each verified to another root; the English occult vocabulary is not \*weyd-): witch ← \*wikkōną, PIE \*weyk- 'consecrate' per Wiktionary, "uncertain origin" per etymonline/Liberman; weird ← OE wyrd 'fate' ← \*wert- 'to turn'; see/seer ← \*sekʷ-; Odin ← \*weh₂t- 'to be excited'; occult ← Latin occulere, \*ḱel- 'to cover'.
 
-## Sources
+## Transition sources
 
-- root: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/weyd- · https://www.etymonline.com/word/*weid-
-- Germanic: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/witaną · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/wīsaz · https://en.wiktionary.org/wiki/wiseacre
-- Latin: https://en.wiktionary.org/wiki/video#Latin
-- Greek: https://en.wiktionary.org/wiki/εἶδος#Ancient_Greek · https://en.wiktionary.org/wiki/ἰδέα#Ancient_Greek · https://en.wiktionary.org/wiki/εἴδωλον#Ancient_Greek · https://en.wiktionary.org/wiki/ἵστωρ#Ancient_Greek · https://en.wiktionary.org/wiki/Ἀΐδης#Ancient_Greek
-- Slavic: https://en.wiktionary.org/wiki/Reconstruction:Proto-Slavic/věděti · https://en.wiktionary.org/wiki/Reconstruction:Proto-Slavic/viděti · https://en.wiktionary.org/wiki/wiedźma · https://en.wiktionary.org/wiki/wieszcz
-- Celtic/Indic: https://en.wiktionary.org/wiki/druid · https://en.wiktionary.org/wiki/वेद#Sanskrit
+These pages support the transitions shown, not merely the presence of a word
+somewhere in the same family. A page at the end of a chain normally documents
+the carrier forms leading to that endpoint.
+
+- PIE and branch attachments: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/weyd- · https://www.etymonline.com/word/*weid-
+- `*witaną → wit/witness`, `*wītaną → twit`, `*wīsaz → wise/wizard`, and the
+  Frankish loan routes to guide/guise: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/witaną · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/wīsaz · https://en.wiktionary.org/wiki/guide · https://en.wiktionary.org/wiki/guise
+- `*wītagō → wīzago → wijssegger → wiseacre`; only the attachment of
+  `*wītagō` back to PIE *weyd- is single-witness/weak:
+  https://en.wiktionary.org/wiki/wiseacre
+- Latin `videō` formations and their English routes: https://en.wiktionary.org/wiki/video#Latin · https://www.etymonline.com/word/envy · https://www.etymonline.com/word/evidence · https://www.etymonline.com/word/provide · https://www.etymonline.com/word/prudent · https://www.etymonline.com/word/vision · https://www.etymonline.com/word/view · https://www.etymonline.com/word/advice
+- `*wéydtōr → ἵστωρ → ἱστορία → history/story`:
+  https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/wéydtōr · https://www.etymonline.com/word/history · https://www.etymonline.com/word/story
+- `εἶδος/ἰδέα/εἴδωλον → idea/idol/eidolon`: https://en.wiktionary.org/wiki/εἶδος#Ancient_Greek · https://en.wiktionary.org/wiki/ἰδέα#Ancient_Greek · https://en.wiktionary.org/wiki/εἴδωλον#Ancient_Greek · https://www.etymonline.com/word/idea · https://www.etymonline.com/word/idol
+- `ᾍδης → Hades`: the English borrowing is unproblematic; the dashed claim is
+  the proposed internal analysis “the Unseen” and hence membership in *weyd-:
+  https://en.wiktionary.org/wiki/ᾍδης#Ancient_Greek
+- Slavic `*viděti/*věděti` and the Polish descendants: https://en.wiktionary.org/wiki/Reconstruction:Proto-Slavic/viděti · https://en.wiktionary.org/wiki/Reconstruction:Proto-Slavic/věděti · https://en.wiktionary.org/wiki/widmo#Polish · https://en.wiktionary.org/wiki/wiedza#Polish · https://en.wiktionary.org/wiki/wiedźma · https://en.wiktionary.org/wiki/wieszcz
+- `*dru-wits → druid` and Sanskrit `veda/vidyā → Veda/Ayurveda`:
+  https://en.wiktionary.org/wiki/druid · https://en.wiktionary.org/wiki/वेद#Sanskrit · https://en.wiktionary.org/wiki/विद्या#Sanskrit · https://en.wiktionary.org/wiki/Ayurveda
+- French formations behind clairvoyant and déjà vu: https://www.etymonline.com/word/clairvoyant · https://www.etymonline.com/word/deja%20vu

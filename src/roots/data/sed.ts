@@ -52,14 +52,14 @@ export const SED_NODES: SedNode[] = [
   { id: "nest", form: "nest", kind: "modern", x: 590, parent: "nestaz" },
   { id: "setija", form: "*sētiją", gloss: "seat", lang: "Proto-Germanic", kind: "proto", x: 685, y: 360 },
   { id: "saeti", form: "sæti", gloss: "seat", lang: "Old Norse", kind: "ancestor", x: 685, y: 795, parent: "setija" },
-  { id: "seat", form: "seat", kind: "modern", x: 685, parent: "saeti", dashed: true },
+  { id: "seat", form: "seat", kind: "modern", x: 685, parent: "saeti" },
 
   // Latin
   { id: "sedere", form: "sedēre", gloss: "to sit", lang: "Latin", kind: "ancestor", x: 950, y: 520 },
   { id: "sedes", form: "sēdēs", gloss: "seat", lang: "Latin", kind: "ancestor", x: 790, y: 600, parent: "sedere" },
   { id: "sie", form: "sie", gloss: "seat, throne", lang: "Old French", kind: "ancestor", x: 790, y: 880, parent: "sedes" },
   { id: "see", form: "see (bishop’s)", kind: "modern", x: 790, parent: "sie" },
-  { id: "possidere", form: "possidēre", gloss: "potis + sedēre ‘to sit as master’", lang: "Latin", kind: "ancestor", x: 900, y: 680, parent: "sedere" },
+  { id: "possidere", form: "possidēre", gloss: "probably potis + sedēre", lang: "Latin", kind: "ancestor", x: 900, y: 680, parent: "sedere", dashed: true },
   { id: "possesser", form: "possesser", gloss: "to possess", lang: "Old French", kind: "ancestor", x: 900, y: 815, parent: "possidere" },
   { id: "possess", form: "possess", kind: "modern", x: 900, parent: "possesser" },
   { id: "sedicum", form: "*sēdicum", gloss: "seat", lang: "Vulgar Latin", kind: "proto", x: 1010, y: 760, parent: "sedes" },
@@ -99,6 +99,6 @@ export const SED_NODES: SedNode[] = [
   { id: "eistedd", form: "eistedd", gloss: "to sit", lang: "Welsh", kind: "ancestor", x: 1885, y: 850 },
   { id: "eisteddfodw", form: "eisteddfod", gloss: "eistedd + bod: a session-being", lang: "Welsh", kind: "ancestor", x: 1885, y: 990, parent: "eistedd" },
   { id: "eisteddfod", form: "Eisteddfod", kind: "modern", x: 1885, parent: "eisteddfodw" },
-  { id: "upanisad", form: "upa-ni-ṣad", gloss: "a sitting near the teacher", lang: "Sanskrit", kind: "ancestor", x: 1990, y: 600 },
+  { id: "upanisad", form: "upa-ni-ṣad", gloss: "a sitting down beside", lang: "Sanskrit", kind: "ancestor", x: 1990, y: 600 },
   { id: "upanishad", form: "Upanishad", kind: "modern", x: 2005, parent: "upanisad" },
 ];

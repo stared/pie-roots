@@ -64,7 +64,7 @@ export const TURN_NODES: TurnNode[] = [
   { id: "polos", form: "πόλος", gloss: "pivot", lang: "Greek", translit: "pólos", kind: "ancestor", a: 104, d: 2, parent: "kwolo", dx: -6 },
   { id: "polus", form: "polus", gloss: "pole; the heavens", lang: "Latin", kind: "ancestor", a: 95.2, d: 3, parent: "polos" },
   { id: "pole", form: "pole", kind: "modern", a: 91, d: 4, parent: "polus", flip: true },
-  { id: "poulie", form: "poulie", gloss: "pulley", lang: "Old French", kind: "ancestor", a: 112.8, d: 3, parent: "polos", dashed: true },
+  { id: "poulie", form: "poulie", gloss: "pulley", lang: "Old French", kind: "ancestor", a: 112.8, d: 3, parent: "polos" },
   { id: "pulley", form: "pulley", kind: "modern", a: 117, d: 4, parent: "poulie", flip: true },
 
   // other formations; colere sits on the bisector of its ±13° split

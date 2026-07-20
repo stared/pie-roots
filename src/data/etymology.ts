@@ -40,7 +40,7 @@ export const TREE: EtymNode = {
   lang: "Proto-Indo-European",
   gloss: "star",
   kind: "root",
-  note: "Probably ‘the glowing one’: *h₂e(h₁)s- ‘to burn, glow’ + the agent suffix *-tḗr (Wiktionary, following Ringe) — though even that reading is hedged. The old idea that the word was borrowed from Semitic Ištar has long been doubted; Wilson-Wright (2015) argues the loan ran the other way.",
+  note: "One proposed analysis is *h₂e(h₁)s- ‘to burn, glow’ + the agent suffix *-tḗr, perhaps ‘the shining one’ (Wiktionary, citing Ringe and NIL); the analysis is uncertain. The resemblance to Semitic Ištar remains disputed: Wilson-Wright (2015) argues specifically that Semitic borrowed from Indo-European, rather than the reverse.",
   quote:
     "Apparently from *h₂e(h₁)s- (“to burn, glow”) + *-tḗr (agentive suffix). — Wiktionary",
   refs: [1, 2, 3, 4],
@@ -110,7 +110,7 @@ export const TREE: EtymNode = {
               lang: "Middle English",
               gloss: "star (borrowed from Norse)",
               kind: "attested",
-              note: "A second, parallel route of the same Germanic word into England — this time by ship, with the Danelaw.",
+              note: "A second, parallel route of the Germanic word into English, borrowed from Old Norse rather than inherited from Old English.",
               refs: [11],
               children: [
                 {
@@ -183,7 +183,7 @@ export const TREE: EtymNode = {
                       gloss: "a machine built to make a star",
                       kind: "modern",
                       sense: "science",
-                      note: "A plasma-confinement fusion device (1951) — named for doing what stars do.",
+                      note: "A plasma-confinement fusion device (1951); its name was formed from stellar + -ator ‘maker’.",
                       refs: [17],
                     },
                   ],
@@ -682,7 +682,7 @@ export const TREE: EtymNode = {
       gloss: "star",
       kind: "attested",
       important: true,
-      note: "The oldest written form in the family — and its initial ḫ- preserves the laryngeal *h₂-, the standard argument that the word is inherited Indo-European rather than a loan from Ishtar’s name.",
+      note: "Its initial ḫ- corresponds to the reconstructed laryngeal *h₂-, important evidence for the inherited Indo-European comparison. This does not by itself settle the deeper, disputed relationship with Semitic Ištar.",
       refs: [60],
     },
     // ——— Celtic ———

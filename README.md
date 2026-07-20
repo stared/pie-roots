@@ -34,10 +34,11 @@ poster page (title, chart, legend, credits) ready for sharing.
 
 ## Sourcing
 
-The chart chains follow **Wiktionary**, with **Etymonline** as a second
-witness; every edge is verified against the sources before it is drawn, and
-uncertain or weakly-sourced steps are dashed. Each charted root has its
-descent tree with notes in [`notes/`](notes) — e.g.
+The chart chains follow **Wiktionary**, with **Etymonline** used where it has
+the relevant English history. The linked notes record which transitions the
+sources support; uncertain or weakly sourced root attachments are dashed.
+Some learned-word carrier stages are compressed in the visualization. Each
+charted root has its descent tree with notes in [`notes/`](notes) — e.g.
 [`notes/weyd.md`](notes/weyd.md) — with the wider survey in
 [`root_trees.md`](root_trees.md). The
 \*h₂stḗr dossier in [`research.md`](research.md) is graded against the

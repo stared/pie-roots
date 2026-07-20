@@ -18,7 +18,7 @@
 │   ├── cultus → cult, culture, cultivate, agriculture
 │   ├── colōnus → colōnia → colony, colonial
 │   └── ? ancilla (*ambhi-kʷolos 'one who bustles around') → ancillary
-├── Gk πόλος 'pivot, axis' ('what it turns on')
+├── Gk πόλος 'pivot, axis'
 │   ├── Latin polus → pole (celestial, magnetic)
 │   └── πολίδιον 'little pivot' → Med. Latin polidia → pulley (folk-attached to unrelated 'pull')
 ├── Gk πάλιν 'back, again' (*kʷl̥His 'turning back') → palindrome, palimpsest, palinode
@@ -34,13 +34,28 @@
 └── ? Old Iranian *wahā-čarana 'sale-going' → Persian bāzār → bazaar
 ```
 
-## Sources
+## Transition sources
 
-- root: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/kʷel- · https://www.etymonline.com/word/*kwel-
-- wheel word: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/kʷékʷlos · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/hwehwlą · https://en.wiktionary.org/wiki/κύκλος#Ancient_Greek · https://en.wiktionary.org/wiki/चक्र#Sanskrit
-- cyclone (which κύκλος-form Piddington coined from is uncertain; family membership is not): https://en.wiktionary.org/wiki/cyclone · https://www.etymonline.com/word/cyclone
-- culture arm: https://en.wiktionary.org/wiki/colo#Latin · https://en.wiktionary.org/wiki/colonus#Latin
-- pivot arm: https://en.wiktionary.org/wiki/πόλος#Ancient_Greek · https://en.wiktionary.org/wiki/pulley (the *πολίδιον step)
-- πάλιν: https://en.wiktionary.org/wiki/πάλιν#Ancient_Greek · βουκόλος: https://en.wiktionary.org/wiki/βουκόλος#Ancient_Greek
-- neck arm: https://en.wiktionary.org/wiki/collum#Latin
-- the two tele-'s: https://en.wiktionary.org/wiki/τέλος#Ancient_Greek · https://en.wiktionary.org/wiki/τῆλε#Ancient_Greek
+- PIE root and branch attachments: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/kʷel- · https://www.etymonline.com/word/*kwel-
+- Reduplicated `*kʷékʷlos → Germanic *hwehwlą → wheel`, Greek `κύκλος → cycle`,
+  and Sanskrit `cakrá → chakra`: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/kʷékʷlos · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/hwehwlą · https://en.wiktionary.org/wiki/κύκλος#Ancient_Greek · https://en.wiktionary.org/wiki/चक्र#Sanskrit · https://www.etymonline.com/word/wheel · https://www.etymonline.com/word/cycle · https://www.etymonline.com/word/chakra
+- Cyclone: membership in the circular/turning family is supported, while the
+  exact Greek formation behind Piddington's coinage is uncertain:
+  https://en.wiktionary.org/wiki/cyclone · https://www.etymonline.com/word/cyclone
+- Latin `colere → cultūra/colōnus → culture/colony`:
+  https://en.wiktionary.org/wiki/colo#Latin · https://en.wiktionary.org/wiki/colonus#Latin · https://www.etymonline.com/word/culture · https://www.etymonline.com/word/colony
+- Greek `πόλος → Latin polus → pole`, and `πόλος → πολίδιον → Medieval Latin
+  polidium/polidia → Old French poulie → pulley`:
+  https://en.wiktionary.org/wiki/πόλος#Ancient_Greek · https://www.etymonline.com/word/pole · https://en.wiktionary.org/wiki/pulley
+- Greek `πάλιν → παλίνδρομος → palindrome`:
+  https://en.wiktionary.org/wiki/πάλιν#Ancient_Greek · https://www.etymonline.com/word/palindrome
+- Greek `βουκόλος → Latin būcolicus → bucolic`:
+  https://en.wiktionary.org/wiki/βουκόλος#Ancient_Greek · https://www.etymonline.com/word/bucolic
+- Proposed `*kʷol-so- → Latin collum → collāre → collar`; the root attachment,
+  not the later Latin/English chain, is disputed:
+  https://en.wiktionary.org/wiki/collum#Latin · https://www.etymonline.com/word/collar
+- Greek `τῆλε → tele- → telephone`: English formation is secure, but attaching
+  `τῆλε` to *kʷel- is disputed: https://en.wiktionary.org/wiki/τῆλε#Ancient_Greek · https://www.etymonline.com/word/telephone
+- Greek `τέλος → New Latin teleologia → teleology`: the later chain is secure,
+  but attaching `τέλος` to *kʷel- is disputed:
+  https://en.wiktionary.org/wiki/τέλος#Ancient_Greek · https://www.etymonline.com/word/teleology
