@@ -36,6 +36,7 @@ export default function Turn() {
         let anchor: "start" | "middle" | "end" = "middle", tx = n.x;
         if (n.x > CX + 190) { anchor = "start"; tx = n.x + 10; }
         if (n.x < CX - 190) { anchor = "end"; tx = n.x - 10; }
+        tx += n.dx ?? 0;
         return (
           <g key={n.id}>
             {modern

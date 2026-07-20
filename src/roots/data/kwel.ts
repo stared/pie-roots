@@ -12,6 +12,8 @@ import type { WordNode } from "../types";
 export interface TurnNode extends WordNode {
   a: number;
   d: number;
+  /** small horizontal label nudge, so word gaps don't align with a ray */
+  dx?: number;
 }
 
 /** radius per ring */
@@ -37,24 +39,21 @@ export const TURN_NODES: TurnNode[] = [
   { id: "chakra", form: "chakra", kind: "modern", a: -58, d: 3, parent: "cakra" },
 
   // the plain o-grade: one turn
-  { id: "kwolo", form: "*kʷól(h₁)-o-", gloss: "the plain o-grade: one turn", lang: "PIE", kind: "proto", a: 96, d: 1 },
-  { id: "polos", form: "πόλος", gloss: "pivot, axis", lang: "Greek", kind: "ancestor", a: 66, d: 2, parent: "kwolo" },
-  { id: "polus", form: "polus", gloss: "pole; the heavens", lang: "Latin", kind: "ancestor", a: 60, d: 2.5, parent: "polos" },
-  { id: "pole", form: "pole", kind: "modern", a: 58, d: 3, parent: "polus" },
-  { id: "polidion", form: "*πολίδιον", gloss: "little pivot", lang: "Greek", kind: "proto", a: 74, d: 2.35, parent: "polos", dashed: true },
-  { id: "poulie", form: "poulie", gloss: "pulley", lang: "Old French", kind: "ancestor", a: 74, d: 2.7, parent: "polidion", dashed: true },
-  { id: "pulley", form: "pulley", kind: "modern", a: 74, d: 3, parent: "poulie" },
-  { id: "kolo", form: "koło", gloss: "wheel, circle", lang: "Polish", kind: "ancestor", a: 96, d: 2, parent: "kwolo" },
-  { id: "koleja", form: "*kolěja", gloss: "wheel track", lang: "Proto-Slavic", kind: "proto", a: 108, d: 1.75, parent: "kwolo" },
-  { id: "kolej", form: "kolej", gloss: "rail, railway", lang: "Polish", kind: "ancestor", a: 114, d: 2.5, parent: "koleja" },
+  { id: "kwolo", form: "*kʷól(h₁)-o-", gloss: "the plain o-grade: one turn", lang: "PIE", kind: "proto", a: 86, d: 1 },
+  { id: "polos", form: "πόλος", gloss: "pivot, axis", lang: "Greek", kind: "ancestor", a: 86, d: 2, parent: "kwolo" },
+  { id: "polus", form: "polus", gloss: "pole; the heavens", lang: "Latin", kind: "ancestor", a: 80, d: 2.5, parent: "polos" },
+  { id: "pole", form: "pole", kind: "modern", a: 78, d: 3, parent: "polus" },
+  { id: "polidion", form: "*πολίδιον", gloss: "little pivot", lang: "Greek", kind: "proto", a: 94, d: 2.35, parent: "polos", dashed: true },
+  { id: "poulie", form: "poulie", gloss: "pulley", lang: "Old French", kind: "ancestor", a: 94, d: 2.7, parent: "polidion", dashed: true },
+  { id: "pulley", form: "pulley", kind: "modern", a: 94, d: 3, parent: "poulie" },
 
   // other formations
   { id: "colere", form: "colere", gloss: "to till, dwell, worship", lang: "Latin", kind: "ancestor", a: -22, d: 1 },
   { id: "cultura", form: "cultūra", gloss: "tilling, cultivation", lang: "Latin", kind: "ancestor", a: -30, d: 1.5, parent: "colere" },
   { id: "culture", form: "culture", kind: "modern", a: -30, d: 2, parent: "cultura" },
   { id: "colonus", form: "colōnus", gloss: "settler, tiller", lang: "Latin", kind: "ancestor", a: -6, d: 1.35, parent: "colere" },
-  { id: "colonia", form: "colōnia", gloss: "settlement", lang: "Latin", kind: "ancestor", a: -3, d: 1.8, parent: "colonus" },
-  { id: "colony", form: "colony", kind: "modern", a: -3, d: 2.15, parent: "colonia" },
+  { id: "colonia", form: "colōnia", gloss: "settlement", lang: "Latin", kind: "ancestor", a: -7, d: 1.9, parent: "colonus" },
+  { id: "colony", form: "colony", kind: "modern", a: -8, d: 2.3, parent: "colonia" },
   { id: "palin", form: "πάλιν", gloss: "back again", lang: "Greek", kind: "ancestor", a: 152, d: 1 },
   { id: "palindromos", form: "παλίνδρομος", gloss: "running back again", lang: "Greek", kind: "ancestor", a: 152, d: 1.5, parent: "palin" },
   { id: "palindrome", form: "palindrome", kind: "modern", a: 152, d: 2, parent: "palindromos" },
@@ -66,7 +65,7 @@ export const TURN_NODES: TurnNode[] = [
   // disputed — the two tele-'s side by side: two different Greek words
   { id: "tele", form: "τῆλε", gloss: "far", lang: "Greek", kind: "ancestor", a: 8, d: 1, dashed: true },
   { id: "telephone", form: "telephone", kind: "modern", a: 8, d: 2, parent: "tele" },
-  { id: "telos", form: "τέλος", gloss: "the turn of the course: completion", lang: "Greek", kind: "ancestor", a: 27, d: 1, dashed: true },
+  { id: "telos", form: "τέλος", gloss: "the turn of the course: completion", lang: "Greek", kind: "ancestor", a: 27, d: 1, dashed: true, dx: 14 },
   { id: "teleologia", form: "teleologia", gloss: "study of ends", lang: "New Latin", kind: "ancestor", a: 27, d: 1.5, parent: "telos" },
   { id: "teleology", form: "teleology", kind: "modern", a: 27, d: 2, parent: "teleologia" },
   { id: "kwolso", form: "*kʷol-so-", gloss: "the neck — what the head turns on", lang: "PIE", kind: "proto", a: 217, d: 1, dashed: true },
