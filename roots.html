@@ -11,6 +11,12 @@
       const slug = MAP[location.hash.slice(1)] ?? "weyd";
       location.replace(`./${slug}/${location.search}`);
     </script>
+    <!-- Privacy-friendly analytics (Plausible), counted under the p.migdal.pl property. -->
+    <script
+      defer
+      data-domain="p.migdal.pl"
+      src="https://plausible.io/js/script.js"
+    ></script>
   </head>
   <body>
     <p>The charts moved — <a href="./weyd/">continue to the root charts</a>.</p>
