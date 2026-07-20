@@ -32,7 +32,7 @@ export interface TurnNode extends WordNode {
 }
 
 /** radius per ring */
-export const RING = [0, 250, 400, 545, 680];
+export const RING = [0, 250, 375, 500, 625];
 
 /** radius for a (possibly fractional) ring index */
 export const ringR = (d: number): number => {
@@ -65,7 +65,7 @@ export const TURN_NODES: TurnNode[] = [
   { id: "pulley", form: "pulley", kind: "modern", a: 117, d: 4, parent: "poulie" },
 
   // other formations; colere sits on the bisector of its ±13° split
-  { id: "colere", form: "colere", gloss: "to till, dwell, worship", lang: "Latin", kind: "ancestor", a: 0, d: 1 },
+  { id: "colere", form: "colere", gloss: "to till, dwell, worship", lang: "Latin", kind: "ancestor", a: 0, d: 1, dx: -9 },
   { id: "cultura", form: "cultūra", gloss: "tilling, cultivation", lang: "Latin", kind: "ancestor", a: -13, d: 2, parent: "colere" },
   { id: "culture", form: "culture", kind: "modern", a: -13, d: 4, parent: "cultura" },
   { id: "colonus", form: "colōnus", gloss: "settler", lang: "Latin", kind: "ancestor", a: 13, d: 2, parent: "colere", noteUp: true },

@@ -15,7 +15,7 @@ for (const n of TURN_NODES) {
 export default function Turn() {
   const nodes = Object.values(laid);
   return (
-    <svg viewBox="0 0 1700 1580" className="wheel" role="img" aria-label="Descent of PIE *kʷel-, words arranged as a wheel">
+    <svg viewBox="105 115 1440 1330" className="wheel" role="img" aria-label="Descent of PIE *kʷel-, words arranged as a wheel">
       {/* the rims: one faint circle per ring */}
       {RING.slice(1).map(r => (
         <circle key={r} cx={CX} cy={CY} r={r} fill="none" className="t-guide" />

@@ -52,7 +52,7 @@ const VIEWS: View[] = [
     slug: "kwel",
     trees: "notes/kwel.md",
     title: <><i>*kʷel-</i> ‘to turn’</>,
-    dek: <>The root named the wheel by turning twice: reduplicated <i>*kʷe-kʷl-óm</i> became <b>wheel</b>, <b>cycle</b>, and <b>chakra</b>; the single turn <i>*kʷólo-</i> became, through Greek <i>πόλος</i> ‘pivot’, <b>pole</b> and <b>pulley</b>. Greek split <i>kʷ</i> by the following vowel — π before o (<i>πόλος</i>), τ before e (<i>τέλος</i>) — while Germanic made it <i>hw-</i> (<b>wheel</b>). The two <i>tele-</i>s are different Greek words, each only a disputed member: <b>teleology</b> ends on <i>τέλος</i> ‘completion’, <b>telephone</b> reaches through <i>τῆλε</i> ‘far’.</>,
+    dek: <><b>wheel</b>, <b>cycle</b>, and <b>chakra</b> are one word that arrived three times: <i>*kʷe-kʷl-óm</i> — ‘turn’ said twice — traveling through Old English, Greek, and Sanskrit. Everything on this wheel turns with the root: a <b>palindrome</b> runs back again, <b>culture</b> and <b>colony</b> grew from Latin <i>colere</i> ‘to till, to dwell’, a <b>collar</b> rings the neck — what the head turns on — and <b>pole</b> was the axis the heavens turn on. The dashed spokes (<b>telephone</b>, <b>teleology</b>, <b>pulley</b>, <b>collar</b>) are the ones the dictionaries still argue about.</>,
     chart: <Turn />,
   },
 ];
