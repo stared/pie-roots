@@ -56,6 +56,9 @@ body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
 /* the wheel page sits on plain white; halos follow via --paper */
 .roots:has(svg.wheel) { --paper: #ffffff; }
 body:has(svg.wheel) { background: #ffffff; }
+/* wheel viewBox is ~1190 units wide (others ~1700): cap the figure so
+   chart type renders at the same on-screen scale as the other charts */
+.roots:has(svg.wheel) figure { max-width: 950px; }
 .t-dot { fill: var(--ink); }
 .t-ring { stroke: #55462f; stroke-width: 1.5; }
 .t-root { font: italic 600 27px var(--serif); fill: var(--ink); }
