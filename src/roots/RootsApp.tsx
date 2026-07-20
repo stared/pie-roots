@@ -45,7 +45,7 @@ const VIEWS: View[] = [
     slug: "sed",
     trees: "notes/sed.md",
     title: <><i>*sed-</i> <span className="means">means</span> to sit</>,
-    dek: <>A body can <b>sit</b>; dust can settle as <b>soot</b>; what settles can become <b>sedate</b>; an army can sit against a city in <b>siege</b>. A bird’s “sitting down” became <b>nest</b>, and perhaps <b>niche</b>. Greek <i>ἕδρα</i> ‘seat’ leads to <b>chair</b>, <b>cathedral</b>, <b>ephedrine</b>, and <b>Sanhedrin</b> — a “sitting together,” hence a council.</>,
+    dek: <>A body can <b>sit</b>; dust settles as <b>soot</b>; a bird’s “sitting down” became <b>nest</b>. Latin compounds turned sitting beside into <b>assess</b>, sitting in ambush into <b>insidious</b>, sitting against into <b>obsess</b>, sitting in reserve into <b>subsidy</b>, sitting apart into <b>dissident</b>, and sitting above into <b>supersede</b>. Greek ‘seat’ survives in <b>chair</b>, <b>cathedral</b>, <b>ephedrine</b>, and <b>Sanhedrin</b>.</>,
     chart: <Sit />,
   },
   {

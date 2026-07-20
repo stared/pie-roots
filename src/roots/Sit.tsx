@@ -3,38 +3,45 @@ import { SED_NODES, type SedNode } from "./data/sed";
 interface Point { x: number; y: number }
 type Laid = Omit<SedNode, "x" | "y"> & Point;
 
-const ROOT: Point = { x: 950, y: 92 };
+const ROOT: Point = { x: 1120, y: 92 };
 const LEAF_Y = 825;
 
 // The published chart is a deliberately chosen dozen, not the research tree.
 // Each family gets enough horizontal room for its ancestry to remain legible.
 const POS: Record<string, Point> = {
-  germanic_sed: { x: 230, y: 205 },
-  sitjana: { x: 70, y: 340 }, sittan: { x: 70, y: 625 }, sit: { x: 70, y: LEAF_Y },
-  setija: { x: 230, y: 340 }, saeti: { x: 230, y: 625 }, seat: { x: 230, y: LEAF_Y },
-  sotam: { x: 390, y: 365 }, sot: { x: 390, y: 625 }, soot: { x: 390, y: LEAF_Y },
+  germanic_sed: { x: 160, y: 205 },
+  sitjana: { x: 50, y: 340 }, sittan: { x: 50, y: 625 }, sit: { x: 50, y: LEAF_Y },
+  setija: { x: 160, y: 340 }, saeti: { x: 160, y: 625 }, seat: { x: 160, y: LEAF_Y },
+  sotam: { x: 270, y: 365 }, sot: { x: 270, y: 625 }, soot: { x: 270, y: LEAF_Y },
 
-  nisdos: { x: 600, y: 210 },
-  nestaz: { x: 520, y: 420 }, nest: { x: 520, y: LEAF_Y },
-  nidus: { x: 670, y: 390 }, nidicare: { x: 670, y: 530 },
-  nicher: { x: 670, y: 655 }, niche: { x: 670, y: LEAF_Y },
+  nisdos: { x: 435, y: 210 },
+  nestaz: { x: 380, y: 420 }, nest: { x: 380, y: LEAF_Y },
+  nidus: { x: 490, y: 390 }, nidicare: { x: 490, y: 530 },
+  nicher: { x: 490, y: 655 }, niche: { x: 490, y: LEAF_Y },
 
-  sedere: { x: 970, y: 220 },
-  sedes: { x: 800, y: 390 }, sie: { x: 770, y: 640 }, see: { x: 770, y: LEAF_Y },
-  sedicum: { x: 900, y: 500 }, sege: { x: 900, y: 640 }, siege: { x: 900, y: LEAF_Y },
-  sedare: { x: 1030, y: 470 }, sedate: { x: 1030, y: LEAF_Y },
-  assidere: { x: 1160, y: 410 }, assise: { x: 1160, y: 625 }, size: { x: 1160, y: LEAF_Y },
+  sedere: { x: 1110, y: 205 },
+  sedes: { x: 690, y: 350 }, sie: { x: 600, y: 620 }, see: { x: 600, y: LEAF_Y },
+  sedicum: { x: 710, y: 500 }, sege: { x: 710, y: 640 }, siege: { x: 710, y: LEAF_Y },
+  sedare: { x: 820, y: 470 }, sedate: { x: 820, y: LEAF_Y },
+  assidere: { x: 985, y: 350 },
+  assise: { x: 930, y: 625 }, size: { x: 930, y: LEAF_Y },
+  assessus: { x: 1040, y: 500 }, assessare: { x: 1040, y: 650 }, assess: { x: 1040, y: LEAF_Y },
+  insidere: { x: 1150, y: 340 }, insidiae: { x: 1150, y: 570 }, insidious: { x: 1150, y: LEAF_Y },
+  obsidere: { x: 1260, y: 420 }, obsessus: { x: 1260, y: 650 }, obsess: { x: 1260, y: LEAF_Y },
+  subsidere: { x: 1370, y: 340 }, subsidium: { x: 1370, y: 570 }, subsidy: { x: 1370, y: LEAF_Y },
+  dissidere: { x: 1480, y: 420 }, dissidens: { x: 1480, y: 650 }, dissident: { x: 1480, y: LEAF_Y },
+  supersedere: { x: 1590, y: 480 }, supersede: { x: 1590, y: LEAF_Y },
 
-  hedra: { x: 1490, y: 215 },
-  ephedra: { x: 1290, y: 465 }, ephedrine: { x: 1290, y: LEAF_Y },
-  kathedra: { x: 1480, y: 350 }, cathedra: { x: 1480, y: 505 },
-  cathedralis: { x: 1420, y: 650 }, cathedral: { x: 1420, y: LEAF_Y },
-  chaiere: { x: 1540, y: 650 }, chair: { x: 1540, y: LEAF_Y },
-  synedrion: { x: 1680, y: 390 }, sanhedrin_he: { x: 1680, y: 630 },
-  sanhedrin: { x: 1680, y: LEAF_Y },
+  hedra: { x: 1900, y: 215 },
+  ephedra: { x: 1710, y: 465 }, ephedrine: { x: 1710, y: LEAF_Y },
+  kathedra: { x: 1900, y: 350 }, cathedra: { x: 1900, y: 505 },
+  cathedralis: { x: 1830, y: 650 }, cathedral: { x: 1830, y: LEAF_Y },
+  chaiere: { x: 1950, y: 650 }, chair: { x: 1950, y: LEAF_Y },
+  synedrion: { x: 2080, y: 390 }, sanhedrin_he: { x: 2080, y: 630 },
+  sanhedrin: { x: 2080, y: LEAF_Y },
 
-  sidos: { x: 1840, y: 220 }, sid: { x: 1840, y: 475 },
-  beansidhe: { x: 1840, y: 650 }, banshee: { x: 1840, y: LEAF_Y },
+  sidos: { x: 2230, y: 220 }, sid: { x: 2230, y: 475 },
+  beansidhe: { x: 2230, y: 650 }, banshee: { x: 2230, y: LEAF_Y },
 };
 
 const byId = new Map(SED_NODES.map(n => [n.id, n]));
@@ -52,7 +59,7 @@ function linkPath(a: Point, b: Point) {
 
 export default function Sit() {
   return (
-    <svg className="seat" viewBox="0 10 1920 875" role="img"
+    <svg className="seat" viewBox="0 10 2280 875" role="img"
       aria-label="Selected descendants of PIE *sed-, arranged as a descent tree">
       {nodes.map(n => {
         const p = n.parent && laid[n.parent] ? laid[n.parent] : ROOT;
