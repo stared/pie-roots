@@ -72,6 +72,15 @@ body:has(svg.wheel) { background: #ffffff; }
   paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
 .t-era { font: 11px var(--sans); letter-spacing: 0.14em; fill: #b3a184; }
 
+/* Speak is an utterance expanding into three semantic registers. Its guide
+   waves are audible structure, not a second data layer. */
+.voice .t-guide { stroke: #e5dac4; }
+.voice .t-link { stroke: #8a6949; }
+
+/* Sit is genealogy without a second diagram competing for attention. */
+.seat .t-link { stroke: #7b725e; stroke-width: 1.2; }
+.seat .t-lang { font-style: normal; font-size: 9.5px; letter-spacing: 0.04em; }
+
 /* dark — night ground for the occult chart: the root is the light source,
    words are what the light reaches. Brightness follows attestation:
    modern words brightest, attested ancestors dimmer, reconstructions dimmest. */

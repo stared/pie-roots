@@ -97,8 +97,4 @@ export const RIPPLE_NODES: RippleNode[] = [
   { id: "bon", form: "bón", gloss: "prayer", lang: "Old Norse", kind: "ancestor", a: 52, g: 2.05, parent: "boniz" },
   { id: "boon", form: "boon", kind: "modern", a: 52, g: 3, parent: "bon" },
 
-  // branches that die before English
-  { id: "banarm", form: "ban", gloss: "word", lang: "Old Armenian", kind: "ancestor", a: -56, g: 1.75 },
-  { id: "basn", form: "*basnь", gloss: "tale, fable", lang: "Proto-Slavic", kind: "proto", a: -63, g: 2.4 },
-  { id: "bhasa", form: "bhāṣā", gloss: "language", lang: "Sanskrit", kind: "ancestor", a: -49, g: 1.1, dashed: true },
 ];

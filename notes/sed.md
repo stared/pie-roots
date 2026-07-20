@@ -15,7 +15,7 @@
 │   ├── *sitjaną → OE sittan → sit
 │   ├── *satjaną (causative 'make sit') → OE settan → set
 │   │   └── German setzen → ersetzen 'replace' → ersatz
-│   ├── *setlaz → OE setl → settle
+│   ├── ? *setlaz → OE setl → settle  [sources disagree on attachment to *sed-]
 │   ├── *sētiją → ON sæti → seat        [Norse loan, not native OE!]
 │   ├── *sōtam 'what settles' → OE sōt → soot
 │   ├── ? *sadulaz → saddle  [OED: formal difficulties]
@@ -51,6 +51,9 @@
 - PIE root and branch attachments: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/sed- · https://www.etymonline.com/word/*sed-
 - Germanic `*sitjaną → sit`, `*satjaną → set`, and the related settle, seat,
   soot and ersatz histories: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/sitjaną · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/satjaną · https://www.etymonline.com/word/settle · https://www.etymonline.com/word/seat · https://www.etymonline.com/word/soot · https://www.etymonline.com/word/ersatz
+  Wiktionary's current Proto-Germanic entry for the settle branch rejects
+  derivation from *sed- on phonological grounds, so that attachment is dashed:
+  https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/seþlą
 - PIE `*nisdós → *nestą → nest` and `*nisdós → Latin nīdus`:
   https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/nisdós · https://en.wiktionary.org/wiki/nidus#Latin · https://www.etymonline.com/word/nest
 - `nīdus` routes to eyas and the disputed nest/seashell explanations of niche:
@@ -58,10 +61,19 @@
 - Latin `sedēre/sēdēs` routes to episcopal see, siege, sedate and size; the
   traditional analysis of `possidēre` as `potis + sedēre` is only probable:
   size: https://en.wiktionary.org/wiki/sedeo#Latin · https://en.wiktionary.org/wiki/sedes#Latin · https://www.etymonline.com/word/see · https://www.etymonline.com/word/possess · https://www.etymonline.com/word/siege · https://www.etymonline.com/word/sedate · https://www.etymonline.com/word/size
-- Greek `ἕδρα/καθέδρα` routes to ephedrine, chair and Sanhedrin:
-  https://en.wiktionary.org/wiki/ἕδρα#Ancient_Greek · https://en.wiktionary.org/wiki/καθέδρα#Ancient_Greek · https://www.etymonline.com/word/ephedrine · https://www.etymonline.com/word/chair · https://www.etymonline.com/word/Sanhedrin
+- Greek `ἕδρα/καθέδρα` routes to ephedrine, chair and Sanhedrin. The source of
+  the plant's Greek name `ἐφέδρα` (“sitting-upon”) is unknown; the chart does
+  not invent a botanical explanation. `Sanhedrin` passed through Hebrew or
+  Aramaic from Greek `συνέδριον`, “sitting together; assembly, council”:
+  https://en.wiktionary.org/wiki/ἕδρα#Ancient_Greek · https://en.wiktionary.org/wiki/καθέδρα#Ancient_Greek · https://www.etymonline.com/word/ephedrine · https://www.etymonline.com/word/chair · https://www.etymonline.com/word/cathedral · https://en.wiktionary.org/wiki/cathedral · https://en.wiktionary.org/wiki/Sanhedrin · https://www.dictionnaire-academie.fr/article/A9S0353
 - Celtic/Welsh routes to banshee and Eisteddfod:
   https://en.wiktionary.org/wiki/banshee · https://en.wiktionary.org/wiki/eisteddfod
+- Cultural meaning of Eisteddfod as a competitive meeting of poets and
+  musicians, and its Welsh analysis as “sitting together”:
+  https://museum.wales/curatorial/social-cultural-history/online-collections/what-is-the-eisteddfod/
 - Sanskrit `upa-ni-ṣad → Upanishad` (literally `upa` “near” + `ni` “down” +
   `sad` “sit”; neither cited page supplies “teacher”):
   https://en.wiktionary.org/wiki/उपनिषद्#Sanskrit · https://www.etymonline.com/word/Upanishad
+- Scholarly context for the Upanishads as foundational Indian philosophical
+  texts, including the debated “sit down near” / esoteric-teaching reading:
+  https://academic.oup.com/reference/62357/reference-article-abstract/554513137

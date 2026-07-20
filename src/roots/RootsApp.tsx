@@ -37,15 +37,15 @@ const VIEWS: View[] = [
   {
     slug: "bheh2",
     trees: "notes/bheh2.md",
-    title: <><i>*bʰeh₂-</i> ‘to speak’</>,
-    dek: <>One verb of speaking: Greek made it sound (<b>prophet</b>, <b>symphony</b>), Latin made it destiny (<b>fate</b>, <b>fairy</b>), Germanic made it command (<b>ban</b>, <b>banish</b>). PIE <i>bʰ-</i> became Latin <i>f-</i> and Greek <i>φ-</i>, so <i>*bʰeh₂-</i> is <i>fārī</i> and <i>φημί</i>. Its homophone <i>*bʰeh₂-</i> ‘to shine’ — phase, photo-, phantom, beacon — is a different root.</>,
+    title: <><i>*bʰeh₂-</i> <span className="means">means</span> to speak</>,
+    dek: <>A spoken thing could become a <b>fate</b>; one who spoke forth, a <b>prophet</b>; a public utterance, a <b>ban</b>. The root travelled as Latin <i>f-</i>, Greek <i>φ-</i>, and Germanic <i>b-</i>, carrying voice into <b>fable</b>, <b>symphony</b>, <b>blame</b>, and <b>banish</b>. A separate, look-alike root meant <i>to shine</i>: the source of <b>phase</b>, <b>photo-</b>, and <b>phantom</b>, not this family.</>,
     chart: <Speak />,
   },
   {
     slug: "sed",
     trees: "notes/sed.md",
-    title: <><i>*sed-</i> ‘to sit’</>,
-    dek: <>Nine separate routes into English: <b>sit</b> and <b>soot</b> straight from Old English, <b>siege</b> and <b>size</b> through French, <b>chair</b> from Greek by way of Latin, <b>banshee</b> from a fairy mound. English <b>nest</b> and Latin <i>nīdus</i> compress the same compound, <i>*ni-sd-ós</i> ‘where the bird sits down’; Greek wore the <i>s-</i> down to a breath, so <i>*sed-</i> is ἕδρα ‘seat’.</>,
+    title: <><i>*sed-</i> <span className="means">means</span> to sit</>,
+    dek: <>A body can <b>sit</b>; dust can settle as <b>soot</b>; what settles can become <b>sedate</b>; an army can sit against a city in <b>siege</b>. A bird’s “sitting down” became <b>nest</b>, and perhaps <b>niche</b>. Greek <i>ἕδρα</i> ‘seat’ leads to <b>chair</b>, <b>cathedral</b>, <b>ephedrine</b>, and <b>Sanhedrin</b> — a “sitting together,” hence a council.</>,
     chart: <Sit />,
   },
   {
