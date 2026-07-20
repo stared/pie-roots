@@ -1,8 +1,8 @@
 # *sed- 'to sit' (full descent tree)
 
 > Verification tier: **exploration** — chains follow Wiktionary, cross-checked
-> against Etymonline; disputed or weakly-sourced links are marked `?` (drawn
-> dashed in the chart). Chart: https://p.migdal.pl/pie-roots/sed/
+> against Etymonline; disputed or weakly-sourced links are marked `?`.
+> Chart: https://p.migdal.pl/pie-roots/sed/
 
 ```
 *sed- (PIE) 'to sit'
@@ -46,6 +46,12 @@
 └── Balto-Slavic arm [context only]: Lith sėdė́ti; Polish siedzieć; sad 'orchard' (causative 'what is set')
 ```
 
-**Topology.** ~55 curated nodes (31 English endpoints, 4 of them grouped swarm-nodes). Six arms + one cross-branch limb: \*nisdós splits at PIE level and feeds both Germanic and Latin — English gets *nest* by blood and *eyas/niche* by borrowing. **~9 independent doors into English**: native OE (sit, soot, nest), Old Norse (seat), French/Latin (size, siege, possess), Greek coinage (-hedron), Latin-transmitted Greek (cathedral, chair), Irish (banshee), Welsh (Eisteddfod), modern German (ersatz), Hebrew-mediated Greek (Sanhedrin), Sanskrit (Upanishad).
+## Sources
 
-**Hook**: a nine-door tree — no other root enters English through so many independent doors, plus one PIE-age compound ('nest') that arrives twice, once by blood and once by borrowing.
+- root: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/sed- · https://www.etymonline.com/word/*sed-
+- nest compound: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/nisdós · https://en.wiktionary.org/wiki/nidus#Latin
+- Germanic: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/sitjaną · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/satjaną
+- Latin: https://en.wiktionary.org/wiki/sedeo#Latin · https://en.wiktionary.org/wiki/sedes#Latin
+- Greek: https://en.wiktionary.org/wiki/ἕδρα#Ancient_Greek · https://en.wiktionary.org/wiki/καθέδρα#Ancient_Greek
+- Celtic doors: https://en.wiktionary.org/wiki/banshee · https://en.wiktionary.org/wiki/eisteddfod
+- Indic: https://en.wiktionary.org/wiki/उपनिषद्#Sanskrit

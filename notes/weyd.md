@@ -1,8 +1,8 @@
 # *weyd- 'to see' → 'to know' (full descent tree)
 
 > Verification tier: **exploration** — chains follow Wiktionary, cross-checked
-> against Etymonline; disputed or weakly-sourced links are marked `?` (drawn
-> dashed in the chart). Chart: https://p.migdal.pl/pie-roots/weyd/ and /weyd-magic/
+> against Etymonline; disputed or weakly-sourced links are marked `?`.
+> Chart: https://p.migdal.pl/pie-roots/weyd/ and /weyd-magic/
 
 ```
 *weyd- (PIE) 'to see; (perfect *wóyde) has seen = knows'
@@ -47,10 +47,6 @@
 └── minor arms (context): Old Armenian gitem 'I know'; Tocharian; Albanian vizë
 ```
 
-**Topology.** ~58 English words; **~110–120 nodes fully drawn** (the largest tree in this round). Six productive arms + three context arms. Latin is the broadest (one verb, videō, fans into >30 English words); the deepest chain is Greek→Latin→French (*weyd- → ἵστωρ → historia → estoire → story: 8–9 levels); Germanic is shallow but contains the **loanback loop** — Germanic material sneaking back into English dressed as Romance (guide, guise). **Six independent routes into English.** The see→know shift divides the tree at the PIE stem level (*wóyde 'knows' everywhere: wit, Veda, οἶδα, ведать) — every arm replays the same metamorphosis independently.
-
-**Hook**: where \*h₂stḗr is a slim tree with one bright crown, \*weyd- is a six-armed banyan — the same 'seen→known' change replays in every arm, and English plunders all six. Bonus star crossover: **asteroid's -oid IS \*weyd-** (εἶδος 'form') — the star chart's favorite word is half see-root.
-
 ### The knowing side (secret-knowledge subset, audited 2026-07-15)
 
 Chains verified per-edge against Wiktionary (etymonline as second witness), verbatim quotes on file.
@@ -77,3 +73,12 @@ Chains verified per-edge against Wiktionary (etymonline as second witness), verb
 ```
 
 **Exclusion bench** (each verified to another root; the English occult vocabulary is not \*weyd-): witch ← \*wikkōną, PIE \*weyk- 'consecrate' per Wiktionary, "uncertain origin" per etymonline/Liberman; weird ← OE wyrd 'fate' ← \*wert- 'to turn'; see/seer ← \*sekʷ-; Odin ← \*weh₂t- 'to be excited'; occult ← Latin occulere, \*ḱel- 'to cover'.
+
+## Sources
+
+- root: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/weyd- · https://www.etymonline.com/word/*weid-
+- Germanic: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/witaną · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/wīsaz · https://en.wiktionary.org/wiki/wiseacre
+- Latin: https://en.wiktionary.org/wiki/video#Latin
+- Greek: https://en.wiktionary.org/wiki/εἶδος#Ancient_Greek · https://en.wiktionary.org/wiki/ἰδέα#Ancient_Greek · https://en.wiktionary.org/wiki/εἴδωλον#Ancient_Greek · https://en.wiktionary.org/wiki/ἵστωρ#Ancient_Greek · https://en.wiktionary.org/wiki/Ἀΐδης#Ancient_Greek
+- Slavic: https://en.wiktionary.org/wiki/Reconstruction:Proto-Slavic/věděti · https://en.wiktionary.org/wiki/Reconstruction:Proto-Slavic/viděti · https://en.wiktionary.org/wiki/wiedźma · https://en.wiktionary.org/wiki/wieszcz
+- Celtic/Indic: https://en.wiktionary.org/wiki/druid · https://en.wiktionary.org/wiki/वेद#Sanskrit

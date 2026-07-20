@@ -1,8 +1,8 @@
 # *kʷel(h₁)- 'to turn; move around; dwell'
 
 > Verification tier: **exploration** — chains follow Wiktionary, cross-checked
-> against Etymonline; disputed or weakly-sourced links are marked `?` (drawn
-> dashed in the chart). Chart: https://p.migdal.pl/pie-roots/kwel/
+> against Etymonline; disputed or weakly-sourced links are marked `?`.
+> Chart: https://p.migdal.pl/pie-roots/kwel/
 
 ```
 *kʷel(h₁)- 'to turn; move around; dwell'
@@ -34,8 +34,13 @@
 └── ? Old Iranian *wahā-čarana 'sale-going' → Persian bāzār → bazaar
 ```
 
-**Topology.** ~45–50 curated nodes; four dense clusters (wheel/cycle/chakra; the culture arm; the neck arm; Greek coinages). ~58 English words at etymonline incl. the disputed tele- family.
+## Sources
 
-**Hook**: one turning root spins out the wheel, the chakra, the cycle, culture, the colony, the collar, the palindrome — and, if Beekes is right about how far a turn can take you, the telephone.
-
-**Fertility verdict**: exceeds the \*deru- benchmark — roughly double the solid English yield, and its disputes are *architectural* (a possible root split, a root merger, a semantic reconstruction) rather than leaf-level. wheel=cycle=chakra as one reduplicated PIE word arriving three ways is a first-rank showpiece.
+- root: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/kʷel- · https://www.etymonline.com/word/*kwel-
+- wheel word: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/kʷékʷlos · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/hwehwlą · https://en.wiktionary.org/wiki/κύκλος#Ancient_Greek · https://en.wiktionary.org/wiki/चक्र#Sanskrit
+- cyclone (which κύκλος-form Piddington coined from is uncertain; family membership is not): https://en.wiktionary.org/wiki/cyclone · https://www.etymonline.com/word/cyclone
+- culture arm: https://en.wiktionary.org/wiki/colo#Latin · https://en.wiktionary.org/wiki/colonus#Latin
+- pivot arm: https://en.wiktionary.org/wiki/πόλος#Ancient_Greek · https://en.wiktionary.org/wiki/pulley (the *πολίδιον step)
+- πάλιν: https://en.wiktionary.org/wiki/πάλιν#Ancient_Greek · βουκόλος: https://en.wiktionary.org/wiki/βουκόλος#Ancient_Greek
+- neck arm: https://en.wiktionary.org/wiki/collum#Latin
+- the two tele-'s: https://en.wiktionary.org/wiki/τέλος#Ancient_Greek · https://en.wiktionary.org/wiki/τῆλε#Ancient_Greek

@@ -1,8 +1,8 @@
 # \*bʰeh₂- 'to speak'
 
 > Verification tier: **exploration** — chains follow Wiktionary, cross-checked
-> against Etymonline; disputed or weakly-sourced links are marked `?` (drawn
-> dashed in the chart). Chart: https://p.migdal.pl/pie-roots/bheh2/
+> against Etymonline; disputed or weakly-sourced links are marked `?`.
+> Chart: https://p.migdal.pl/pie-roots/bheh2/
 
 ```
 *bʰeh₂- (PIE) 'to speak, say'
@@ -62,10 +62,11 @@
 └── bhāṣā (Sanskrit) 'speech, language' — no English yield
 ```
 
-**Topology.** ~40 curated English words + ~30 ancestors ≈ **70–85 nodes** — chart-scale. Three fat arms of comparable size (Latin ~22 English words, Greek ~24, Germanic ~8) plus three stub arms that die without English (Armenian, Balto-Slavic, Indo-Iranian). Learned Greek is shallow (3–4 steps); the Germanic ban-family loops are deep (root → Proto-Germanic → Frankish → Old French/Medieval Latin → Italian → English = 6–7 steps). **~7 independent routes into English**: native Old English (ban), Old Norse (boon), Germanic→Frankish→Old French (banal, abandon), Germanic→Medieval Latin→Italian (contraband), Latin→Old French (fable, fame, fate…), learned Latin (nefarious, confess), Greek learned (phone family) with sub-routes Greek→Latin→Old French (blame) and Greek→Late Latin→Old English (anthem — the tree's oldest borrowing).
-
 **False twin appendix** — homophonous \*bʰeh₂- 'to shine' (same Wiktionary page): photo-, phosphorus, phase, phenomenon, epiphany, diaphanous, emphasis, fantasy, fancy, phantom, hierophant, sycophant, cellophane, beacon, beckon, ? banner. Every 'shine' word is a potential trap: *phase* vs *aphasia*, *emphasis* vs *apophasis*, *phenomenon* vs *phoneme* — identical-looking Greek stems from two different roots.
 
-**Hook**: a three-armed tree where each arm smuggles speech into English by a different trick — Latin as destiny (fate = 'what has been said'), Greek as sound, Germanic as command — with a built-in impostor root whose descendants are indistinguishable from the real ones without the etymology.
+## Sources
 
-Source: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/bʰeh₂- · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/bannaną
+- root: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/bʰeh₂- · https://www.etymonline.com/word/*bha-
+- Latin: https://en.wiktionary.org/wiki/for#Latin (fārī) · https://en.wiktionary.org/wiki/fateor#Latin · https://en.wiktionary.org/wiki/fas#Latin
+- Greek: https://en.wiktionary.org/wiki/φημί#Ancient_Greek · https://en.wiktionary.org/wiki/φωνή#Ancient_Greek · https://en.wiktionary.org/wiki/βλάσφημος#Ancient_Greek
+- Germanic: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/bannaną · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/bōniz
