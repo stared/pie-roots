@@ -52,7 +52,7 @@ const VIEWS: View[] = [
     slug: "kwel",
     trees: "notes/kwel.md",
     title: <><i>*kʷel-</i> ‘to turn’</>,
-    dek: <><b>wheel</b>, <b>cycle</b>, and <b>chakra</b> are one word that arrived three times: <i>*kʷe-kʷl-óm</i> — ‘turn’ said twice — traveling through Old English, Greek, and Sanskrit. Everything on this wheel turns with the root: a <b>palindrome</b> runs back again, <b>culture</b> and <b>colony</b> grew from Latin <i>colere</i> ‘to till, to dwell’, a <b>collar</b> rings the neck — what the head turns on — and <b>pole</b> was the axis the heavens turn on. The dashed spokes (<b>telephone</b>, <b>teleology</b>, <b>pulley</b>, <b>collar</b>) are the ones the dictionaries still argue about.</>,
+    dek: <><b>wheel</b>, <b>cycle</b>, and <b>chakra</b> are one word that arrived three times: <i>*kʷe-kʷl-óm</i> — ‘turn’ said twice — traveling through Old English, Greek, and Sanskrit. Everything on this wheel turns with the root: a <b>palindrome</b> runs back again, <b>culture</b> and <b>colony</b> grew from Latin <i>colere</i> ‘to till, to dwell’, a <b>collar</b> rings the neck — what the head turns on — and <b>pole</b> was the axis the heavens turn on. Four spokes hold less firmly — <b>telephone</b>, <b>teleology</b>, <b>pulley</b>, <b>collar</b>: the dictionaries still argue over them.</>,
     chart: <Turn />,
   },
 ];
