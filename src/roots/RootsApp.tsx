@@ -51,8 +51,8 @@ const VIEWS: View[] = [
   {
     slug: "kwel",
     trees: "notes/kwel.md",
-    title: <><i>*kʷel-</i> ‘to turn’</>,
-    dek: <><b>wheel</b>, <b>cycle</b>, and <b>chakra</b> are one word: <b>*kʷe-kʷl-óm</b> — <i>turn</i> said twice — through Old English, Greek, and Sanskrit. Everything on this wheel turns with the root: a <b>palindrome</b> runs back again, <b>culture</b> and <b>colony</b> grew from Latin <b>colere</b>, <i>to till and dwell</i>, and <b>pole</b> was the axis the heavens turn on. Maybe also: <b>pulley</b>, through a little <b>πόλος</b>; <b>collar</b>, if the neck was named for turning; and <b>telephone</b> with <b>teleology</b>, whose <b>tele-</b> and <b>teleo-</b> are two different Greek words — <b>τῆλε</b> <i>far</i>, <b>τέλος</b> <i>completion</i>.</>,
+    title: <><i>*kʷel-</i> <span className="means">means</span> to turn</>,
+    dek: <><b>wheel</b>, <b>cycle</b>, and <b>chakra</b> arrive from one word: <b>*kʷe-kʷl-óm</b> — <i>turn</i> said twice. Everything on this wheel turns with the root: a <b>palindrome</b> runs back again, <b>culture</b> and <b>colony</b> grew from Latin <b>colere</b>, <i>to till and dwell</i>, and <b>pole</b> was the axis the heavens turn on. Maybe also: <b>pulley</b>, through a little <b>πόλος</b>; <b>collar</b>, if the neck was named for turning; and <b>telephone</b> with <b>teleology</b>, whose <b>tele-</b> and <b>teleo-</b> are two different Greek words — <b>τῆλε</b> <i>far</i>, <b>τέλος</b> <i>completion</i>.</>,
     chart: <Turn />,
   },
 ];
