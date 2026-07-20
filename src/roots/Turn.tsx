@@ -51,7 +51,7 @@ export default function Turn() {
 
       {/* the hub */}
       <text x={CX} y={CY + 2} textAnchor="middle" className="t-root">*kʷel-</text>
-      <text x={CX} y={CY + 28} textAnchor="middle" className="t-root-gloss">to turn</text>
+      <text x={CX} y={CY + 28} textAnchor="middle" className="t-root-gloss">to turn · Proto-Indo-European</text>
     </svg>
   );
 }
