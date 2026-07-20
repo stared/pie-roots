@@ -68,7 +68,7 @@ export const SED_NODES: SedNode[] = [
   { id: "siege", form: "siege", kind: "modern", x: 1040, parent: "sege" },
   { id: "sedare", form: "sēdāre", gloss: "to settle, to calm", lang: "Latin", kind: "ancestor", x: 1110, y: 600, parent: "sedere" },
   { id: "sedate", form: "sedate", kind: "modern", x: 1110, parent: "sedare" },
-  { id: "assidere", form: "assidēre", gloss: "ad + sedēre: to sit by", lang: "Latin", kind: "ancestor", x: 1220, y: 680, parent: "sedere" },
+  { id: "assidere", form: "assidēre", gloss: "sit beside", lang: "Latin", kind: "ancestor", x: 1220, y: 680, parent: "sedere" },
   { id: "assise", form: "assise", gloss: "the court’s sitting", lang: "Old French", kind: "ancestor", x: 1220, y: 780, parent: "assidere" },
   { id: "size", form: "size", kind: "modern", x: 1220, parent: "assise" },
   { id: "assessus", form: "assessus", gloss: "a sitting by", lang: "Latin", kind: "ancestor", x: 1260, y: 760, parent: "assidere" },

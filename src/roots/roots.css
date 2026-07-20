@@ -59,6 +59,7 @@ body:has(svg.wheel) { background: #ffffff; }
 /* wheel viewBox is ~1190 units wide (others ~1700): cap the figure so
    chart type renders at the same on-screen scale as the other charts */
 .roots:has(svg.wheel) figure { max-width: 950px; }
+.roots:has(svg.seat) figure { max-width: 1500px; }
 .t-dot { fill: var(--ink); }
 .t-ring { stroke: #55462f; stroke-width: 1.5; }
 .t-root { font: italic 600 27px var(--serif); fill: var(--ink); }
@@ -79,7 +80,11 @@ body:has(svg.wheel) { background: #ffffff; }
 
 /* Sit is genealogy without a second diagram competing for attention. */
 .seat .t-link { stroke: #7b725e; stroke-width: 1.2; }
-.seat .t-lang { font-style: normal; font-size: 9.5px; letter-spacing: 0.04em; }
+.seat .t-word { font-size: 19.5px; }
+.seat .t-anc { font-size: 17px; }
+.seat .t-note { font-size: 13px; }
+.seat .t-lang { font-style: normal; font-size: 11px; letter-spacing: 0.04em; }
+.seat .t-root { font-size: 30px; }
 
 /* dark — night ground for the occult chart: the root is the light source,
    words are what the light reaches. Brightness follows attestation:
