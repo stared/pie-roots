@@ -2,7 +2,7 @@ import { TURN_NODES, RING, ringR, type TurnNode } from "./data/kwel";
 import { noteLine, polar } from "./types";
 
 const CX = 830, CY = 790;
-const R0 = 92; // links leave the hub from here
+const LBL = 120; // beyond CX±LBL labels anchor sideways
 
 interface Laid extends TurnNode { x: number; y: number }
 
@@ -15,15 +15,18 @@ for (const n of TURN_NODES) {
 export default function Turn() {
   const nodes = Object.values(laid);
   return (
-    <svg viewBox="105 115 1440 1330" className="wheel" role="img" aria-label="Descent of PIE *kʷel-, words arranged as a wheel">
+    <svg viewBox="215 250 1190 1080" className="wheel" role="img" aria-label="Descent of PIE *kʷel-, words arranged as a wheel">
       {/* the rims: one faint circle per ring */}
       {RING.slice(1).map(r => (
         <circle key={r} cx={CX} cy={CY} r={r} fill="none" className="t-guide" />
       ))}
 
-      {/* spokes: straight segments from parent (or hub rim) to node */}
+      {/* spokes: straight segments from the parent node; lines start at ring 1,
+          so root-level nodes on ring 1 get no inward spoke — contested root-level
+          nodes on ring 2 (τῆλε, τέλος) keep a dashed stub back to ring 1 */}
       {nodes.map(n => {
-        const [px, py] = n.parent ? [laid[n.parent].x, laid[n.parent].y] : polar(CX, CY, n.a, R0);
+        if (!n.parent && n.d <= 1) return null;
+        const [px, py] = n.parent ? [laid[n.parent].x, laid[n.parent].y] : polar(CX, CY, n.a, RING[1]);
         return <line key={n.id} x1={px} y1={py} x2={n.x} y2={n.y}
           className="t-link" strokeDasharray={n.dashed ? "5 4" : undefined} />;
       })}
@@ -32,8 +35,8 @@ export default function Turn() {
       {nodes.map(n => {
         const modern = n.kind === "modern";
         let anchor: "start" | "middle" | "end" = "middle", tx = n.x;
-        if (n.x > CX + 190) { anchor = "start"; tx = n.x + 10; }
-        if (n.x < CX - 190) { anchor = "end"; tx = n.x - 10; }
+        if (n.x > CX + LBL) { anchor = "start"; tx = n.x + 10; }
+        if (n.x < CX - LBL) { anchor = "end"; tx = n.x - 10; }
         tx += n.dx ?? 0;
         return (
           <g key={n.id}>
@@ -41,17 +44,19 @@ export default function Turn() {
               ? <circle cx={n.x} cy={n.y} r={4.4} className="t-dot" />
               : <circle cx={n.x} cy={n.y} r={4} fill="none" className="t-ring"
                   strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />}
-            <text x={tx} y={n.y - 9 - (n.translit ? 14 : 0) - (n.noteUp ? 14 : 0)} textAnchor={anchor}
+            {/* one tight block per node — word, [translit], gloss — above the node, or below with flip */}
+            <text x={tx} y={n.flip ? n.y + 18 : n.y - 9 - 14 * ((n.translit ? 1 : 0) + (noteLine(n) ? 1 : 0))} textAnchor={anchor}
               className={modern ? "t-word" : "t-anc"}>{n.form}</text>
-            {n.translit && <text x={tx} y={n.y - 8 - (n.noteUp ? 15 : 0)} textAnchor={anchor} className="t-note">[{n.translit}]</text>}
-            {noteLine(n) && <text x={tx} y={n.noteUp ? n.y - 8 : n.y + 18} textAnchor={anchor} className="t-note">{noteLine(n)}</text>}
+            {n.translit && <text x={tx} y={n.flip ? n.y + 33 : n.y - 8 - (noteLine(n) ? 15 : 0)} textAnchor={anchor} className="t-note">[{n.translit}]</text>}
+            {noteLine(n) && <text x={tx} y={n.flip ? n.y + (n.translit ? 48 : 33) : n.y - 8} textAnchor={anchor} className="t-note">{noteLine(n)}</text>}
           </g>
         );
       })}
 
       {/* the hub */}
       <text x={CX} y={CY + 2} textAnchor="middle" className="t-root">*kʷel-</text>
-      <text x={CX} y={CY + 28} textAnchor="middle" className="t-root-gloss">to turn · Proto-Indo-European</text>
+      <text x={CX} y={CY + 26} textAnchor="middle" className="t-root-gloss">to turn</text>
+      <text x={CX} y={CY + 44} textAnchor="middle" className="t-root-gloss">Proto-Indo-European</text>
     </svg>
   );
 }

@@ -59,7 +59,8 @@ body:has(svg.wheel) { background: #ffffff; }
 .t-dot { fill: var(--ink); }
 .t-ring { stroke: #55462f; stroke-width: 1.5; }
 .t-root { font: italic 600 27px var(--serif); fill: var(--ink); }
-.t-root-gloss { font: 12.5px var(--sans); letter-spacing: 0.06em; fill: var(--mid); }
+.t-root-gloss { font: 12.5px var(--sans); letter-spacing: 0.06em; fill: var(--mid);
+  paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
 .t-word { font: 600 19px var(--serif); fill: var(--ink);
   paint-order: stroke; stroke: var(--paper); stroke-width: 5px; stroke-linejoin: round; }
 .t-anc { font: italic 600 15px var(--serif); fill: #362c1d;
