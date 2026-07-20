@@ -1,9 +1,10 @@
 // *kʷel- 'to turn'. Data from root_trees.md (exploration tier).
 // The layout is a wheel made of words alone. Four rings, EQUALLY spaced
-// (radius 125 each): ring 1 — PIE formations and root-adjacent bases;
-// ring 2 — first descendants; ring 3 — later intermediates; ring 4 —
-// English words, evenly spread (~26°) around the rim (a chain with an
-// extra step subdivides: poulie at 3.5).
+// (radius 125 each): ring 1 — PIE formations ONLY; ring 2 — attested
+// arm bases and first descendants (non-PIE bases start here, joined to
+// ring 1 by a stub — solid, or dashed when contested); ring 3 — later
+// intermediates; ring 4 — English words, evenly spread (~26°) around
+// the rim.
 // Limb philosophy: every branch is ONE STRAIGHT LINE from its fork to its
 // rim-leaf; intermediate words sit ON that line at their ring radii (their
 // angles below are the computed line–circle intersections, e.g. hwēol at
@@ -63,23 +64,20 @@ export const TURN_NODES: TurnNode[] = [
   { id: "polos", form: "πόλος", gloss: "pivot", lang: "Greek", translit: "pólos", kind: "ancestor", a: 104, d: 2, parent: "kwolo", dx: -6 },
   { id: "polus", form: "polus", gloss: "pole; the heavens", lang: "Latin", kind: "ancestor", a: 95.2, d: 3, parent: "polos" },
   { id: "pole", form: "pole", kind: "modern", a: 91, d: 4, parent: "polus", flip: true },
-  { id: "polidion", form: "*πολίδιον", gloss: "little pivot", lang: "Greek", translit: "polídion", kind: "proto", a: 112.8, d: 3, parent: "polos", dashed: true },
-  { id: "poulie", form: "poulie", gloss: "pulley", lang: "Old French", kind: "ancestor", a: 115.2, d: 3.5, parent: "polidion", dashed: true },
+  { id: "poulie", form: "poulie", gloss: "pulley", lang: "Old French", kind: "ancestor", a: 112.8, d: 3, parent: "polos", dashed: true },
   { id: "pulley", form: "pulley", kind: "modern", a: 117, d: 4, parent: "poulie", flip: true },
 
   // other formations; colere sits on the bisector of its ±13° split
-  { id: "colere", form: "colere", gloss: "to till, dwell, worship", lang: "Latin", kind: "ancestor", a: 0, d: 1 },
-  { id: "cultura", form: "cultūra", gloss: "tilling, cultivation", lang: "Latin", kind: "ancestor", a: -8.7, d: 2, parent: "colere" },
+  { id: "colere", form: "colere", gloss: "to till, dwell, worship", lang: "Latin", kind: "ancestor", a: 0, d: 2 },
+  { id: "cultura", form: "cultūra", gloss: "tilling, cultivation", lang: "Latin", kind: "ancestor", a: -8.8, d: 3, parent: "colere" },
   { id: "culture", form: "culture", kind: "modern", a: -13, d: 4, parent: "cultura" },
-  { id: "colonus", form: "colōnus", gloss: "settler", lang: "Latin", kind: "ancestor", a: 8.7, d: 2, parent: "colere", flip: true },
-  { id: "colonia", form: "colōnia", gloss: "settlement", lang: "Latin", kind: "ancestor", a: 11.6, d: 3, parent: "colonus" },
-  { id: "colony", form: "colony", kind: "modern", a: 13, d: 4, parent: "colonia" },
-  { id: "palin", form: "πάλιν", gloss: "back again", lang: "Greek", translit: "pálin", kind: "ancestor", a: 184, d: 1, flip: true },
-  { id: "palindromos", form: "παλίνδρομος", gloss: "running back again", lang: "Greek", translit: "palíndromos", kind: "ancestor", a: 184, d: 2, parent: "palin", flip: true },
+  { id: "colonus", form: "colōnus", gloss: "settler", lang: "Latin", kind: "ancestor", a: 8.8, d: 3, parent: "colere" },
+  { id: "colony", form: "colony", kind: "modern", a: 13, d: 4, parent: "colonus" },
+  { id: "palin", form: "πάλιν", gloss: "back again", lang: "Greek", translit: "pálin", kind: "ancestor", a: 184, d: 2, flip: true },
+  { id: "palindromos", form: "παλίνδρομος", gloss: "running back again", lang: "Greek", translit: "palíndromos", kind: "ancestor", a: 184, d: 3, parent: "palin", flip: true },
   { id: "palindrome", form: "palindrome", kind: "modern", a: 184, d: 4, parent: "palindromos" },
-  { id: "boukolos", form: "βουκόλος", gloss: "cowherd", lang: "Greek", translit: "boukólos", kind: "ancestor", a: 143, d: 1, flip: true },
-  { id: "boukolikos", form: "βουκολικός", gloss: "pastoral", lang: "Greek", translit: "boukolikós", kind: "ancestor", a: 143, d: 2, parent: "boukolos" },
-  { id: "bucolicus", form: "būcolicus", gloss: "pastoral", lang: "Latin", kind: "ancestor", a: 143, d: 3, parent: "boukolikos" },
+  { id: "boukolos", form: "βουκόλος", gloss: "cowherd", lang: "Greek", translit: "boukólos", kind: "ancestor", a: 143, d: 2 },
+  { id: "bucolicus", form: "būcolicus", gloss: "pastoral", lang: "Latin", kind: "ancestor", a: 143, d: 3, parent: "boukolos" },
   { id: "bucolic", form: "bucolic", kind: "modern", a: 143, d: 4, parent: "bucolicus" },
 
   // disputed — the two tele-'s side by side: two different Greek words
