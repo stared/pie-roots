@@ -1,5 +1,5 @@
 import { TURN_NODES, RING, ringR, type TurnNode } from "./data/kwel";
-import { noteLine, polar, radialPath } from "./types";
+import { noteLine, polar } from "./types";
 
 const CX = 830, CY = 790;
 const R0 = 92; // links leave the hub from here
@@ -15,20 +15,18 @@ for (const n of TURN_NODES) {
 export default function Turn() {
   const nodes = Object.values(laid);
   return (
-    <svg viewBox="0 0 1700 1580" role="img" aria-label="Descent of PIE *kʷel-, words arranged as a wheel">
+    <svg viewBox="0 0 1700 1580" className="wheel" role="img" aria-label="Descent of PIE *kʷel-, words arranged as a wheel">
       {/* the rims: one faint circle per ring */}
       {RING.slice(1).map(r => (
         <circle key={r} cx={CX} cy={CY} r={r} fill="none" className="t-guide" />
       ))}
 
-      {/* spokes */}
-      <g transform={`translate(${CX} ${CY})`}>
-        {nodes.map(n => {
-          const [pa, pr] = n.parent ? [laid[n.parent].a, ringR(laid[n.parent].d)] : [n.a, R0];
-          return <path key={n.id} d={radialPath(pa, pr, n.a, ringR(n.d))} fill="none"
-            className="t-link" strokeDasharray={n.dashed ? "5 4" : undefined} />;
-        })}
-      </g>
+      {/* spokes: straight segments from parent (or hub rim) to node */}
+      {nodes.map(n => {
+        const [px, py] = n.parent ? [laid[n.parent].x, laid[n.parent].y] : polar(CX, CY, n.a, R0);
+        return <line key={n.id} x1={px} y1={py} x2={n.x} y2={n.y}
+          className="t-link" strokeDasharray={n.dashed ? "5 4" : undefined} />;
+      })}
 
       {/* words on the rings */}
       {nodes.map(n => {
@@ -44,7 +42,8 @@ export default function Turn() {
               : <circle cx={n.x} cy={n.y} r={4} fill="none" className="t-ring"
                   strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />}
             <text x={tx} y={n.y - 9} textAnchor={anchor} className={modern ? "t-word" : "t-anc"}>{n.form}</text>
-            {noteLine(n) && <text x={tx} y={n.y + 18} textAnchor={anchor} className="t-note">{noteLine(n)}</text>}
+            {n.translit && <text x={tx} y={n.y + 17} textAnchor={anchor} className="t-note">[{n.translit}]</text>}
+            {noteLine(n) && <text x={tx} y={n.y + (n.translit ? 32 : 18)} textAnchor={anchor} className="t-note">{noteLine(n)}</text>}
           </g>
         );
       })}

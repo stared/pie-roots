@@ -13,7 +13,7 @@ export interface WordNode {
   form: string;
   gloss?: string;
   lang?: string;
-  /** romanization for non-Latin scripts, shown as [translit] in the note line */
+  /** romanization for non-Latin scripts, shown as its own [translit] line */
   translit?: string;
   kind: "proto" | "ancestor" | "modern";
   parent?: string;
@@ -21,9 +21,8 @@ export interface WordNode {
   dashed?: boolean;
 }
 
-export const noteLine = (n: { gloss?: string; lang?: string; translit?: string }): string | undefined => {
-  const tail = [n.gloss, n.lang].filter(Boolean).join(" · ");
-  const line = [n.translit && `[${n.translit}]`, tail].filter(Boolean).join(" ");
+export const noteLine = (n: { gloss?: string; lang?: string }): string | undefined => {
+  const line = [n.gloss, n.lang].filter(Boolean).join(" · ");
   return line || undefined;
 };
 
