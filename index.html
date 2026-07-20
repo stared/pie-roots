@@ -46,6 +46,14 @@
       a.root h2 .plain { font-weight: 400; color: var(--mid); }
       a.root p { margin-top: 5px; font-size: 15px; font-style: italic; color: var(--mid); line-height: 1.5; }
       a.root:hover h2 { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+      .group + .group { margin-top: 5vh; }
+      .group-label {
+        font-family: var(--sans); font-size: 12px; letter-spacing: 0.16em;
+        text-transform: uppercase; color: var(--faint); padding-left: 6px;
+        margin-bottom: 2px;
+      }
+      .wip a.root { opacity: 0.55; transition: opacity 0.15s ease; }
+      .wip a.root:hover { opacity: 1; }
       footer {
         margin-top: 7vh; font-family: var(--sans); font-size: 12.5px;
         color: var(--mid); text-align: center; line-height: 2;
@@ -70,34 +78,40 @@
       </p>
     </header>
     <main>
-      <a class="root" href="https://p.migdal.pl/tree-of-tree/">
-        <h2><i>*deru-</i> <span class="plain">— the tree of ‘tree’</span></h2>
-        <p>tree, true, truce, trust, druid, endure, tar — a scrollytelling explorable</p>
-      </a>
-      <a class="root" href="./h2ster/">
-        <h2><i>*h₂stḗr</i> <span class="plain">— the star of ‘star’</span></h2>
-        <p>star, stellar, asterisk, disaster, étoile — a scrollytelling explorable</p>
-      </a>
-      <a class="root" href="./weyd/">
-        <h2><i>*weyd-</i> <span class="plain">means to see, to know</span></h2>
-        <p>vision, view, evidence, wit, wise, history, idea — and Hades, the Unseen</p>
-      </a>
-      <a class="root" href="./weyd-magic/">
-        <h2><i>*weyd-</i> <span class="plain">means to see, to know — the occult side</span></h2>
-        <p>wizard, clairvoyant, déjà vu, eidolon — and Polish wiedźma, wieszcz, widmo</p>
-      </a>
-      <a class="root" href="./bheh2/">
-        <h2><i>*bʰeh₂-</i> <span class="plain">‘to speak’</span></h2>
-        <p>fate, fairy, prophet, euphemism, anthem, ban, bandit, contraband</p>
-      </a>
-      <a class="root" href="./sed/">
-        <h2><i>*sed-</i> <span class="plain">‘to sit’</span></h2>
-        <p>sit, settle, seat, siege, size, chair, banshee, Upanishad</p>
-      </a>
-      <a class="root" href="./kwel/">
-        <h2><i>*kʷel-</i> <span class="plain">‘to turn’</span></h2>
-        <p>wheel, cycle, chakra, culture, colony, pole, palindrome, collar</p>
-      </a>
+      <div class="group">
+        <p class="group-label">Published</p>
+        <a class="root" href="https://p.migdal.pl/tree-of-tree/">
+          <h2><i>*deru-</i> <span class="plain">— the tree of ‘tree’</span></h2>
+          <p>tree, true, truce, trust, druid, endure, tar — a scrollytelling explorable</p>
+        </a>
+        <a class="root" href="./weyd/">
+          <h2><i>*weyd-</i> <span class="plain">means to see, to know</span></h2>
+          <p>vision, view, evidence, wit, wise, history, idea — and Hades, the Unseen</p>
+        </a>
+        <a class="root" href="./kwel/">
+          <h2><i>*kʷel-</i> <span class="plain">means to turn</span></h2>
+          <p>wheel, cycle, chakra, culture, colony, pole, palindrome, collar</p>
+        </a>
+      </div>
+      <div class="group wip">
+        <p class="group-label">Work in progress</p>
+        <a class="root" href="./h2ster/">
+          <h2><i>*h₂stḗr</i> <span class="plain">— the star of ‘star’</span></h2>
+          <p>star, stellar, asterisk, disaster, étoile — a scrollytelling explorable</p>
+        </a>
+        <a class="root" href="./weyd-magic/">
+          <h2><i>*weyd-</i> <span class="plain">means to see, to know — the occult side</span></h2>
+          <p>wizard, clairvoyant, déjà vu, eidolon — and Polish wiedźma, wieszcz, widmo</p>
+        </a>
+        <a class="root" href="./bheh2/">
+          <h2><i>*bʰeh₂-</i> <span class="plain">‘to speak’</span></h2>
+          <p>fate, fairy, prophet, euphemism, anthem, ban, bandit, contraband</p>
+        </a>
+        <a class="root" href="./sed/">
+          <h2><i>*sed-</i> <span class="plain">‘to sit’</span></h2>
+          <p>sit, settle, seat, siege, size, chair, banshee, Upanishad</p>
+        </a>
+      </div>
     </main>
     <footer>
       by <a href="https://p.migdal.pl">Piotr Migdał</a> · sources: Wiktionary, Etymonline &amp; the specialist dictionaries<br />
