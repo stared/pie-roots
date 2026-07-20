@@ -52,6 +52,9 @@ body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
 .t-guide { stroke: #ece4d1; stroke-width: 1; fill: none; }
 .t-link { stroke: #8a775a; stroke-width: 1.3; }
 .wheel .t-link { stroke: #7d5836; stroke-width: 2; }
+/* the wheel page sits on plain white; halos follow via --paper */
+.roots:has(svg.wheel) { --paper: #ffffff; }
+body:has(svg.wheel) { background: #ffffff; }
 .t-dot { fill: var(--ink); }
 .t-ring { stroke: #55462f; stroke-width: 1.5; }
 .t-root { font: italic 600 27px var(--serif); fill: var(--ink); }

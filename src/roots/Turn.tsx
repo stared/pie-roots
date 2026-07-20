@@ -41,9 +41,10 @@ export default function Turn() {
               ? <circle cx={n.x} cy={n.y} r={4.4} className="t-dot" />
               : <circle cx={n.x} cy={n.y} r={4} fill="none" className="t-ring"
                   strokeDasharray={n.kind === "proto" ? "2 2" : undefined} />}
-            <text x={tx} y={n.y - 9} textAnchor={anchor} className={modern ? "t-word" : "t-anc"}>{n.form}</text>
-            {n.translit && <text x={tx} y={n.y + 17} textAnchor={anchor} className="t-note">[{n.translit}]</text>}
-            {noteLine(n) && <text x={tx} y={n.y + (n.translit ? 32 : 18)} textAnchor={anchor} className="t-note">{noteLine(n)}</text>}
+            <text x={tx} y={n.y - 9 - (n.translit ? 14 : 0) - (n.noteUp ? 14 : 0)} textAnchor={anchor}
+              className={modern ? "t-word" : "t-anc"}>{n.form}</text>
+            {n.translit && <text x={tx} y={n.y - 8 - (n.noteUp ? 15 : 0)} textAnchor={anchor} className="t-note">[{n.translit}]</text>}
+            {noteLine(n) && <text x={tx} y={n.noteUp ? n.y - 8 : n.y + 18} textAnchor={anchor} className="t-note">{noteLine(n)}</text>}
           </g>
         );
       })}
