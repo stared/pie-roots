@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "roots": "vite --port 4330 --open /weyd/",
-    "roots:shoot": "node scripts/shoot-roots.mjs"
+    "roots:shoot": "node scripts/shoot-roots.mjs",
+    "roots:downloads": "node scripts/test-downloads.mjs"
   },
   "dependencies": {
     "d3-hierarchy": "^3.1.2",
