@@ -4,15 +4,15 @@ import type { WordNode } from "./types";
 interface Point { x: number; y: number }
 type Laid = WordNode & Point;
 
-const GRID_TOP = 260;
+const GRID_TOP = 400;
 const GRID_STEP = 65;
 const row = (n: number) => GRID_TOP + n * GRID_STEP;
 const COL_LEFT = 70;
 const COL_STEP = 92;
 const col = (n: number) => COL_LEFT + n * COL_STEP;
-const HEAD_Y = 228;
-const LEAF_HIGH = row(8);
-const LEAF_LOW = row(9);
+const HEAD_Y = 300;
+const LEAF_HIGH = row(7);
+const LEAF_LOW = row(8);
 
 /** Each node is a label block — form, ring, gloss, language. Links join block
  *  to block: they leave below the language line and stop above the next form,
@@ -33,40 +33,41 @@ const ROOT: Point = { x: (col(0) + col(20)) / 2, y: 80 };
 // literal one (obsidēre "sit against; besiege"). Shared ancestors are centered
 // over their endpoint span; no family owns a private grid.
 const POS: Record<string, Point> = {
-  germanic_sed: { x: col(1.5), y: HEAD_Y },
-  sitjana: { x: col(0), y: row(1) }, sittan: { x: col(0), y: row(3) }, sit: { x: col(0), y: LEAF_HIGH },
-  satjana: { x: col(1), y: row(2) }, settan: { x: col(1), y: row(4) }, set: { x: col(1), y: LEAF_LOW },
-  setija: { x: col(2), y: row(1) }, saeti: { x: col(2), y: row(3) }, seat: { x: col(2), y: LEAF_HIGH },
-  sotam: { x: col(3), y: row(2) }, sot: { x: col(3), y: row(4) }, soot: { x: col(3), y: LEAF_LOW },
+  // no cover node above the Germanic four: each is its own formation on the
+  // root, and no source posits a shared Proto-Germanic ancestor for them
+  sitjana: { x: col(0), y: HEAD_Y }, sittan: { x: col(0), y: row(2) }, sit: { x: col(0), y: LEAF_HIGH },
+  satjana: { x: col(1), y: row(1) }, settan: { x: col(1), y: row(3) }, set: { x: col(1), y: LEAF_LOW },
+  setija: { x: col(2), y: HEAD_Y }, saeti: { x: col(2), y: row(2) }, seat: { x: col(2), y: LEAF_HIGH },
+  sotam: { x: col(3), y: row(1) }, sot: { x: col(3), y: row(3) }, soot: { x: col(3), y: LEAF_LOW },
 
   nisdos: { x: col(4.5), y: HEAD_Y },
-  nestaz: { x: col(4), y: row(1) }, nest: { x: col(4), y: LEAF_HIGH },
-  nidus: { x: col(5), y: row(2) }, nidicare: { x: col(5), y: row(4) },
-  nicher: { x: col(5), y: row(6) }, niche: { x: col(5), y: LEAF_LOW },
+  nestaz: { x: col(4), y: row(2) }, nest: { x: col(4), y: LEAF_HIGH },
+  nidus: { x: col(5), y: row(1) }, nidicare: { x: col(5), y: row(3) },
+  nicher: { x: col(5), y: row(5) }, niche: { x: col(5), y: LEAF_LOW },
 
   sedes: { x: col(6), y: HEAD_Y },
-  sie: { x: col(6), y: row(1) }, see: { x: col(6), y: LEAF_HIGH },
+  sie: { x: col(6), y: row(2) }, see: { x: col(6), y: LEAF_HIGH },
 
   sedere: { x: col(10.5), y: HEAD_Y },
   sedicum: { x: col(7), y: row(1) }, sege: { x: col(7), y: row(3) }, siege: { x: col(7), y: LEAF_LOW },
-  sedare: { x: col(8), y: row(2) }, sedate: { x: col(8), y: LEAF_HIGH },
+  sedare: { x: col(8), y: row(2) }, sedatus: { x: col(8), y: row(4) }, sedate: { x: col(8), y: LEAF_HIGH },
   assidere: { x: col(9.5), y: row(1) },
   assise: { x: col(9), y: row(3) }, sise: { x: col(9), y: row(5) }, size: { x: col(9), y: LEAF_LOW },
   assessus: { x: col(10), y: row(4) }, assessare: { x: col(10), y: row(6) }, assess: { x: col(10), y: LEAF_HIGH },
-  insidere: { x: col(11), y: row(2) }, insidiae: { x: col(11), y: row(5) },
-  insidiosus: { x: col(11), y: row(7) }, insidious: { x: col(11), y: LEAF_LOW },
-  obsidere: { x: col(12), y: row(1) }, obsessus: { x: col(12), y: row(3) }, obsess: { x: col(12), y: LEAF_HIGH },
-  dissidere: { x: col(13), y: row(2) }, dissidens: { x: col(13), y: row(4) }, dissident: { x: col(13), y: LEAF_LOW },
-  supersedere: { x: col(14), y: row(1) }, supersede: { x: col(14), y: LEAF_HIGH },
+  insidere: { x: col(11), y: row(1) }, insidiae: { x: col(11), y: row(3) },
+  insidiosus: { x: col(11), y: row(5) }, insidious: { x: col(11), y: LEAF_LOW },
+  obsidere: { x: col(12), y: row(2) }, obsessus: { x: col(12), y: row(4) }, obsess: { x: col(12), y: LEAF_HIGH },
+  dissidere: { x: col(13), y: row(1) }, dissidens: { x: col(13), y: row(3) }, dissident: { x: col(13), y: LEAF_LOW },
+  supersedere: { x: col(14), y: row(2) }, supersede: { x: col(14), y: LEAF_HIGH },
 
   // sedēre's twin stem: the dictionaries build subsīdō on sīdō, so subsidy
   // descends beside the sedēre fan, not inside it
   sido: { x: col(15), y: HEAD_Y },
-  subsidere: { x: col(15), y: row(2) }, subsidium: { x: col(15), y: row(4) },
+  subsidere: { x: col(15), y: row(1) }, subsidium: { x: col(15), y: row(3) },
   subsidy: { x: col(15), y: LEAF_LOW },
 
   hedra: { x: col(17.5), y: HEAD_Y },
-  ephedra: { x: col(16), y: row(1) }, ephedrine: { x: col(16), y: LEAF_HIGH },
+  ephedra: { x: col(16), y: row(2) }, ephedrine: { x: col(16), y: LEAF_HIGH },
   kathedra: { x: col(17.5), y: row(1) }, cathedra: { x: col(17.5), y: row(3) },
   cathedralis: { x: col(17), y: row(5) }, cathedral: { x: col(17), y: LEAF_LOW },
   chaiere: { x: col(18), y: row(6) }, chair: { x: col(18), y: LEAF_HIGH },
@@ -111,15 +112,43 @@ function linkPath(a: Point, b: Laid, kneeY: number, drop = LABEL_DROP) {
     ` Q${b.x},${kneeY} ${b.x},${kneeY + r} V${y1}`;
 }
 
+/**
+ * The root's own branches take a bracket instead: a stem down to one shared
+ * lintel, then a drop into each branch's column. Ten diagonals from a single
+ * point would converge into a near-solid wedge under the root and separate
+ * only far out; one lintel says the same thing in a single line. It is drawn
+ * once — as a trunk with two rounded ends plus one drop per branch — so no
+ * segment is ever painted twice.
+ */
+const LINTEL = 196;
+const rootKids = nodes.filter(n => !(n.parent && laid[n.parent]));
+const kidXs = rootKids.map(n => n.x);
+const MIN_X = Math.min(...kidXs), MAX_X = Math.max(...kidXs);
+const LINTEL_R = 14;
+
+/** stem, trunk, and the two rounded ends where the outermost branches turn */
+const bracket = [
+  `M${ROOT.x},${ROOT.y + ROOT_DROP} V${LINTEL}`,
+  `M${MIN_X + LINTEL_R},${LINTEL} H${MAX_X - LINTEL_R}`,
+  ...rootKids
+    .filter(n => n.x === MIN_X || n.x === MAX_X)
+    .map(n => {
+      const s = n.x === MIN_X ? 1 : -1;
+      return `M${n.x + s * LINTEL_R},${LINTEL} Q${n.x},${LINTEL} ${n.x},${LINTEL + LINTEL_R} V${arriveY(n)}`;
+    }),
+];
+const rootDrop = (n: Laid) => `M${n.x},${LINTEL} V${arriveY(n)}`;
+
 export default function Sit() {
   return (
-    <svg className="seat" viewBox="0 35 2000 875" role="img"
+    <svg className="seat" viewBox="0 35 2000 940" role="img"
       aria-label="Selected descendants of PIE *sed-, arranged as a descent tree">
+      {bracket.map((d, i) => <path key={`b-${i}`} d={d} fill="none" className="t-link" />)}
       {nodes.map(n => {
         const parent = n.parent && laid[n.parent] ? laid[n.parent] : undefined;
+        if (!parent && (n.x === MIN_X || n.x === MAX_X)) return null; // drawn with the bracket ends
         return <path key={`l-${n.id}`} fill="none" className="t-link"
-          d={linkPath(parent ?? ROOT, n, knee[parent ? n.parent! : ROOT_KEY],
-            parent ? LABEL_DROP : ROOT_DROP)}
+          d={parent ? linkPath(parent, n, knee[n.parent!]) : rootDrop(n)}
           strokeDasharray={n.dashed ? "5 4" : undefined} />;
       })}
 

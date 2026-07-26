@@ -1,7 +1,10 @@
 # *sed- 'to sit' (full descent tree)
 
-> Verification tier: **exploration** — chains follow Wiktionary, cross-checked
-> against Etymonline; disputed or weakly-sourced links are marked `?`.
+> Verification tier: **exploration** for the research tree below — chains follow
+> Wiktionary, cross-checked against Etymonline; disputed or weakly-sourced links
+> are marked `?`. The subset that is actually **charted** is audited edge by edge
+> with quotations (2026-07-27, section below), and three errors it caught are
+> corrected in the chart data.
 > Chart: https://p.migdal.pl/pie-roots/sed/
 
 ```
@@ -16,7 +19,7 @@
 │   ├── *satjaną (causative 'make sit') → OE settan → set
 │   │   └── German setzen → ersetzen 'replace' → ersatz
 │   ├── ? *setlaz → OE setl → settle  [sources disagree on attachment to *sed-; not charted]
-│   ├── *sētiją → ON sæti → seat        [Norse loan, not native OE!]
+│   ├── *setiją → ON sæti → seat        [Norse loan, not native OE!]
 │   ├── *sōtam 'what settles' → OE sōt → soot
 │   ├── ? *sadulaz → saddle  [OED: formal difficulties]
 │   └── OE cotsǣta 'cottage-sitter' → ? cosset (pet lamb → pamper)
@@ -29,7 +32,7 @@
 │   │   ├── ? possidēre 'probably potis + sedēre' → possess; obsidēre 'sit against' → obsess
 │   │   │   └── obses 'one who sits before, hostage' → ? hostage (competing hospit- derivation)
 │   │   ├── VLat *sedicum → OF sege → siege, besiege
-│   │   └── sēdāre 'settle, calm' → sedate, sedative
+│   │   └── sēdāre 'settle, calm' → sedātus (pp) → sedate; sedative
 │   ├── sīdō 'settle down' — *sed- reduplicated (de Vaan *sizd-e/o-), a stem BESIDE sedēre
 │   │   └── subsīdere 'sit down, remain' → subsidium 'reserve troops' → subsidy
 │   ├── sēdēs 'seat' → OF sie(d) → see (bishop's)
@@ -39,7 +42,7 @@
 │   ├── ἕδρα 'seat; face of a solid'
 │   │   ├── [group] -hedron: polyhedron, tetrahedron, exedra
 │   │   ├── καθέδρα 'a sitting-down' → Latin cathedra → cathedral, ex cathedra; → OF chaiere → chair; → chaise
-│   │   ├── συνέδριον 'sitting-together, council' → Hebrew → Sanhedrin
+│   │   ├── συνέδριον 'sitting-together, council' → Late Hebrew → Sanhedrin
 │   │   └── ἐφέδρα 'sitting-upon (plant)' → ephedra, ephedrine
 │   └── ? πιέζω 'press' (*pi-sed- 'sit upon') → piezo-  [Wiktionary prefers *peysd-]
 ├── Celtic arm
@@ -48,6 +51,72 @@
 ├── Indo-Iranian arm: Skt upa-ni-ṣad 'a sitting-down beside' → Upanishad
 └── Balto-Slavic arm [context only]: Lith sėdė́ti; Polish siedzieć; sad 'orchard' (causative 'what is set')
 ```
+
+## Per-edge audit of the charted tree (2026-07-27)
+
+Every edge drawn in the chart, read against a witness and quoted. Etymonline
+unless marked; Wiktionary as the second witness on reconstructions; Lewis &
+Short, Matasović and de Vaan where the question is Latin or Celtic. Three edges
+were **wrong before this pass and are corrected in the data**; they are marked
+**FIXED**. Anything a witness hedges is dashed in the chart.
+
+**Germanic.** *sit* — “Old English *sittan* … Proto-Germanic \*setjan … PIE root
+\*sed- (1)” (Wiktionary reconstructs \*sitjaną, the form charted).
+*set* — “Old English *settan* (transitive) ‘cause to sit’ … Proto-Germanic
+\*(bi)satejanan ‘to cause to sit, set’ … causative form of PIE \*sod-, a variant
+of the root \*sed-”; charted as \*satjaną *to make sit*, Wiktionary's form.
+*seat* — “from Old Norse *sæti* ‘seat, position’”; Wiktionary's Old Norse entry
+cites Proto-Germanic **\*setiją** — the chart said \*sētiją with a long e.
+**FIXED.** *soot* — Wiktionary's \*sōtą “From a lengthened o-grade of \*sitjaną”,
+Old English descendant *sōt*; Etymonline glosses it literally “what settles”.
+No node stands above these four: each is its own formation on the root, so the
+chart draws them straight from \*sed- rather than under an invented cover node.
+
+**The nest compound.** “Old English *nest* … PIE \*nizdo- … \*ni ‘down’ + \*sed-
+‘to sit’ … Latin cognate *nīdus*”. Both English arrivals are charted: *nest* by
+descent, *niche* by borrowing — and the borrowing is dashed at two steps,
+because Etymonline prefers the rival route: French *niche* “is said to be from”
+Italian *nicchia*, while derivation “from an Old French noun derived from
+*nichier* … via Gallo-Roman \*nidicare from Latin *nidus*” **“has difficulties.”**
+
+**Latin.** *see* — “Old French *sie* ‘seat, throne; town, capital; episcopal
+see,’ from Latin *sedem* (nominative *sedes*)”; `sēdēs` is charted beside the
+verb, not under it, since it is a root-noun. *siege* — “Old French *siege,
+sege* ‘seat, throne’ … Vulgar Latin \*sedicum ‘seat’ … from Latin *sedere*”,
+which is why \*sēdicum hangs off the verb and not off `sēdēs`. *sedate* —
+“Latin *sedatus* … past participle of *sedare* ‘to settle, make calm,’
+causative of *sedere*”, and Wiktionary lists English *sedate* under `sedātus`;
+the chart used to skip that participle. **FIXED.** *assess* — “Medieval Latin
+*assessare* … from Latin *assessus*, past participle of *assidere* … *ad* ‘to’
++ *sedere*”. *size* — see the entry below; English **assize** is size's sibling,
+not its ancestor. **FIXED** (was `assise → assize → size`). *insidious* —
+“Latin *insidiosus* … from *insidiae* ‘plot, snare, ambush’ … *insidere* … *in-*
++ *sedere*”. *obsess* — “Latin *obsessus*, past participle of *obsidere* ‘sit
+opposite to, besiege’ … *ob* + *sedere*”. *dissident* — “*dissidentem*
+(nominative *dissidens*), present participle of *dissidere* … literally ‘to sit
+apart’”. *supersede* — “Latin *supersedere* … *super* ‘above’ + *sedere*”.
+*subsidy* — the stem question is argued in full below; charted through `sīdō`.
+
+**Greek.** *cathedral* — “Late Latin *ecclesia cathedralis* ‘church of a
+bishop's seat’ … Latin *cathedra* … Greek *kathedra* ‘chair, seat, bench’”.
+*chair* — “Old French *chaiere* … Latin *cathedra* … Greek *kathedra*, from
+*kata* ‘down’ + *hedra* ‘seat’”. *ephedrine* — “Greek *ephedra*, literally
+‘sitting upon,’ from *epi* ‘on’ + *hedra* ‘seat’”, the drug named 1887.
+*Sanhedrin* — “**Late Hebrew** *sanhedrin (gedola)* … Greek *synedrion*
+‘assembly, council,’ literally ‘sitting together’”, with the plural *-in* a
+Mishnaic Hebrew form; the chart's node is relabelled Late Hebrew accordingly,
+and the earlier "Hebrew **or Aramaic**" hedge in these notes is withdrawn — no
+witness read supports the Aramaic route.
+
+**Celtic.** *banshee* — “Irish *bean sidhe* ‘female of the Elves’ … *sidhe*
+… *sid* ‘fairy mound’”, which Etymonline files under \*sed-. The Proto-Celtic
+node has a Leiden witness: Wiktionary's \*sīdos “tumulus (inhabited by
+supernatural beings)”, “From Proto-Indo-European \*sed-”, citing Matasović,
+*Etymological Dictionary of Proto-Celtic* (Brill, 2009).
+
+Not audited to this standard, because the chart does not draw them: everything
+in the research tree above that is not a charted node (possess, ersatz, eyas,
+Eisteddfod, Upanishad, settle, and the disputed-membership section).
 
 ## Transition sources
 
@@ -78,8 +147,10 @@
   size: https://en.wiktionary.org/wiki/sedeo#Latin · https://en.wiktionary.org/wiki/sedes#Latin · https://www.etymonline.com/word/see · https://www.etymonline.com/word/possess · https://www.etymonline.com/word/siege · https://www.etymonline.com/word/sedate · https://www.etymonline.com/word/size
 - Greek `ἕδρα/καθέδρα` routes to ephedrine, chair and Sanhedrin. The source of
   the plant's Greek name `ἐφέδρα` (“sitting-upon”) is unknown; the chart does
-  not invent a botanical explanation. `Sanhedrin` passed through Hebrew or
-  Aramaic from Greek `συνέδριον`, “sitting together; assembly, council”:
+  not invent a botanical explanation. `Sanhedrin` passed through Late (Mishnaic)
+  Hebrew from Greek `συνέδριον`, “sitting together; assembly, council” — the
+  Aramaic alternative once noted here has no witness behind it (see the
+  per-edge audit):
   https://en.wiktionary.org/wiki/ἕδρα#Ancient_Greek · https://en.wiktionary.org/wiki/καθέδρα#Ancient_Greek · https://www.etymonline.com/word/ephedrine · https://www.etymonline.com/word/chair · https://www.etymonline.com/word/cathedral · https://en.wiktionary.org/wiki/cathedral · https://en.wiktionary.org/wiki/Sanhedrin · https://www.dictionnaire-academie.fr/article/A9S0353
 - Celtic/Welsh routes to banshee and Eisteddfod:
   https://en.wiktionary.org/wiki/banshee · https://en.wiktionary.org/wiki/eisteddfod

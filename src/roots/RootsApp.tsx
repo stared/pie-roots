@@ -12,6 +12,8 @@ interface View {
   slug: string;
   /** this root's notes file (path within the repo, optional #anchor) */
   trees: string;
+  /** the dictionaries this chart's edges were checked against */
+  sources?: string;
   title: ReactNode;
   dek: ReactNode;
   chart: ReactNode;
@@ -45,8 +47,9 @@ const VIEWS: View[] = [
   {
     slug: "sed",
     trees: "notes/sed.md",
+    sources: "Wiktionary, Etymonline, Lewis & Short, Matasović",
     title: <><i>*sed-</i> <span className="means">means</span> to sit</>,
-    dek: <>A body can <b>sit</b>, or make something else sit — <b>set</b>; a bird’s <i>sitting down</i> is a <b>nest</b>, a Norse <i>seat</i> is a <b>seat</b>, and what settles out of smoke is <b>soot</b>. Latin stacked prefixes on <b>sedēre</b>: <i>sit beside</i> gave <b>assess</b>, <i>sit in ambush</i> <b>insidious</b>, <i>sit against</i> <b>obsess</b>, <i>sit apart</i> <b>dissident</b>, <i>sit above</i> <b>supersede</b>; on its twin stem <b>sīdō</b>, <i>sit in reserve</i> gave <b>subsidy</b>. Greek thinned the root’s <b>s-</b> to a breathing, so <b>sed-</b> arrives as <b>ἕδρα</b> <i>seat</i> — the seat inside <b>cathedral</b>, <b>chair</b>, <b>ephedrine</b>, and <b>Sanhedrin</b>. Irish <b>bean sí</b>, the <i>woman of the mound</i>, is the <b>banshee</b>.</>,
+    dek: <>A body can <b>sit</b>, or make something else sit — <b>set</b>; a bird’s <i>sitting down</i> is a <b>nest</b>, and what settles out of smoke is <b>soot</b>. Latin stacked prefixes on <b>sedēre</b>: <i>sit beside</i> gave <b>assess</b>, <i>sit in ambush</i> <b>insidious</b>, <i>sit against</i> <b>obsess</b>, <i>sit apart</i> <b>dissident</b>, <i>sit above</i> <b>supersede</b>; on its twin stem <b>sīdō</b>, <i>sit in reserve</i> gave <b>subsidy</b>. Greek thinned the root’s <b>s-</b> to a breathing, so <b>sed-</b> arrives as <b>ἕδρα</b> <i>seat</i> — the seat inside <b>cathedral</b>, <b>chair</b>, <b>ephedrine</b>, and <b>Sanhedrin</b>. Irish <b>bean sí</b>, the <i>woman of the mound</i>, is the <b>banshee</b>.</>,
     chart: <Sit />,
   },
   {
@@ -88,7 +91,7 @@ export default function RootsApp() {
           <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" /></svg> attested ancestor</span>
           <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" strokeDasharray="2 2" /></svg> reconstructed</span>
           <span><svg width="20" height="13"><line x1="1" y1="7" x2="19" y2="7" className="t-link" strokeDasharray="5 4" /></svg> disputed step</span>
-          <span className="by">by <a href="https://p.migdal.pl">Piotr Migdał</a> · 2026 · <a href="https://p.migdal.pl/pie-roots/">p.migdal.pl/pie-roots</a> · sources: Wiktionary, Etymonline</span>
+          <span className="by">by <a href="https://p.migdal.pl">Piotr Migdał</a> · 2026 · <a href="https://p.migdal.pl/pie-roots/">p.migdal.pl/pie-roots</a> · sources: {view.sources ?? "Wiktionary, Etymonline"}</span>
         </footer>
       ) : (
         <footer className="credit">
@@ -96,7 +99,7 @@ export default function RootsApp() {
           <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" /></svg> attested ancestor</span>
           <span><svg width="12" height="13"><circle cx="6" cy="7" r="4" fill="none" className="t-ring" strokeDasharray="2 2" /></svg> reconstructed</span>
           <span><svg width="20" height="13"><line x1="1" y1="7" x2="19" y2="7" className="t-link" strokeDasharray="5 4" /></svg> disputed step</span>
-          <span className="by">sources: Wiktionary, Etymonline · <a href={`https://github.com/stared/pie-roots/blob/main/${view.trees}`}>full descent tree</a> · <a href="?share">poster version</a> · download <button className="dl" onClick={() => downloadPoster(view.slug, "png")}>PNG</button> / <button className="dl" onClick={() => downloadPoster(view.slug, "svg")}>SVG</button></span>
+          <span className="by">sources: {view.sources ?? "Wiktionary, Etymonline"} · <a href={`https://github.com/stared/pie-roots/blob/main/${view.trees}`}>full descent tree</a> · <a href="?share">poster version</a> · download <button className="dl" onClick={() => downloadPoster(view.slug, "png")}>PNG</button> / <button className="dl" onClick={() => downloadPoster(view.slug, "svg")}>SVG</button></span>
         </footer>
       )}
     </div>

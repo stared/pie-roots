@@ -9,28 +9,27 @@ import type { WordNode } from "../types";
 
 export const SED_NODES: WordNode[] = [
   // Germanic
-  { id: "germanic_sed", form: "*set- / *sat-", gloss: "the inherited sit-family", lang: "Proto-Germanic", kind: "proto" },
-  { id: "sitjana", form: "*sitjaną", gloss: "to sit", lang: "Proto-Germanic", kind: "proto", parent: "germanic_sed" },
+  { id: "sitjana", form: "*sitjaną", gloss: "to sit", lang: "Proto-Germanic", kind: "proto" },
   { id: "sittan", form: "sittan", gloss: "to sit", lang: "Old English", kind: "ancestor", parent: "sitjana" },
   { id: "sit", form: "sit", kind: "modern", parent: "sittan" },
-  { id: "setlaz", form: "*setlaz", gloss: "seat", lang: "Proto-Germanic", kind: "proto", parent: "germanic_sed", dashed: true },
+  { id: "setlaz", form: "*setlaz", gloss: "seat", lang: "Proto-Germanic", kind: "proto", dashed: true },
   { id: "setl", form: "setl", gloss: "seat", lang: "Old English", kind: "ancestor", parent: "setlaz" },
   { id: "setlan", form: "setlan", gloss: "to settle, put to rest", lang: "Old English", kind: "ancestor", parent: "setl" },
   { id: "settle", form: "settle", kind: "modern", parent: "setlan" },
-  { id: "satjana", form: "*satjaną", gloss: "to make sit", lang: "Proto-Germanic", kind: "proto", parent: "germanic_sed" },
+  { id: "satjana", form: "*satjaną", gloss: "to make sit", lang: "Proto-Germanic", kind: "proto" },
   { id: "settan", form: "settan", gloss: "to set", lang: "Old English", kind: "ancestor", parent: "satjana" },
   { id: "set", form: "set", kind: "modern", parent: "settan" },
   { id: "irsezzen", form: "irsezzen", gloss: "to replace", lang: "Old High German", kind: "ancestor", parent: "satjana" },
   { id: "ersetzen", form: "ersetzen", gloss: "to replace", lang: "German", kind: "ancestor", parent: "irsezzen" },
   { id: "ersatzde", form: "Ersatz", gloss: "replacement", lang: "German", kind: "ancestor", parent: "ersetzen" },
   { id: "ersatz", form: "ersatz", kind: "modern", parent: "ersatzde" },
-  { id: "sotam", form: "*sōtą", gloss: "what settles", lang: "Proto-Germanic", kind: "proto", parent: "germanic_sed" },
+  { id: "sotam", form: "*sōtą", gloss: "what settles", lang: "Proto-Germanic", kind: "proto" },
   { id: "sot", form: "sōt", gloss: "soot", lang: "Old English", kind: "ancestor", parent: "sotam" },
   { id: "soot", form: "soot", kind: "modern", parent: "sot" },
   { id: "nisdos", form: "*ni-sd-ós", gloss: "nest: where the bird sits down", lang: "PIE", kind: "proto" },
   { id: "nestaz", form: "*nestą", gloss: "nest", lang: "Proto-Germanic", kind: "proto", parent: "nisdos" },
   { id: "nest", form: "nest", kind: "modern", parent: "nestaz" },
-  { id: "setija", form: "*sētiją", gloss: "seat", lang: "Proto-Germanic", kind: "proto", parent: "germanic_sed" },
+  { id: "setija", form: "*setiją", gloss: "seat", lang: "Proto-Germanic", kind: "proto" },
   { id: "saeti", form: "sæti", gloss: "seat", lang: "Old Norse", kind: "ancestor", parent: "setija" },
   { id: "seat", form: "seat", kind: "modern", parent: "saeti" },
 
@@ -48,7 +47,8 @@ export const SED_NODES: WordNode[] = [
   { id: "sege", form: "sege", gloss: "seat", lang: "Old French", kind: "ancestor", parent: "sedicum" },
   { id: "siege", form: "siege", kind: "modern", parent: "sege" },
   { id: "sedare", form: "sēdāre", gloss: "to settle, to calm", lang: "Latin", kind: "ancestor", parent: "sedere" },
-  { id: "sedate", form: "sedate", kind: "modern", parent: "sedare" },
+  { id: "sedatus", form: "sedātus", gloss: "calmed, composed", lang: "Latin", kind: "ancestor", parent: "sedare" },
+  { id: "sedate", form: "sedate", kind: "modern", parent: "sedatus" },
   { id: "assidere", form: "assidēre", gloss: "sit beside", lang: "Latin", kind: "ancestor", parent: "sedere" },
   { id: "assise", form: "assise", gloss: "the court’s sitting", lang: "Old French", kind: "ancestor", parent: "assidere" },
   // English assize is size's sibling, not its ancestor: both witnesses route
@@ -90,7 +90,7 @@ export const SED_NODES: WordNode[] = [
 
   // Greek
   { id: "hedra", form: "ἕδρα", gloss: "seat", lang: "Greek", kind: "ancestor" },
-  { id: "ephedra", form: "ἐφέδρα", gloss: "plant name: sitting-upon", lang: "Greek", kind: "ancestor", parent: "hedra" },
+  { id: "ephedra", form: "ἐφέδρα", gloss: "sitting upon", lang: "Greek", kind: "ancestor", parent: "hedra" },
   { id: "ephedrine", form: "ephedrine", kind: "modern", parent: "ephedra" },
   { id: "kathedra", form: "καθέδρα", gloss: "seat, chair", lang: "Greek", kind: "ancestor", parent: "hedra" },
   { id: "cathedra", form: "cathedra", gloss: "chair; bishop’s seat", lang: "Latin", kind: "ancestor", parent: "kathedra" },
@@ -99,7 +99,7 @@ export const SED_NODES: WordNode[] = [
   { id: "chaiere", form: "chaiere", gloss: "chair, throne", lang: "Old French", kind: "ancestor", parent: "cathedra" },
   { id: "chair", form: "chair", kind: "modern", parent: "chaiere" },
   { id: "synedrion", form: "συνέδριον", gloss: "a sitting-together", lang: "Greek", kind: "ancestor", parent: "hedra" },
-  { id: "sanhedrin_he", form: "sanhedrīn", gloss: "council", lang: "Hebrew", kind: "ancestor", parent: "synedrion" },
+  { id: "sanhedrin_he", form: "sanhedrīn", gloss: "council", lang: "Late Hebrew", kind: "ancestor", parent: "synedrion" },
   { id: "sanhedrin", form: "Sanhedrin", kind: "modern", parent: "sanhedrin_he" },
 
   // Celtic, Welsh, Sanskrit
