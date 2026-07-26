@@ -78,11 +78,12 @@
   texts, including the debated “sit down near” / esoteric-teaching reading:
   https://academic.oup.com/reference/62357/reference-article-abstract/554513137
 
-## Additional English candidates (researched 2026-07-20; not in chart)
+## Additional English candidates (researched 2026-07-20)
 
 The published chart remains a subset. These were checked as possible additions,
 with compounds grouped by the actual intermediate verb rather than attached
-straight to `*sed-`.
+straight to `*sed-`. Six have since been charted — assess, insidious, obsess,
+subsidy, supersede, dissident; the rest stay in the notes only.
 
 ### Strong and potentially surprising
 

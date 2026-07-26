@@ -75,7 +75,6 @@ body:has(svg.wheel) { background: #ffffff; }
   paint-order: stroke; stroke: var(--paper); stroke-width: 5px; stroke-linejoin: round; }
 .t-note { font: italic 11px var(--sans); fill: #6b5a42;
   paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
-.t-era { font: 11px var(--sans); letter-spacing: 0.14em; fill: #b3a184; }
 
 /* Speak is an utterance expanding into three semantic registers. Its guide
    waves are audible structure, not a second data layer. */

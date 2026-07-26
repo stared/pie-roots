@@ -23,8 +23,9 @@ One root per page:
   widmo*
 - [/bheh2/](https://p.migdal.pl/pie-roots/bheh2/) — **\*bʰeh₂-** 'to speak' as
   a rippling fan: *fate, fairy, prophet, anthem, ban, bandit, contraband*
-- [/sed/](https://p.migdal.pl/pie-roots/sed/) — **\*sed-** 'to sit' in dated
-  time strata: *settle, siege, size, chair, banshee, Upanishad*
+- [/sed/](https://p.migdal.pl/pie-roots/sed/) — **\*sed-** 'to sit' as a descent
+  lattice, one English word per column: *set, settle, soot, nest, siege, size,
+  chair, banshee*
 - [/kwel/](https://p.migdal.pl/pie-roots/kwel/) — **\*kʷel-** 'to turn' as a
   wheel of words: *wheel, cycle, chakra, culture, colony, pole, collar*
 
