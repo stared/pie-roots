@@ -24,11 +24,14 @@
 │   ├── sedēre 'to sit'
 │   │   ├── [group] session, sedentary, sediment, sessile, séance
 │   │   ├── [group] -sidēre compounds: preside, reside, subside, assiduous, insidious, dissident, supersede
-│   │   ├── assidēre 'sit beside (as judge)' → OF assise 'court sitting' → assize → size; assess
+│   │   ├── assidēre 'sit beside (as judge)' → OF assise 'court sitting' → OF sise (clipped) → size; assess
+│   │   │   └── English assize is size's SIBLING, not its ancestor — both from OF assise
 │   │   ├── ? possidēre 'probably potis + sedēre' → possess; obsidēre 'sit against' → obsess
 │   │   │   └── obses 'one who sits before, hostage' → ? hostage (competing hospit- derivation)
 │   │   ├── VLat *sedicum → OF sege → siege, besiege
 │   │   └── sēdāre 'settle, calm' → sedate, sedative
+│   ├── sīdō 'settle down' — *sed- reduplicated (de Vaan *sizd-e/o-), a stem BESIDE sedēre
+│   │   └── subsīdere 'sit down, remain' → subsidium 'reserve troops' → subsidy
 │   ├── sēdēs 'seat' → OF sie(d) → see (bishop's)
 │   ├── solium 'throne' → ? soil (conflated with solum 'ground')
 │   └── ? cēdō 'go, yield' (*ke-sd- 'sit away'?) → cede, concede, proceed, succeed…  [disputed]
@@ -49,6 +52,18 @@
 ## Transition sources
 
 - PIE root and branch attachments: https://en.wiktionary.org/wiki/Reconstruction:Proto-Indo-European/sed- · https://www.etymonline.com/word/*sed-
+- `assidēre → OF assise → OF sise → size` (checked 2026-07-26): both witnesses
+  read directly make the clipped `sise` the step and leave English **assize** as
+  size's sibling, not its ancestor — Etymonline “from Old French sise, shortened
+  form of assise”, Wiktionary “Old French cise, sise, aphetism of assise”.
+  Evidence tier: first-sweep only. MED has the clipped form as its own headword
+  (`sise` n., senses from the court session through “quantity or size”, incl. a
+  1440 “Syse, or a-syse”) and OED derives the noun from French `sise` ← OF
+  `assise`, but both sites return 403 to this repo's fetcher, so those two are
+  second-hand via search summary and still want a read with library access.
+  https://www.etymonline.com/word/size · https://en.wiktionary.org/wiki/size ·
+  https://quod.lib.umich.edu/m/middle-english-dictionary/dictionary/MED40539 ·
+  https://www.oed.com/dictionary/size_n1
 - Germanic `*sitjaną → sit`, `*satjaną → set`, and the related settle, seat,
   soot and ersatz histories: https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/sitjaną · https://en.wiktionary.org/wiki/Reconstruction:Proto-Germanic/satjaną · https://www.etymonline.com/word/settle · https://www.etymonline.com/word/seat · https://www.etymonline.com/word/soot · https://www.etymonline.com/word/ersatz
   Wiktionary's current Proto-Germanic entry for the settle branch rejects
@@ -99,10 +114,19 @@ subsidy, supersede, dissident; the rest stay in the notes only.
   English word moved from besieging to haunting or tormenting, then to a fixed
   idea. This would echo the existing siege branch without duplicating it.
   https://www.etymonline.com/word/obsess
-- **subsidy**: Latin `subsidere` “sit down; remain” → `subsidium`, originally
-  troops held in reserve and then aid or support → subsidy. Both sources make
-  the `sub- + sīdō/sedēre` analysis explicit.
-  https://en.wiktionary.org/wiki/subsidy · https://www.etymonline.com/word/subsidy
+- **subsidy**: Latin `subsīdere` “sit down; remain” → `subsidium`, originally
+  troops held in reserve and then aid or support → subsidy. Which stem the verb
+  is built on is a real split, and no witness says `sedēre` (checked 2026-07-26):
+  Lewis & Short heads the entry “sub-sīdo, sēdi, sessum, **3**”, i.e. a compound
+  of `sīdō` (its `subsĭdĕo, ēre` is a bare cross-reference back to it), and
+  derives the noun “from subsideo”; Wiktionary gives the verb as `sub-` + `sīdō`
+  but the noun as `sub-` + `sedeō`; Etymonline says only that the `sidere` in
+  `subsidere` is “connected to” `sedere`. `sīdō` itself is `*sed-` reduplicated
+  (de Vaan, *Etymological Dictionary of Latin*, `*sizd-e/o-`, p. 562), so the
+  root membership is not in doubt — only the stem. Charted through `sīdō`.
+  http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=subsido ·
+  http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=subsidium ·
+  https://en.wiktionary.org/wiki/subsido · https://www.etymonline.com/word/subsidy
 - **supersede**: Latin `supersedēre`, literally “sit above,” developed through
   “refrain/postpone” to “set aside, replace.” The spelling preserves the Latin
   stem unusually clearly.

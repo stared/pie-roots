@@ -51,18 +51,24 @@ const POS: Record<string, Point> = {
   sedes: { x: col(7), y: row(-1) },
   sie: { x: col(7), y: row(2) }, see: { x: col(7), y: LEAF_LOW },
 
-  sedere: { x: (col(8) + col(16)) / 2, y: row(-1) },
+  sedere: { x: (col(8) + col(15)) / 2, y: row(-1) },
   sedicum: { x: col(8), y: row(1) }, sege: { x: col(8), y: row(3) }, siege: { x: col(8), y: LEAF_HIGH },
   sedare: { x: col(9), y: row(2) }, sedate: { x: col(9), y: LEAF_LOW },
   assidere: { x: (col(10) + col(11)) / 2, y: row(1) },
-  assise: { x: col(10), y: row(3) }, size: { x: col(10), y: LEAF_HIGH },
+  assise: { x: col(10), y: row(3) }, sise: { x: col(10), y: row(5) },
+  size: { x: col(10), y: LEAF_HIGH },
   assessus: { x: col(11), y: row(4) }, assessare: { x: col(11), y: row(6) }, assess: { x: col(11), y: LEAF_LOW },
   insidere: { x: col(12), y: row(1) }, insidiae: { x: col(12), y: row(3) },
   insidiosus: { x: col(12), y: row(5) }, insidious: { x: col(12), y: LEAF_HIGH },
   obsidere: { x: col(13), y: row(2) }, obsessus: { x: col(13), y: row(4) }, obsess: { x: col(13), y: LEAF_LOW },
-  subsidere: { x: col(14), y: row(1) }, subsidium: { x: col(14), y: row(3) }, subsidy: { x: col(14), y: LEAF_HIGH },
-  dissidere: { x: col(15), y: row(2) }, dissidens: { x: col(15), y: row(4) }, dissident: { x: col(15), y: LEAF_LOW },
-  supersedere: { x: col(16), y: row(1) }, supersede: { x: col(16), y: LEAF_HIGH },
+  dissidere: { x: col(14), y: row(1) }, dissidens: { x: col(14), y: row(3) }, dissident: { x: col(14), y: LEAF_HIGH },
+  supersedere: { x: col(15), y: row(2) }, supersede: { x: col(15), y: LEAF_LOW },
+
+  // sedēre's twin stem: the dictionaries build subsīdō on sīdō, so subsidy
+  // descends beside the sedēre fan, not inside it
+  sido: { x: col(16), y: row(-1) },
+  subsidere: { x: col(16), y: row(1) }, subsidium: { x: col(16), y: row(3) },
+  subsidy: { x: col(16), y: LEAF_HIGH },
 
   hedra: { x: (col(17) + col(20)) / 2, y: row(-1) },
   ephedra: { x: col(17), y: row(2) }, ephedrine: { x: col(17), y: LEAF_LOW },
@@ -78,11 +84,11 @@ const POS: Record<string, Point> = {
 };
 
 /** the branch heads: each descends from *sed- itself */
-const HEADS = ["germanic_sed", "nisdos", "sedes", "sedere", "hedra", "sidos"];
+const HEADS = ["germanic_sed", "nisdos", "sedes", "sedere", "sido", "hedra", "sidos"];
 const heads = new Set(HEADS);
 
 const LATIN_CHILDREN = ["sedicum", "sedare", "assidere", "insidere",
-  "obsidere", "subsidere", "dissidere", "supersedere"];
+  "obsidere", "dissidere", "supersedere"];
 const latinChildren = new Set(LATIN_CHILDREN);
 
 const byId = new Map(SED_NODES.map(n => [n.id, n]));
@@ -121,7 +127,8 @@ export default function Sit() {
           fill="none" className="t-link" />)}
       {LATIN_CHILDREN.map(id =>
         <path key={`bundle-${id}`} d={bundlePath(laid.sedere, laid[id], LATIN_CORRIDOR)}
-          fill="none" className="t-link" />)}
+          fill="none" className="t-link"
+          strokeDasharray={laid[id].dashed ? "5 4" : undefined} />)}
       {nodes.map(n => {
         if (latinChildren.has(n.id) || heads.has(n.id)) return null;
         return <path key={`l-${n.id}`} d={linkPath(laid[n.parent!], n)} fill="none"

@@ -51,7 +51,10 @@ export const SED_NODES: WordNode[] = [
   { id: "sedate", form: "sedate", kind: "modern", parent: "sedare" },
   { id: "assidere", form: "assidēre", gloss: "sit beside", lang: "Latin", kind: "ancestor", parent: "sedere" },
   { id: "assise", form: "assise", gloss: "the court’s sitting", lang: "Old French", kind: "ancestor", parent: "assidere" },
-  { id: "size", form: "size", kind: "modern", parent: "assise" },
+  // English assize is size's sibling, not its ancestor: both witnesses route
+  // size through the clipped assise (Etymonline, Wiktionary)
+  { id: "sise", form: "sise", gloss: "an assessed amount", lang: "Old French", kind: "ancestor", parent: "assise" },
+  { id: "size", form: "size", kind: "modern", parent: "sise" },
   { id: "assessus", form: "assessus", gloss: "a sitting by", lang: "Latin", kind: "ancestor", parent: "assidere" },
   { id: "assessare", form: "assessāre", gloss: "fix a tax or fine", lang: "Medieval Latin", kind: "ancestor", parent: "assessus" },
   { id: "assess", form: "assess", kind: "modern", parent: "assessare" },
@@ -62,7 +65,13 @@ export const SED_NODES: WordNode[] = [
   { id: "obsidere", form: "obsidēre", gloss: "sit against; besiege", lang: "Latin", kind: "ancestor", parent: "sedere" },
   { id: "obsessus", form: "obsessus", gloss: "besieged", lang: "Latin", kind: "ancestor", parent: "obsidere" },
   { id: "obsess", form: "obsess", kind: "modern", parent: "obsessus" },
-  { id: "subsidere", form: "subsidere", gloss: "sit down; remain", lang: "Latin", kind: "ancestor", parent: "sedere" },
+  // sīdō is *sed- reduplicated (de Vaan *sizd-e/o-), a stem beside sedēre, and
+  // every dictionary builds subsīdō on it: L&S "sub-sīdo … 3", Wiktionary
+  // sub- + sīdō. No source derives the verb from sedēre — Etymonline only says
+  // its sidere is "connected to" sedere. subsidium: L&S "from subsideo", the
+  // collateral 2nd-conjugation form of the same verb.
+  { id: "sido", form: "sīdō", gloss: "to settle down", lang: "Latin", kind: "ancestor" },
+  { id: "subsidere", form: "subsīdere", gloss: "sit down; remain", lang: "Latin", kind: "ancestor", parent: "sido" },
   { id: "subsidium", form: "subsidium", gloss: "reserve troops; support", lang: "Latin", kind: "ancestor", parent: "subsidere" },
   { id: "subsidy", form: "subsidy", kind: "modern", parent: "subsidium" },
   { id: "dissidere", form: "dissidēre", gloss: "sit apart; disagree", lang: "Latin", kind: "ancestor", parent: "sedere" },
