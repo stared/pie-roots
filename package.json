@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "roots": "vite --port 4330 --open /weyd/",
     "roots:shoot": "node scripts/shoot-roots.mjs",
+    "roots:audit": "node scripts/audit-roots.mjs",
     "roots:downloads": "node scripts/test-downloads.mjs"
   },
   "dependencies": {

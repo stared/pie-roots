@@ -24,7 +24,7 @@ One root per page:
 - [/bheh2/](https://p.migdal.pl/pie-roots/bheh2/) — **\*bʰeh₂-** 'to speak' as
   a rippling fan: *fate, fairy, prophet, anthem, ban, bandit, contraband*
 - [/sed/](https://p.migdal.pl/pie-roots/sed/) — **\*sed-** 'to sit' as a descent
-  lattice, one English word per column: *set, settle, soot, nest, siege, size,
+  lattice, one English word per column: *set, soot, nest, siege, size, subsidy,
   chair, banshee*
 - [/kwel/](https://p.migdal.pl/pie-roots/kwel/) — **\*kʷel-** 'to turn' as a
   wheel of words: *wheel, cycle, chakra, culture, colony, pole, collar*

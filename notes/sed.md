@@ -15,7 +15,7 @@
 │   ├── *sitjaną → OE sittan → sit
 │   ├── *satjaną (causative 'make sit') → OE settan → set
 │   │   └── German setzen → ersetzen 'replace' → ersatz
-│   ├── ? *setlaz → OE setl → settle  [sources disagree on attachment to *sed-]
+│   ├── ? *setlaz → OE setl → settle  [sources disagree on attachment to *sed-; not charted]
 │   ├── *sētiją → ON sæti → seat        [Norse loan, not native OE!]
 │   ├── *sōtam 'what settles' → OE sōt → soot
 │   ├── ? *sadulaz → saddle  [OED: formal difficulties]

@@ -46,7 +46,7 @@ const VIEWS: View[] = [
     slug: "sed",
     trees: "notes/sed.md",
     title: <><i>*sed-</i> <span className="means">means</span> to sit</>,
-    dek: <>A body can <b>sit</b>, make something else sit — <b>set</b> — or come to rest for good and <b>settle</b>; a bird’s <i>sitting down</i> is a <b>nest</b>, and what settles out of smoke is <b>soot</b>. Latin stacked prefixes on <b>sedēre</b>: <i>sit beside</i> gave <b>assess</b>, <i>sit in ambush</i> <b>insidious</b>, <i>sit against</i> <b>obsess</b>, <i>sit apart</i> <b>dissident</b>, <i>sit above</i> <b>supersede</b>; on its twin stem <b>sīdō</b>, <i>sit in reserve</i> gave <b>subsidy</b>. Greek thinned the root’s <b>s-</b> to a breathing, so <b>sed-</b> arrives as <b>ἕδρα</b> <i>seat</i> — the seat inside <b>cathedral</b>, <b>chair</b>, <b>ephedrine</b>, and <b>Sanhedrin</b>. Irish <b>bean sí</b>, the <i>woman of the mound</i>, is the <b>banshee</b>.</>,
+    dek: <>A body can <b>sit</b>, or make something else sit — <b>set</b>; a bird’s <i>sitting down</i> is a <b>nest</b>, a Norse <i>seat</i> is a <b>seat</b>, and what settles out of smoke is <b>soot</b>. Latin stacked prefixes on <b>sedēre</b>: <i>sit beside</i> gave <b>assess</b>, <i>sit in ambush</i> <b>insidious</b>, <i>sit against</i> <b>obsess</b>, <i>sit apart</i> <b>dissident</b>, <i>sit above</i> <b>supersede</b>; on its twin stem <b>sīdō</b>, <i>sit in reserve</i> gave <b>subsidy</b>. Greek thinned the root’s <b>s-</b> to a breathing, so <b>sed-</b> arrives as <b>ἕδρα</b> <i>seat</i> — the seat inside <b>cathedral</b>, <b>chair</b>, <b>ephedrine</b>, and <b>Sanhedrin</b>. Irish <b>bean sí</b>, the <i>woman of the mound</i>, is the <b>banshee</b>.</>,
     chart: <Sit />,
   },
   {
