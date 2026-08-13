@@ -35,24 +35,42 @@
       header p { max-width: 600px; margin: 1.25em auto 0; font-size: 18px; line-height: 1.55; color: var(--mid); }
       header p i { color: var(--ink); }
       main { width: 100%; max-width: 680px; margin-top: clamp(52px, 8vh, 84px); }
-      .group { display: flex; flex-direction: column; gap: 34px; }
+      .group { display: flex; flex-direction: column; gap: 16px; }
       a.root {
-        display: block; text-decoration: none; color: inherit;
+        position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 220px;
+        column-gap: 28px; align-items: end; min-height: 166px; padding: 25px 28px;
+        border: 1px solid #b8c2d1; text-decoration: none; color: inherit;
+        overflow: hidden; transition: border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
       }
       a.root h2 { font-size: 27px; font-weight: 600; line-height: 1.15; }
+      a.root > h2, a.root > p { grid-column: 1; }
       a.root h2 i { font-style: italic; }
       a.root h2 .plain { display: block; margin-top: 7px; font-size: 17px; font-weight: 400; color: var(--mid); }
       a.root p { margin-top: 9px; font-size: 15px; color: var(--mid); line-height: 1.6; }
-      a.root:hover h2 { color: var(--link); }
-      a.root:focus-visible { outline: 3px solid #84adff; outline-offset: 5px; }
+      a.root:hover, a.root:focus-visible {
+        border-color: var(--link); box-shadow: inset 0 0 0 2px var(--link);
+        background: #f3f7ff; outline: none;
+      }
+      a.root:hover h2, a.root:focus-visible h2 { color: var(--link); }
+      .mini-crop {
+        position: absolute; inset: 0 0 0 auto; width: 220px;
+        overflow: hidden; background: #eef2f7;
+      }
+      .mini {
+        width: 100%; height: 100%; object-fit: cover;
+        filter: saturate(0.72) contrast(0.94); opacity: 0.84;
+        transition: filter 140ms ease, opacity 140ms ease;
+      }
+      .mini-deru { object-position: 50% 62%; }
+      a.root:hover .mini, a.root:focus-visible .mini { filter: saturate(1) contrast(1.06); opacity: 1; }
       .group-label {
         align-self: center; font-size: 19px; font-style: normal;
         font-weight: 500; color: var(--link); margin-bottom: 10px;
       }
       .wip { margin-top: 72px; }
-      .wip a.root h2 { font-size: 25px; color: var(--ink); }
-      .wip a.root h2 .plain { font-size: 16px; }
-      .wip a.root p { font-size: 14px; color: var(--mid); }
+      .wip a.root h2 { font-size: 27px; color: var(--ink); }
+      .wip a.root h2 .plain { font-size: 17px; }
+      .wip a.root p { font-size: 15px; color: var(--mid); }
       .wip a.root:hover h2 { color: var(--link); }
       footer {
         width: 100%; max-width: 680px; margin-top: 64px;
@@ -61,7 +79,13 @@
       }
       footer a { color: var(--link); }
       @media (max-width: 620px) {
+        a.root { grid-template-columns: minmax(0, 1fr) 120px; column-gap: 14px; min-height: 154px; padding: 21px 18px; }
+        .mini-crop { width: 120px; }
         .wip { margin-top: 58px; }
+      }
+      @media (max-width: 430px) {
+        a.root { grid-template-columns: 1fr; }
+        .mini-crop { display: none; }
       }
     </style>
     <!-- Privacy-friendly analytics (Plausible), counted under the p.migdal.pl property. -->
@@ -82,22 +106,25 @@
     </header>
     <main>
       <div class="group">
-        <p class="group-label">Published</p>
         <a class="root" href="https://p.migdal.pl/tree-of-tree/">
           <h2><i>*deru-</i> <span class="plain">the tree of ‘tree’</span></h2>
           <p>tree · true · trust · druid · endure</p>
+          <span class="mini-crop"><img class="mini mini-deru" src="./thumbnails/deru.jpg" alt="" /></span>
         </a>
         <a class="root" href="./weyd-magic/">
           <h2><i>*weyd-</i> <span class="plain">means to see, to know</span></h2>
           <p>wizard · clairvoyant · déjà vu · Ayurveda · wiedźma</p>
+          <span class="mini-crop"><img class="mini mini-weyd-magic" src="./thumbnails/weyd-magic.jpg" alt="" /></span>
         </a>
         <a class="root" href="./weyd/">
           <h2><i>*weyd-</i> <span class="plain">means to see, to know (alternative)</span></h2>
           <p>vision · evidence · envy · history · idea · advice</p>
+          <span class="mini-crop"><img class="mini mini-weyd" src="./thumbnails/weyd.jpg" alt="" /></span>
         </a>
         <a class="root" href="./kwel/">
           <h2><i>*kʷel-</i> <span class="plain">means to turn</span></h2>
           <p>wheel · cycle · chakra · culture · colony · palindrome</p>
+          <span class="mini-crop"><img class="mini mini-kwel" src="./thumbnails/kwel.jpg" alt="" /></span>
         </a>
       </div>
       <div class="group wip">
@@ -105,14 +132,17 @@
         <a class="root" href="./h2ster/">
           <h2><i>*h₂stḗr</i> <span class="plain">the star of ‘star’</span></h2>
           <p>star · stellar · asterisk · asteroid · disaster</p>
+          <span class="mini-crop"><img class="mini mini-h2ster" src="./thumbnails/h2ster.jpg" alt="" /></span>
         </a>
         <a class="root" href="./bheh2/">
           <h2><i>*bʰeh₂-</i> <span class="plain">‘to speak’</span></h2>
           <p>fate · fairy · prophet · anthem · ban · contraband</p>
+          <span class="mini-crop"><img class="mini mini-bheh2" src="./thumbnails/bheh2.jpg" alt="" /></span>
         </a>
         <a class="root" href="./sed/">
           <h2><i>*sed-</i> <span class="plain">‘to sit’</span></h2>
           <p>sit · set · soot · nest · siege · chair · banshee</p>
+          <span class="mini-crop"><img class="mini mini-sed" src="./thumbnails/sed.jpg" alt="" /></span>
         </a>
       </div>
     </main>
