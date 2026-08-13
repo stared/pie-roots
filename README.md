@@ -18,8 +18,8 @@ One root per page:
   know — laid out as an eye: *vision, view, evidence, wit, wise, history,
   idea, Hades*
 - [/weyd-magic/](https://p.migdal.pl/pie-roots/weyd-magic/) — **\*weyd-**
-  means magic — the root's occult descendants as rays of light: *wizard,
-  wiseacre, clairvoyant, déjà vu, eidolon* — and Polish *wiedźma, wieszcz,
+  means to see, to know — shown as rays of light: *wizard,
+  wiseacre, clairvoyant, déjà vu, Ayurveda* — and Polish *wiedźma, wieszcz,
   widmo*
 - [/bheh2/](https://p.migdal.pl/pie-roots/bheh2/) — **\*bʰeh₂-** 'to speak' as
   a rippling fan: *fate, fairy, prophet, anthem, ban, bandit, contraband*
