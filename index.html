@@ -36,6 +36,8 @@
       header p i { color: var(--ink); }
       main { width: 100%; max-width: 680px; margin-top: clamp(52px, 8vh, 84px); }
       .group { display: flex; flex-direction: column; gap: 16px; }
+      .entry { position: relative; }
+      .entry a.root { padding-bottom: 45px; }
       a.root {
         position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 220px;
         column-gap: 28px; align-items: end; min-height: 166px; padding: 25px 28px;
@@ -52,6 +54,13 @@
         background: #f3f7ff; outline: none;
       }
       a.root:hover h2, a.root:focus-visible h2 { color: var(--link); }
+      .reddit {
+        position: absolute; z-index: 1; left: 28px; bottom: 17px;
+        font-size: 12px;
+        color: var(--faint); text-decoration-color: #aab4c2;
+        text-underline-offset: 2px;
+      }
+      .reddit:hover, .reddit:focus-visible { color: var(--link); }
       .mini-crop {
         position: absolute; inset: 0 0 0 auto; width: 220px;
         overflow: hidden; background: #eef2f7;
@@ -80,6 +89,8 @@
       footer a { color: var(--link); }
       @media (max-width: 620px) {
         a.root { grid-template-columns: minmax(0, 1fr) 120px; column-gap: 14px; min-height: 154px; padding: 21px 18px; }
+        .entry a.root { padding-bottom: 42px; }
+        .reddit { left: 18px; bottom: 15px; }
         .mini-crop { width: 120px; }
         .wip { margin-top: 58px; }
       }
@@ -106,26 +117,35 @@
     </header>
     <main>
       <div class="group">
-        <a class="root" href="https://p.migdal.pl/tree-of-tree/">
-          <h2><i>*deru-</i> <span class="plain">the tree of ‘tree’</span></h2>
-          <p>tree · true · trust · druid · endure</p>
-          <span class="mini-crop"><img class="mini mini-deru" src="./thumbnails/deru.jpg" alt="" /></span>
-        </a>
-        <a class="root" href="./weyd-magic/">
-          <h2><i>*weyd-</i> <span class="plain">means to see, to know</span></h2>
-          <p>wizard · clairvoyant · déjà vu · Ayurveda · wiedźma</p>
-          <span class="mini-crop"><img class="mini mini-weyd-magic" src="./thumbnails/weyd-magic.jpg" alt="" /></span>
-        </a>
+        <div class="entry">
+          <a class="root" href="https://p.migdal.pl/tree-of-tree/">
+            <h2><i>*deru-</i> <span class="plain">the tree of ‘tree’</span></h2>
+            <p>tree · true · trust · druid · endure</p>
+            <span class="mini-crop"><img class="mini mini-deru" src="./thumbnails/deru.jpg" alt="" /></span>
+          </a>
+          <a class="reddit" href="https://www.reddit.com/r/dataisbeautiful/comments/1uf8tqa/oc_tree_truth_druid_dryad_tar_and_dendrite_grew/">discussion on r/dataisbeautiful</a>
+        </div>
+        <div class="entry">
+          <a class="root" href="./weyd-magic/">
+            <h2><i>*weyd-</i> <span class="plain">means to see, to know</span></h2>
+            <p>wizard · clairvoyant · déjà vu · Ayurveda · wiedźma</p>
+            <span class="mini-crop"><img class="mini mini-weyd-magic" src="./thumbnails/weyd-magic.jpg" alt="" /></span>
+          </a>
+          <a class="reddit" href="https://www.reddit.com/r/etymology/comments/1uya2eh/druid_wizard_providence_ayurveda_visualization/">discussion on r/etymology</a>
+        </div>
         <a class="root" href="./weyd/">
           <h2><i>*weyd-</i> <span class="plain">means to see, to know (alternative)</span></h2>
           <p>vision · evidence · envy · history · idea · advice</p>
           <span class="mini-crop"><img class="mini mini-weyd" src="./thumbnails/weyd.jpg" alt="" /></span>
         </a>
-        <a class="root" href="./kwel/">
-          <h2><i>*kʷel-</i> <span class="plain">means to turn</span></h2>
-          <p>wheel · cycle · chakra · culture · colony · palindrome</p>
-          <span class="mini-crop"><img class="mini mini-kwel" src="./thumbnails/kwel.jpg" alt="" /></span>
-        </a>
+        <div class="entry">
+          <a class="root" href="./kwel/">
+            <h2><i>*kʷel-</i> <span class="plain">means to turn</span></h2>
+            <p>wheel · cycle · chakra · culture · colony · palindrome</p>
+            <span class="mini-crop"><img class="mini mini-kwel" src="./thumbnails/kwel.jpg" alt="" /></span>
+          </a>
+          <a class="reddit" href="https://www.reddit.com/r/etymology/comments/1v1pj6r/wheel_cycle_chakra_pole_colony_telephone_and/">discussion on r/etymology</a>
+        </div>
       </div>
       <div class="group wip">
         <p class="group-label">Work in progress</p>
